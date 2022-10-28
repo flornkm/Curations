@@ -1,4 +1,0 @@
-- "Buffering" state is exposed in LazyImageFull, but not in LazyImage. Does it make sense to even expose?
-  - Not exposing it would be non-breaking!
-- Add "debounceDuration" or prop; decide on naming!
-  - Make optional, and 0 by default.

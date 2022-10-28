@@ -21,18 +21,17 @@ body {
 .notion-collection-card {
 position: relative;
 }
-
-.notion-property-url {
+.notion-collection-card-property:not(:first-child) {
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
-  /*visibility: hidden;*/
+  opacity: 0;
   left: 0;
   bottom: 0;
 }
 
-.notion-property-url > form, .notion-property-url > form> input {
+.notion-property-url > form, .notion-property-url > form> input, .notion-property-url {
   width: 100%;
   height: 100%;
 }
