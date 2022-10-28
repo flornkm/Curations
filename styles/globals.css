@@ -1,12 +1,16 @@
 * {
   box-sizing: border-box;
-  background-color: #0D0D0D;
-  color: white;
 }
 
-body {
+body, .notion-app, #__next {
   padding: 0;
   margin: 0;
+  background-color: #0D0D0D;
+  color: #f5f5f5;
+}
+
+.notion-header {
+  display: none;
 }
 
 .notion-collection-header {
@@ -36,3 +40,68 @@ position: relative;
   height: 100%;
 }
 
+.notion-collection-group-title, .notion-collection-view-type-icon {
+  display: none;
+}
+
+.notion-collection-view-tabs-row {
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.title {
+  display: none;
+}
+
+.notion-collection-view-tabs-row > .notion-collection-view-type {
+  border-radius: 8px;
+}
+
+.notion-collection-view-tabs-content-item:hover {
+  border-radius: 8px;
+}
+
+.notion-collection-view-type-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #f5f5f5;
+  background-color: transparent;
+}
+
+.notion-collection-view-tabs-content-item-active {
+  font-weight: 400;
+  background-color: #242329;
+  border-radius: 8px;
+}
+
+.notion-collection-view-type {
+  background-color: transparent;
+}
+
+.notion-page-icon-hero.notion-page-icon-image {
+  width: 48px;
+  margin-left: 8px;
+  margin-bottom: 16px;
+  height: 48px;
+}
+
+.notion-page-no-cover.notion-page-has-image-icon {
+  padding-top: 0;
+}
+
+.notion-collection-card {
+  background-color: #242329;
+}
+
+.notion-collection-card:hover {
+  background-color: #2d2c33;
+}
+
+.notion-page-title-text {
+  color: white;
+}
+
+.notion-gallery-grid {
+  border-top: none;
+}
