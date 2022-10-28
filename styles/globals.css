@@ -16,3 +16,24 @@ body {
 .notion-page-icon-inline {
   display: none;
 }
+
+
+.notion-collection-card {
+position: relative;
+}
+
+.notion-property-url {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  /*visibility: hidden;*/
+  left: 0;
+  bottom: 0;
+}
+
+.notion-property-url > form, .notion-property-url > form> input {
+  width: 100%;
+  height: 100%;
+}
+
