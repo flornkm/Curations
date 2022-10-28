@@ -1,0 +1,1 @@
+{"version":3,"file":"asset-wrapper.d.ts","sourceRoot":"","sources":["../../src/components/asset-wrapper.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EAAoB,KAAK,EAAE,MAAM,cAAc,CAAA;AAUtD,eAAO,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC;IAClC,OAAO,EAAE,MAAM,CAAA;IACf,KAAK,EAAE,KAAK,CAAA;CACb,CA6DA,CAAA"}

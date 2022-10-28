@@ -1,0 +1,1 @@
+{"version":3,"file":"sync-pointer-block.d.ts","sourceRoot":"","sources":["../../src/components/sync-pointer-block.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EACL,KAAK,IAAI,SAAS,EAEnB,MAAM,cAAc,CAAA;AAIrB,eAAO,MAAM,gBAAgB,EAAE,KAAK,CAAC,EAAE,CAAC;IACtC,KAAK,EAAE,SAAS,CAAA;IAChB,KAAK,EAAE,MAAM,CAAA;CACd,CAwBA,CAAA"}

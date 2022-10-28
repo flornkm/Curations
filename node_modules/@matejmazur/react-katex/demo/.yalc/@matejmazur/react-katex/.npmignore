@@ -1,0 +1,10 @@
+node_modules
+demo
+docs
+.github
+.vscode
+tests
+*.log
+
+# don't ignore .npmignore files
+!.npmignore

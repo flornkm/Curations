@@ -1,0 +1,1 @@
+{"version":3,"file":"google-drive.d.ts","sourceRoot":"","sources":["../../src/components/google-drive.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EAAE,gBAAgB,EAAE,MAAM,cAAc,CAAA;AAM/C,eAAO,MAAM,WAAW,EAAE,KAAK,CAAC,EAAE,CAAC;IACjC,KAAK,EAAE,gBAAgB,CAAA;IACvB,SAAS,CAAC,EAAE,MAAM,CAAA;CACnB,CAmEA,CAAA"}

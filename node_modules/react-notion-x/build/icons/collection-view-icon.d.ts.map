@@ -1,0 +1,1 @@
+{"version":3,"file":"collection-view-icon.d.ts","sourceRoot":"","sources":["../../src/icons/collection-view-icon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EAAE,kBAAkB,EAAE,MAAM,cAAc,CAAA;AAQjD,UAAU,uBAAuB;IAC/B,SAAS,CAAC,EAAE,MAAM,CAAA;IAClB,IAAI,EAAE,kBAAkB,CAAA;CACzB;AAUD,eAAO,MAAM,kBAAkB,EAAE,KAAK,CAAC,EAAE,CAAC,uBAAuB,CAUhE,CAAA"}

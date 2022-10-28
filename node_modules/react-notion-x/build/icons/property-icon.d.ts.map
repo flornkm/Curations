@@ -1,0 +1,1 @@
+{"version":3,"file":"property-icon.d.ts","sourceRoot":"","sources":["../../src/icons/property-icon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EAAE,YAAY,EAAE,MAAM,cAAc,CAAA;AAmB3C,UAAU,iBAAiB;IACzB,SAAS,CAAC,EAAE,MAAM,CAAA;IAClB,IAAI,EAAE,YAAY,CAAA;CACnB;AAuBD,eAAO,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC,iBAAiB,CAQpD,CAAA"}

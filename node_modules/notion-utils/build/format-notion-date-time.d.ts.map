@@ -1,0 +1,1 @@
+{"version":3,"file":"format-notion-date-time.d.ts","sourceRoot":"","sources":["../src/format-notion-date-time.ts"],"names":[],"mappings":"AAEA,MAAM,WAAW,cAAc;IAC7B,IAAI,EAAE,UAAU,CAAA;IAChB,UAAU,EAAE,MAAM,CAAA;IAClB,UAAU,CAAC,EAAE,MAAM,CAAA;IACnB,SAAS,CAAC,EAAE,MAAM,CAAA;CACnB;AAED,eAAO,MAAM,oBAAoB,aAAc,cAAc,WAK5D,CAAA"}

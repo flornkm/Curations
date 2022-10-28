@@ -1,0 +1,1 @@
+{"version":3,"file":"get-page-property.d.ts","sourceRoot":"","sources":["../src/get-page-property.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAc,iBAAiB,EAAE,MAAM,cAAc,CAAA;AAInE;;;;;;;;;;;;GAYG;AACH,wBAAgB,eAAe,CAC7B,CAAC,GAAG,MAAM,GAAG,MAAM,GAAG,OAAO,GAAG,MAAM,EAAE,GAAG,MAAM,EAAE,EACnD,YAAY,EAAE,MAAM,EAAE,KAAK,EAAE,KAAK,EAAE,SAAS,EAAE,iBAAiB,GAAG,CAAC,CAAA"}

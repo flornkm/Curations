@@ -1,0 +1,1 @@
+{"version":3,"file":"collection-row.d.ts","sourceRoot":"","sources":["../../src/third-party/collection-row.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,OAAO,EAAE,SAAS,EAAE,MAAM,cAAc,CAAA;AAOxC,eAAO,MAAM,aAAa,EAAE,KAAK,CAAC,EAAE,CAAC;IACnC,KAAK,EAAE,SAAS,CAAA;IAChB,UAAU,CAAC,EAAE,OAAO,CAAA;IACpB,SAAS,CAAC,EAAE,MAAM,CAAA;CACnB,CAiEA,CAAA"}
