@@ -393,17 +393,6 @@ eval("module.exports = __webpack_require__(/*! ./dist/client/link */ \"./node_mo
 
 /***/ }),
 
-/***/ "@matejmazur/react-katex":
-/*!******************************************!*\
-  !*** external "@matejmazur/react-katex" ***!
-  \******************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("@matejmazur/react-katex");
-
-/***/ }),
-
 /***/ "@notionhq/client":
 /*!***********************************!*\
   !*** external "@notionhq/client" ***!
@@ -415,6 +404,17 @@ module.exports = require("@notionhq/client");
 
 /***/ }),
 
+/***/ "@xobotyi/scrollbar-width":
+/*!*******************************************!*\
+  !*** external "@xobotyi/scrollbar-width" ***!
+  \*******************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@xobotyi/scrollbar-width");
+
+/***/ }),
+
 /***/ "classnames":
 /*!*****************************!*\
   !*** external "classnames" ***!
@@ -423,6 +423,83 @@ module.exports = require("@notionhq/client");
 
 "use strict";
 module.exports = require("classnames");
+
+/***/ }),
+
+/***/ "copy-to-clipboard":
+/*!************************************!*\
+  !*** external "copy-to-clipboard" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("copy-to-clipboard");
+
+/***/ }),
+
+/***/ "fast-deep-equal/react":
+/*!****************************************!*\
+  !*** external "fast-deep-equal/react" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fast-deep-equal/react");
+
+/***/ }),
+
+/***/ "fast-shallow-equal":
+/*!*************************************!*\
+  !*** external "fast-shallow-equal" ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fast-shallow-equal");
+
+/***/ }),
+
+/***/ "hotkeys-js":
+/*!*****************************!*\
+  !*** external "hotkeys-js" ***!
+  \*****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("hotkeys-js");
+
+/***/ }),
+
+/***/ "invariant":
+/*!****************************!*\
+  !*** external "invariant" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("invariant");
+
+/***/ }),
+
+/***/ "js-cookie":
+/*!****************************!*\
+  !*** external "js-cookie" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("js-cookie");
+
+/***/ }),
+
+/***/ "katex":
+/*!************************!*\
+  !*** external "katex" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("katex");
 
 /***/ }),
 
@@ -1262,39 +1339,6 @@ module.exports = require("react-fast-compare");
 
 /***/ }),
 
-/***/ "react-hotkeys-hook":
-/*!*************************************!*\
-  !*** external "react-hotkeys-hook" ***!
-  \*************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-hotkeys-hook");
-
-/***/ }),
-
-/***/ "react-image":
-/*!******************************!*\
-  !*** external "react-image" ***!
-  \******************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-image");
-
-/***/ }),
-
-/***/ "react-lazy-images":
-/*!************************************!*\
-  !*** external "react-lazy-images" ***!
-  \************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-lazy-images");
-
-/***/ }),
-
 /***/ "react-tweet-embed":
 /*!************************************!*\
   !*** external "react-tweet-embed" ***!
@@ -1306,17 +1350,6 @@ module.exports = require("react-tweet-embed");
 
 /***/ }),
 
-/***/ "react-use":
-/*!****************************!*\
-  !*** external "react-use" ***!
-  \****************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-use");
-
-/***/ }),
-
 /***/ "react/jsx-dev-runtime":
 /*!****************************************!*\
   !*** external "react/jsx-dev-runtime" ***!
@@ -1325,6 +1358,72 @@ module.exports = require("react-use");
 
 "use strict";
 module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "screenfull":
+/*!*****************************!*\
+  !*** external "screenfull" ***!
+  \*****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("screenfull");
+
+/***/ }),
+
+/***/ "set-harmonic-interval":
+/*!****************************************!*\
+  !*** external "set-harmonic-interval" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("set-harmonic-interval");
+
+/***/ }),
+
+/***/ "throttle-debounce":
+/*!************************************!*\
+  !*** external "throttle-debounce" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("throttle-debounce");
+
+/***/ }),
+
+/***/ "ts-easing":
+/*!****************************!*\
+  !*** external "ts-easing" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("ts-easing");
+
+/***/ }),
+
+/***/ "tslib":
+/*!************************!*\
+  !*** external "tslib" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("tslib");
+
+/***/ }),
+
+/***/ "unionize":
+/*!***************************!*\
+  !*** external "unionize" ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("unionize");
 
 /***/ }),
 
