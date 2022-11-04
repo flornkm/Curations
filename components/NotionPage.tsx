@@ -57,9 +57,10 @@ const Code = dynamic(() =>
 )
 const Collection = dynamic(() =>
   import('react-notion-x/build/third-party/collection').then(
-    (m) => m.Collection
+    (m) => m.Collection 
   )
 )
+
 const Equation = dynamic(() =>
   import('react-notion-x/build/third-party/equation').then((m) => m.Equation)
 )
@@ -104,6 +105,89 @@ export const NotionPage = ({
   const title = getPageTitle(recordMap)
   console.log(title, recordMap)
 
+  const subProductivity = [];
+  const subDesign = [];
+  const subLearning = [];
+  const subDevelopment = [];
+  
+
+  recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
+    console.log('Subcategory Productivity: '+item.value)
+    subProductivity.push(item.value);
+    console.log(subProductivity);
+  })
+
+  recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema["K[S^"].options.map((item) => {
+    console.log('Subcategory Design: '+item.value);
+    subDesign.push(item.value);
+    console.log(subDesign);
+  })
+
+  recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.Pbex.options.map((item) => {
+    console.log('Subcategory Learning: '+item.value);
+    subLearning.push(item.value);
+    console.log(subLearning);
+  })
+
+  recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.zQcd.options.map((item) => {
+    console.log('Subcategory Development: '+item.value);
+    subDevelopment.push(item.value);
+    console.log(subDevelopment);
+  })
+
+ // Create a component for each subcategory
+  const SubProductivity = () => {
+    return (
+      <div>
+        <h1>Productivity</h1>
+        <ul>
+          {subProductivity.map((item) => {
+            return <li>{item}</li>
+          })}
+        </ul>
+      </div>
+    )
+  }
+
+  const SubDesign = () => {
+    return (
+      <div>
+        <h1>Design</h1>
+        <ul>
+          {subDesign.map((item) => {
+            return <li>{item}</li>
+          })}
+        </ul>
+      </div>
+    )
+  }
+
+  const SubLearning = () => {
+    return (
+      <div>
+        <h1>Learning</h1>
+        <ul>
+          {subLearning.map((item) => {
+            return <li>{item}</li>
+          })}
+        </ul>
+      </div>
+    )
+  }
+
+  const SubDevelopment = () => {
+    return (
+      <div>
+        <h1>Development</h1>
+        <ul>
+          {subDevelopment.map((item) => {
+            return <li>{item}</li>
+          })}
+        </ul>
+      </div>
+    )
+  }
+
   // useful for debugging from the dev console
   if (typeof window !== 'undefined') {
     const keys = Object.keys(recordMap?.block || {})
@@ -145,6 +229,11 @@ export const NotionPage = ({
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
+      <SubDevelopment/>
+      <SubLearning/>
+      <SubDesign/>
+      <SubProductivity/>
+      
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
