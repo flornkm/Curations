@@ -43,10 +43,31 @@ position: relative;
 .subcategory {
   display: flex;
   gap: 16px;
+  height: 100px;
 }
 
 .subcategory > p {
   cursor: pointer;
+  min-width: 200px;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+.disabled {
+  display: none;
+}
+
+.notion-page-content-inner > div {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.notion-page-content-inner > div > div {
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .notion-collection-group-title, .notion-collection-view-type-icon {

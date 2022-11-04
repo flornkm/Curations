@@ -110,7 +110,7 @@ export const NotionPage = ({
   const subDesign = [];
   const subLearning = [];
   const subDevelopment = [];
-  
+
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
     console.log('Subcategory Productivity: '+item.value)
@@ -144,6 +144,25 @@ export const NotionPage = ({
       subcategory.innerHTML += '<p> ' + element + ' </p>';
     });
     subcategory.classList.add('subcategory');
+
+    const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+    
+    subcategory.addEventListener('click', (e) => {
+      console.log(e.target);
+
+      cards.forEach((card) => {
+        console.log(card.parentElement.parentElement.parentElement.parentElement);
+        card.parentElement.parentElement.parentElement.parentElement.style.display = 'green';
+
+        if (card.innerHTML == e.target.innerText) {
+          console.log(card.parentElement.parentElement);
+          card.parentElement.parentElement.parentElement.parentElement.style.backgroundColor = 'green';
+        } else if (card.innerHTML != e.target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+          console.log(card.innerHTML);
+          card.parentElement.parentElement.parentElement.parentElement.style.backgroundColor = 'red';
+        }
+      });
+    })
     // After the tabs row, append the subcategory
     tabsRow.after(subcategory);
   }
@@ -163,29 +182,66 @@ export const NotionPage = ({
     const g = window as any
     g.recordMap = recordMap
     g.block = block
-  }
+  } 
+
+  // list all cards with class name .notion-property-multi_select-item notion-item-default
+  // const cards = document.querySelectorAll('.notion-collection-card-property:not(:first-child)');
 
   const socialDescription = 'React Notion X Demo'
   const socialImage =
     'https://react-notion-x-demo.transitivebullsh.it/social.jpg'
 
+     
+
     function clickNav(e) {
-      console.log(e.target.innerText)
+      // console.log(e.target.innerText);
+
+      const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+
+      // cards.forEach((card) => {
+      //   console.log(card.parentElement.parentElement.parentElement.parentElement)
+      //   card.parentElement.parentElement.parentElement.parentElement.style.display = 'green';
+      //   if (card.innerHTML == e.target.innerText) {
+      //     console.log(card.parentElement.parentElement);
+      //     card.parentElement.parentElement.parentElement.parentElement.style.backgroundColor = 'green';
+      //   } else if (card.innerHTML != e.target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+      //     console.log(card.innerHTML);
+      //     card.parentElement.parentElement.parentElement.parentElement.style.backgroundColor = 'red';
+      //   }
+      // });
+      
       if(e.target.innerText == 'Productivity') {
         detachSubcategory();
         appendSubcategory(subProductivity);
+
+        cards.forEach((card) => {
+          console.log(card.innerHTML);
+        });
+
       }
       if(e.target.innerText == 'Design') {
         detachSubcategory();
         appendSubcategory(subDesign);
+
+        cards.forEach((card) => {
+          console.log(card.innerHTML);
+        });
       }
       if(e.target.innerText == 'Learning') {
         detachSubcategory();
         appendSubcategory(subLearning);
+
+        cards.forEach((card) => {
+          console.log(card.innerHTML);
+        });
       }
       if(e.target.innerText == 'Development') {
         detachSubcategory();
         appendSubcategory(subDevelopment);
+
+        cards.forEach((card) => {
+          console.log(card.innerHTML);
+        });
       }
       if(e.target.innerText == 'All') {
         detachSubcategory();
