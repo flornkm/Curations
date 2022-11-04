@@ -40,25 +40,44 @@ position: relative;
   height: 100%;
 }
 
+.subcategory {
+  display: flex;
+  gap: 16px;
+}
+
+.subcategory > p {
+  cursor: pointer;
+}
+
 .notion-collection-group-title, .notion-collection-view-type-icon {
   display: none;
 }
 
 .notion-collection-view-tabs-row {
-  margin-bottom: 8px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
   gap: 8px;
+  position: fixed;
+  margin: 0 auto;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid #242329;
+  border-radius: 100px;
+  padding: 2px;
 }
 
 .title {
   display: none;
-}
+} 
 
 .notion-collection-view-tabs-row > .notion-collection-view-type {
   border-radius: 8px;
 }
 
 .notion-collection-view-tabs-content-item:hover {
-  border-radius: 8px;
+  border-radius: 100px;
 }
 
 .notion-collection-view-type-title {
@@ -72,7 +91,12 @@ position: relative;
 .notion-collection-view-tabs-content-item-active {
   font-weight: 400;
   background-color: #242329;
-  border-radius: 8px;
+  border-radius: 100px;
+  border: 0px;
+}
+
+.notion-collection-view-tabs-content-item-active:hover {
+  border-radius: 100px;
 }
 
 .notion-collection-view-type {
@@ -84,6 +108,24 @@ position: relative;
   margin-left: 8px;
   margin-bottom: 16px;
   height: 48px;
+  display: none;
+}
+
+.notion-title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.notion-title::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("/favicon.png");
+  background-size: contain;
 }
 
 .notion-page-no-cover.notion-page-has-image-icon {
