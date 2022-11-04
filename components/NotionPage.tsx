@@ -11,6 +11,7 @@ import { NotionRenderer } from 'react-notion-x'
 import TweetEmbed from 'react-tweet-embed'
 
 import { Loading } from './Loading'
+import { useEffect } from 'react'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -135,57 +136,24 @@ export const NotionPage = ({
     console.log(subDevelopment);
   })
 
- // Create a component for each subcategory
-  const SubProductivity = () => {
-    return (
-      <div>
-        <h1>Productivity</h1>
-        <ul>
-          {subProductivity.map((item) => {
-            return <li>{item}</li>
-          })}
-        </ul>
-      </div>
-    )
+  // Append the subcategory component after the notion class notion-collection-view-tabs-row
+  const appendSubcategory = (category) => {
+    const tabsRow = document.querySelector('.notion-collection-view-tabs-row');
+    const subcategory = document.createElement('div');
+    category.forEach(element => {
+      subcategory.innerHTML += '<p> ' + element + ' </p>';
+    });
+    subcategory.classList.add('subcategory');
+    // After the tabs row, append the subcategory
+    tabsRow.after(subcategory);
   }
 
-  const SubDesign = () => {
-    return (
-      <div>
-        <h1>Design</h1>
-        <ul>
-          {subDesign.map((item) => {
-            return <li>{item}</li>
-          })}
-        </ul>
-      </div>
-    )
-  }
-
-  const SubLearning = () => {
-    return (
-      <div>
-        <h1>Learning</h1>
-        <ul>
-          {subLearning.map((item) => {
-            return <li>{item}</li>
-          })}
-        </ul>
-      </div>
-    )
-  }
-
-  const SubDevelopment = () => {
-    return (
-      <div>
-        <h1>Development</h1>
-        <ul>
-          {subDevelopment.map((item) => {
-            return <li>{item}</li>
-          })}
-        </ul>
-      </div>
-    )
+  // Detach all subcategorys inserted after the notion class notion-collection-view-tabs-row
+  const detachSubcategory = () => {
+    const subcategorys = document.querySelectorAll('.subcategory');
+    subcategorys.forEach((subcategory) => {
+      subcategory.remove();
+    })
   }
 
   // useful for debugging from the dev console
@@ -200,6 +168,29 @@ export const NotionPage = ({
   const socialDescription = 'React Notion X Demo'
   const socialImage =
     'https://react-notion-x-demo.transitivebullsh.it/social.jpg'
+
+    function clickNav(e) {
+      console.log(e.target.innerText)
+      if(e.target.innerText == 'Productivity') {
+        detachSubcategory();
+        appendSubcategory(subProductivity);
+      }
+      if(e.target.innerText == 'Design') {
+        detachSubcategory();
+        appendSubcategory(subDesign);
+      }
+      if(e.target.innerText == 'Learning') {
+        detachSubcategory();
+        appendSubcategory(subLearning);
+      }
+      if(e.target.innerText == 'Development') {
+        detachSubcategory();
+        appendSubcategory(subDevelopment);
+      }
+      if(e.target.innerText == 'All') {
+        detachSubcategory();
+      }
+    }
 
   return (
     <>
@@ -228,12 +219,7 @@ export const NotionPage = ({
         <meta name='twitter:creator' content='@transitive_bs' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <SubDevelopment/>
-      <SubLearning/>
-      <SubDesign/>
-      <SubProductivity/>
-      
+      <div onClick={clickNav}>
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
@@ -251,10 +237,12 @@ export const NotionPage = ({
           Modal,
           Tweet
         }}
+        
 
         // NOTE: custom images will only take effect if previewImages is true and
         // if the image has a valid preview image defined in recordMap.preview_images[src]
       />
+      </div>
     </>
   )
 }
