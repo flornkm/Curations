@@ -46,10 +46,31 @@ position: relative;
   height: 100px;
 }
 
-.subcategory > p {
+.subActive {
+  text-decoration: underline;
+}
+
+.subcategory > div {
+  display: flex;
+  justify-content: center;
+  align-items: top;
   cursor: pointer;
   min-width: 200px;
   text-align: center;
+  color: #bcbcbc;
+  position: relative;
+}
+
+.subcategory > div > p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1;
 }
 
 .active {
