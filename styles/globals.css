@@ -43,11 +43,15 @@ position: relative;
 .subcategory {
   display: flex;
   gap: 16px;
-  height: 100px;
+  height: 80px;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 12px;
 }
 
 .subActive {
-  text-decoration: underline;
+  /* border bottom 1px solid #f5f5f5; */
+  border-bottom: 1px solid #f5f5f5;
 }
 
 .subcategory > div {
@@ -55,10 +59,13 @@ position: relative;
   justify-content: center;
   align-items: top;
   cursor: pointer;
-  min-width: 200px;
   text-align: center;
   color: #bcbcbc;
   position: relative;
+  border-bottom: 1px solid transparent;
+  width: 100px;
+  gap: 16px;
+  flex: none;
 }
 
 .subcategory > div > p {
@@ -67,6 +74,7 @@ position: relative;
   left: 0;
   right: 0;
   bottom: 0;
+  padding-bottom: 8px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -82,8 +90,7 @@ position: relative;
 }
 
 .notion-page-content-inner > div {
-  max-width: 100%;
-  overflow-x: scroll;
+  width: 100%;
 }
 
 .notion-page-content-inner > div > div {
@@ -95,19 +102,55 @@ position: relative;
   display: none;
 }
 
-.notion-collection-view-tabs-row {
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  justify-content: center;
-  gap: 8px;
-  position: fixed;
-  margin: 0 auto;
-  width: auto;
-  background-color: transparent;
-  border: 2px solid #242329;
-  border-radius: 100px;
-  padding: 2px;
+@media screen and (min-width: 768px) {
+  .notion-collection-view-tabs-row {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    margin: 0 auto;
+    width: auto;
+    background-color: transparent;
+    border: 2px solid #242329;
+    border-radius: 100px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notion-collection-view-tabs-row {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    margin: 0 auto;
+    width: auto;
+    background-color: #0D0D0D;
+    border: 2px solid #242329;
+    border-radius: 100px;
+    padding: 3px;
+    width: 90%;
+    z-index: 999;
+    justify-content: space-between;
+  }
+
+  .notion-collection-view-tabs-content-item {
+    flex-grow: 1;
+  }
+
+  .notion-collection-view-type-icon {
+    display: none;
+    margin-right: 0;
+    color: white;
+  }
+  .notion-collection-view-type-title {
+    display: block;
+    font-size: 10px;
+  }
 }
 
 .title {
@@ -175,11 +218,15 @@ position: relative;
 }
 
 .notion-collection-card {
-  background-color: #242329;
+  background-color: transparent;
 }
 
 .notion-collection-card:hover {
-  background-color: #2d2c33;
+  background-color: #1a1a1c;
+}
+
+.notion-collection-card-cover {
+  border: 0px;
 }
 
 .notion-page-title-text {

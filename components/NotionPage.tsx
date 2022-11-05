@@ -141,9 +141,15 @@ export const NotionPage = ({
   const appendSubcategory = (category) => {
     const tabsRow = document.querySelector('.notion-collection-view-tabs-row');
     const subcategory = document.createElement('div');
+    const width = 24;
+    const height = 24;
     category.forEach(element => {
       if (element === 'All') {
-        subcategory.innerHTML += '<div>' + '<svg width="40" height="40" stroke-width="1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM12 22V2M21.95 11c-6.47 2.667-12.254 2.667-19.9 0M18.572 4.462c-2.667 4.53-2.667 9.723 0 15.076M5.428 4.462c2.667 4.53 2.667 9.723 0 15.076" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>' + '<p class="subActive"> ' + element + ' </p>' + '</div>';
+        subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColorr"><path d="M3 9.5L12 4l9 5.5M19 13v6.4a.6.6 0 01-.6.6H5.6a.6.6 0 01-.6-.6V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p class="subActive"> ' + element + ' </p>' + '</div>';
+      } else if (element === '3D Assets') {
+        subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M21 7.353v9.294a.6.6 0 01-.309.525l-8.4 4.666a.6.6 0 01-.582 0l-8.4-4.666A.6.6 0 013 16.647V7.353a.6.6 0 01.309-.524l8.4-4.667a.6.6 0 01.582 0l8.4 4.667a.6.6 0 01.309.524z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.528 7.294l8.18 4.544a.6.6 0 00.583 0l8.209-4.56M12 21v-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
+      } else if (element === 'Design Inspiration') {
+        subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M21 2l-1 1M3 2l1 1M21 16l-1-1M3 16l1-1M9 18h6M10 21h4M12 3C8 3 5.952 4.95 6 8c.023 1.487.5 2.5 1.5 3.5S9 13 9 15h6c0-2 .5-2.5 1.5-3.5h0c1-1 1.477-2.013 1.5-3.5.048-3.05-2-5-6-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
       } else {
         subcategory.innerHTML += '<div>' + '<p> ' + element + ' </p>' + '</div>';
       }
@@ -331,6 +337,137 @@ export const NotionPage = ({
       });
     }
 
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      const activeMain = document.querySelector('button.notion-collection-view-tabs-content-item-active');
+      console.log(activeMain.children[0].textContent);
+
+      if (activeMain.children[0].textContent == 'Productivity') {
+        detachSubcategory();
+        appendSubcategory(subProductivity);
+
+        const subcategorys = document.querySelectorAll('.subcategory div');
+                subcategorys.forEach((subcategory) => {
+                  subcategory.addEventListener('click', (e) => {
+                    const target = e.target as HTMLButtonElement;
+                    const subActives = document.querySelectorAll('.subActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    target.classList.add('subActive');
+                    console.log(target.textContent);
+                    const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+                    // Filter the cards
+                    cards.forEach((card) => {
+                      if (card.innerHTML == target.innerText) {
+                        console.log(card.parentElement.parentElement);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
+                        console.log(card.innerHTML);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+                      } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+                        console.log('All');
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      }
+                    })
+                  })
+                })
+      } else if (activeMain.children[0].textContent == 'Design') {
+        detachSubcategory();
+        appendSubcategory(subDesign);
+
+        const subcategorys = document.querySelectorAll('.subcategory div');
+                subcategorys.forEach((subcategory) => {
+                  subcategory.addEventListener('click', (e) => {
+                    const target = e.target as HTMLButtonElement;
+                    const subActives = document.querySelectorAll('.subActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    target.classList.add('subActive');
+                    console.log(target.textContent);
+                    const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+                    // Filter the cards
+                    cards.forEach((card) => {
+                      if (card.innerHTML == target.innerText) {
+                        console.log(card.parentElement.parentElement);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
+                        console.log(card.innerHTML);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+                      } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+                        console.log('All');
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      }
+                    })
+                  })
+                })
+      } else if (activeMain.children[0].textContent == 'Learning') {
+        detachSubcategory();
+        appendSubcategory(subLearning);
+
+        const subcategorys = document.querySelectorAll('.subcategory div');
+                subcategorys.forEach((subcategory) => {
+                  subcategory.addEventListener('click', (e) => {
+                    const target = e.target as HTMLButtonElement;
+                    const subActives = document.querySelectorAll('.subActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    target.classList.add('subActive');
+                    console.log(target.textContent);
+                    const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+                    // Filter the cards
+                    cards.forEach((card) => {
+                      if (card.innerHTML == target.innerText) {
+                        console.log(card.parentElement.parentElement);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
+                        console.log(card.innerHTML);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+                      } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+                        console.log('All');
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      }
+                    })
+                  })
+                })
+      } else if (activeMain.children[0].textContent == 'Development') {
+        detachSubcategory();
+        appendSubcategory(subDevelopment);
+
+        const subcategorys = document.querySelectorAll('.subcategory div');
+                subcategorys.forEach((subcategory) => {
+                  subcategory.addEventListener('click', (e) => {
+                    const target = e.target as HTMLButtonElement;
+                    const subActives = document.querySelectorAll('.subActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    target.classList.add('subActive');
+                    console.log(target.textContent);
+                    const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
+                    // Filter the cards
+                    cards.forEach((card) => {
+                      if (card.innerHTML == target.innerText) {
+                        console.log(card.parentElement.parentElement);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
+                        console.log(card.innerHTML);
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+                      } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
+                        console.log('All');
+                        card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                      }
+                    })
+                  })
+                })
+      } else if (activeMain.children[0].textContent == 'All') {
+        detachSubcategory();
+      }
+    }, 200);
   }, [])
 
   return (
