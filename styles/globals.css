@@ -53,6 +53,7 @@ position: relative;
   display: none;
 }
 
+<<<<<<< Updated upstream
 .notion-collection-view-tabs-row {
   top: 40px;
   left: 50%;
@@ -66,6 +67,72 @@ position: relative;
   border: 2px solid #242329;
   border-radius: 100px;
   padding: 2px;
+=======
+@media screen and (min-width: 768px) {
+  .notion-collection-view-tabs-row {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    margin: 0 auto;
+    width: auto;
+    background-color: transparent;
+    border: 2px solid #242329;
+    border-radius: 100px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notion-collection-view-tabs-row {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    margin: 0 auto;
+    width: auto;
+    background-color: #0D0D0D;
+    border: 2px solid #242329;
+    border-radius: 100px;
+    padding: 3px;
+    width: 90%;
+    z-index: 999;
+    justify-content: space-between;
+  }
+
+  .notion-collection-view-tabs-content-item {
+    flex-grow: 1;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    color: black;
+    background: white;
+    cursor: pointer;
+    border-radius: 100px;
+    right: -8px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .notion-collection-view-type-icon {
+    display: none;
+    margin-right: 0;
+    color: white;
+  }
+  .notion-collection-view-type-title {
+    display: block;
+    font-size: 10px;
+  }
+>>>>>>> Stashed changes
 }
 
 .title {

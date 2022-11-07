@@ -144,6 +144,13 @@ export const NotionPage = ({
       subcategory.innerHTML += '<p> ' + element + ' </p>';
     });
     subcategory.classList.add('subcategory');
+<<<<<<< Updated upstream
+=======
+    // Add an arrow and append the subcategory to the category
+    const arrowIcon = '<span class="arrow">' + '<?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>' + '</span>';
+    subcategory.after(arrowIcon);
+
+>>>>>>> Stashed changes
     // After the tabs row, append the subcategory
     tabsRow.after(subcategory);
   }
