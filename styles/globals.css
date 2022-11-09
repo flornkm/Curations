@@ -63,6 +63,7 @@ position: relative;
   gap: 16px;
   flex: none;
   padding-top: 6px;
+  
 }
 
 .subcategory > div > p {
@@ -127,12 +128,12 @@ position: relative;
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
     position: fixed;
     margin: 0 auto;
     width: auto;
     background-color: transparent;
-    border: 2px solid #242329;
+    border: 2px solid #27262C;
     border-radius: 100px;
     padding: 3px;
   }
@@ -144,12 +145,12 @@ position: relative;
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
-    gap: 8px;
+    gap: 4px;
     position: fixed;
     margin: 0 auto;
     width: auto;
     background-color: #0D0D0D;
-    border: 2px solid #242329;
+    border: 2px solid #27262C;
     border-radius: 100px;
     padding: 3px;
     width: 90%;
@@ -232,6 +233,7 @@ position: relative;
 
 .notion-collection-view-tabs-content-item:hover {
   border-radius: 100px;
+  background-color: #1D1C21;
 }
 
 .notion-collection-view-type-title {
@@ -244,7 +246,7 @@ position: relative;
 
 .notion-collection-view-tabs-content-item-active {
   font-weight: 400;
-  background-color: #242329;
+  background-color: #27262C !important;
   border-radius: 100px;
   border: 0px;
 }
@@ -255,6 +257,7 @@ position: relative;
 
 .notion-collection-view-type {
   background-color: transparent;
+  margin: 0px 6px 0px 6px;
 }
 
 .notion-page-icon-hero.notion-page-icon-image {
