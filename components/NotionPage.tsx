@@ -475,7 +475,9 @@ export const NotionPage = ({
     setTimeout(() => {
       const cards = document.querySelectorAll('.notion-collection-card');
       cards.forEach((card) => {
-        card.href = "https://"+card.children[1].children[1].children[0].innerText+"/";
+        // use href to get the link
+        const innerCard = card.children[1].children[1].children[0] as HTMLAnchorElement;
+        card.setAttribute('href', "https://"+innerCard.innerText+"/");
         card.setAttribute('target', '_blank');
       });
 
