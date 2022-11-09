@@ -153,6 +153,25 @@ position: relative;
   }
 }
 
+.arrow {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.arrow > div {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+
 .title {
   display: none;
 } 
