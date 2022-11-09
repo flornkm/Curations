@@ -191,7 +191,7 @@ export const NotionPage = ({
       } else if (element === 'CSS') {
         subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M4 3l1.778 17.09L12 22l6.222-1.91L20 3H4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7h9.5l-1 10-3.5 1-3.5-1-.25-2.5M16 11.5H7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
       } else if (element === 'Arduino') {
-        subcategory.innerHTML += '<div>' + `<svg width="${width}" height=${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M7 19.4V4.6a.6.6 0 01.6-.6h8.8a.6.6 0 01.6.6v14.8a.6.6 0 01-.6.6H7.6a.6.6 0 01-.6-.6zM14 20v2.5M10 20v2.5M14 4V1.5M10 4V1.5M7 12H4.5M19.5 12H17M7 6.5H4.5M19.5 6.5H17M7 17.5H4.5M19.5 17.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
+        subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M7 19.4V4.6a.6.6 0 01.6-.6h8.8a.6.6 0 01.6.6v14.8a.6.6 0 01-.6.6H7.6a.6.6 0 01-.6-.6zM14 20v2.5M10 20v2.5M14 4V1.5M10 4V1.5M7 12H4.5M19.5 12H17M7 6.5H4.5M19.5 6.5H17M7 17.5H4.5M19.5 17.5H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
       } else if (element === 'Repositories') {
         subcategory.innerHTML += '<div>' + `<svg width="${width}" stroke-width="1.5" height="${height}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M4 19V5a2 2 0 012-2h13.4a.6.6 0 01.6.6v13.114" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M8 3v8l2.5-1.6L13 11V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 17h14M6 21h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M6 21a2 2 0 110-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
       } else if (element === 'VS Code Extensions') {
@@ -251,13 +251,43 @@ export const NotionPage = ({
     const arrowIcon = '<div><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>'
     arrow.innerHTML = arrowIcon;
     arrow.classList.add('arrow');
-    subcategory.appendChild(arrow);
 
-    arrow.addEventListener('click', () => {
-      console.log('arrow');
-      document.querySelector('.subcategory').scroll = 100;
+    function appendArrow() {
+      subcategory.appendChild(arrow);
+    }
+
+    // Log childrens of subcategory
+    if (subcategory.children.length > 10 && window.innerWidth > 1400 && window.innerWidth < 1600) {
+      appendArrow();
+    }
+
+    if (subcategory.children.length > 14 && window.innerWidth > 1800) {
+      appendArrow();
+    }
+  
+
+      arrow.addEventListener('click', () => {
+        document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft += document.querySelector('.subcategory').scrollWidth;
+        console.log(document.querySelector('.subcategory').scrollWidth);
+        console.log(document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft);
+        if (document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft !== 0) {
+          const arrowLeft = document.createElement('span');
+          const arrowLeftIcon = '<div><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>'
+          arrowLeft.innerHTML = arrowLeftIcon;
+          arrowLeft.classList.add('arrow');
+          arrowLeft.classList.add('left');
+          arrow.remove();
+          subcategory.appendChild(arrowLeft);
+          arrowLeft.addEventListener('click', () => {
+            document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft -= document.querySelector('.subcategory').scrollWidth;
+            if (document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft === 0) {
+              // Remove left arrow and add right arrow
+              arrowLeft.remove();
+              appendArrow()
+            }
+          });
+        }
     });
-    
     // After the tabs row, append the subcategory
     tabsRow.after(subcategory);
   }
@@ -443,6 +473,12 @@ export const NotionPage = ({
 
   useEffect(() => {
     setTimeout(() => {
+      const cards = document.querySelectorAll('.notion-collection-card');
+      cards.forEach((card) => {
+        card.href = "https://"+card.children[1].children[1].children[0].innerText+"/";
+        card.setAttribute('target', '_blank');
+      });
+
       const activeMain = document.querySelector('button.notion-collection-view-tabs-content-item-active');
       console.log(activeMain.children[0].textContent);
 
