@@ -113,6 +113,8 @@ position: relative;
 
 .notion-collection-card-cover {
   border-radius: 8px;
+  width: 100%;
+  height: 100%;
 }
 
 .notion-collection-group-title, .notion-collection-view-type-icon {
@@ -304,4 +306,6 @@ position: relative;
 
 .notion-gallery-grid {
   border-top: none;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-gap: 32px;
 }
