@@ -317,6 +317,7 @@ export const NotionPage = ({
     'https://react-notion-x-demo.transitivebullsh.it/social.jpg'
 
   useEffect(() => {
+
     const mainNav = document.querySelector('.notion-collection-view-tabs-row');
     const subNav = document.querySelector('.subcategory');
 
