@@ -317,6 +317,15 @@ export const NotionPage = ({
     'https://react-notion-x-demo.transitivebullsh.it/social.jpg'
 
   useEffect(() => {
+    setTimeout(() => {
+      const urls = document.querySelectorAll('.notion-property-url') as NodeListOf<HTMLAnchorElement>;
+      urls.forEach((url) => {
+        const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
+        cardUrl.href = 'https://' + url.innerHTML + '/';
+        cardUrl.setAttribute('target', '_blank');
+        console.log('URL', url.parentElement.parentElement.parentElement);
+      });
+    }, 200);
 
     const mainNav = document.querySelector('.notion-collection-view-tabs-row');
     const subNav = document.querySelector('.subcategory');
@@ -465,8 +474,19 @@ export const NotionPage = ({
             }, 200);
         }
         if (target.textContent == 'All') {
-          detachSubcategory();
+          detachSubcategory();  
         }
+
+        setTimeout(() => {
+          const urls = document.querySelectorAll('.notion-property-url') as NodeListOf<HTMLAnchorElement>;
+              urls.forEach((url) => {
+                const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
+                cardUrl.href = 'https://' + url.innerHTML + '/';
+                cardUrl.setAttribute('target', '_blank');
+                console.log('URL', url.parentElement.parentElement.parentElement);
+          });
+        }, 200);
+
       });
     }
 
@@ -474,14 +494,6 @@ export const NotionPage = ({
 
   useEffect(() => {
     setTimeout(() => {
-      const cards = document.querySelectorAll('.notion-collection-card');
-      cards.forEach((card) => {
-        // use href to get the link
-        const innerCard = card.children[1].children[1].children[0] as HTMLAnchorElement;
-        card.setAttribute('href', "https://"+innerCard.innerText+"/");
-        card.setAttribute('target', '_blank');
-      });
-
       const activeMain = document.querySelector('button.notion-collection-view-tabs-content-item-active');
       console.log(activeMain.children[0].textContent);
 
