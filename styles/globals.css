@@ -309,6 +309,7 @@ position: relative;
 .notion-collection-card {
   background-color: transparent;
   transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .notion-collection-card:hover {
