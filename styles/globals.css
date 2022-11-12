@@ -122,6 +122,8 @@ position: relative;
 .notion-page-title .notion-page-icon-inline {
   margin-left: 0px;
   margin-right: 6px;
+  display: flex;
+  align-items: center;
 }
 
 .notion-collection-group-title, .notion-collection-view-type-icon {
