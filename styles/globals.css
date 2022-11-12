@@ -21,14 +21,12 @@ body, .notion-app, #__next {
 .notion-collection-card {
 position: relative;
 }
-.notion-collection-card-property:not(:first-child) {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  opacity: 0;
-  left: 0;
-  bottom: 0;
+
+.notion-collection-card-property:nth-child(2) {
+  display: none;
+}
+.notion-collection-card-property:nth-child(3) {
+  display: none;
 }
 
 .notion-property-url > form, .notion-property-url > form> input, .notion-property-url {
