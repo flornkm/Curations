@@ -648,6 +648,7 @@ export const NotionPage = ({
         <meta property='og:title' content={title} />
         <meta name='twitter:title' content={title} />
         <meta name='twitter:creator' content='@transitive_bs' />
+        
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div>

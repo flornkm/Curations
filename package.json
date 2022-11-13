@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^1.0.4",
+    "@vercel/analytics": "^0.1.4",
     "classnames": "^2.3.1",
     "got": "^12.0.2",
     "iconoir-react": "^5.4.0",
