@@ -120,6 +120,8 @@ position: relative;
 .notion-page-title .notion-page-icon-inline {
   margin-left: 0px;
   margin-right: 6px;
+  display: flex;
+  align-items: center;
 }
 
 .notion-collection-group-title, .notion-collection-view-type-icon {
@@ -309,6 +311,7 @@ position: relative;
 .notion-collection-card {
   background-color: transparent;
   transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .notion-collection-card:hover {
