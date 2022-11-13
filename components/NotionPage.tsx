@@ -318,10 +318,10 @@ export const NotionPage = ({
 
   useEffect(() => {
     setTimeout(() => {
-      const urls = document.querySelectorAll('.notion-property-url') as NodeListOf<HTMLAnchorElement>;
+      const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
       urls.forEach((url) => {
         const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
-        cardUrl.href = 'https://' + url.innerHTML + '/';
+        cardUrl.href = url.innerHTML;
         cardUrl.setAttribute('target', '_blank');
         console.log('URL', url.parentElement.parentElement.parentElement);
       });
@@ -478,10 +478,10 @@ export const NotionPage = ({
         }
 
         setTimeout(() => {
-          const urls = document.querySelectorAll('.notion-property-url') as NodeListOf<HTMLAnchorElement>;
+          const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
               urls.forEach((url) => {
                 const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
-                cardUrl.href = 'https://' + url.innerHTML + '/';
+                cardUrl.href = url.innerHTML;
                 cardUrl.setAttribute('target', '_blank');
                 console.log('URL', url.parentElement.parentElement.parentElement);
           });
