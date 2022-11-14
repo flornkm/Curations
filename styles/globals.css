@@ -350,6 +350,6 @@ position: relative;
 
 .notion-gallery-grid {
   border-top: none;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 32px;
 }
