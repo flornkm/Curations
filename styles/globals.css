@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/font/Inter-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/font/Inter-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/font/Inter-SemiBold.woff2');
+  font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +24,7 @@ body, .notion-app, #__next {
   margin: 0;
   background-color: #0D0D0D;
   color: #f5f5f5;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
 }
 
 .notion-header {
@@ -76,6 +94,7 @@ position: relative;
   justify-content: center;
   z-index: 1;
   border-bottom: 1px solid transparent;
+  font-weight: 500;
 }
 
 .subcategory > div > p.subActive {
@@ -261,6 +280,8 @@ position: relative;
   text-overflow: ellipsis;
   color: #f5f5f5;
   background-color: transparent;
+  line-height: 140%;
+  font-weight: 500;
 }
 
 .notion-collection-view-tabs-content-item-active {
