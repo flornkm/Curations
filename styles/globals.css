@@ -372,3 +372,25 @@ border-bottom-right-radius: 8px;
   grid-gap: 32px;
   grid-auto-rows: auto;
 }
+
+@media screen and (max-width: 970px) {
+  .notion-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .notion-full-width{
+    max-width: 100%;
+    overflow: auto;
+    --notion-max-width: calc(min(1920px, 98vw));
+    padding-left: calc(min(96px, 3vw));
+    padding-right: calc(min(96px, 3vw));
+  }
+
+  .notion-collection-view-type-title{
+    font-size: 12px;
+  }
+
+  .notion-collection-view-tabs-row{
+    width: 90%;
+  }
+} 
