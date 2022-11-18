@@ -518,7 +518,7 @@ export const NotionPage = ({
   useEffect(() => {
     setTimeout(() => {
       const nav = document.querySelector('.notion-collection-view-tabs-row') as HTMLDivElement;
-      nav.style.transition = 'top 0.1s ease-in-out';
+      nav.style.transition = 'top 0.1s cubic-bezier(0.61, 0, 0, 1.74) 0s';
       if (window.innerWidth < 971) {
         window.addEventListener('scroll', () => {  
           if (window.scrollY > 64) {
