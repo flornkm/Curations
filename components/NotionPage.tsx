@@ -145,7 +145,7 @@ export const NotionPage = ({
     const height = 24;
     category.forEach(element => {
       if (element === 'All') {
-        subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2 2 6.477 2 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 2.05S16 6 16 12c0 6-3 9.95-3 9.95M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5h18.74M2.63 8.5h18.74" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p class="subActive"> ' + element + ' </p>' + '</div>';
+        subcategory.innerHTML += '<div>' + `<svg class="svgActive" width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2 2 6.477 2 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 2.05S16 6 16 12c0 6-3 9.95-3 9.95M11 21.95S8 18 8 12c0-6 3-9.95 3-9.95M2.63 15.5h18.74M2.63 8.5h18.74" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p class="subActive"> ' + element + ' </p>' + '</div>';
       } else if (element === '3D Assets') {
         subcategory.innerHTML += '<div>' + `<svg width="${width}" height="${height}" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M21 7.353v9.294a.6.6 0 01-.309.525l-8.4 4.666a.6.6 0 01-.582 0l-8.4-4.666A.6.6 0 013 16.647V7.353a.6.6 0 01.309-.524l8.4-4.667a.6.6 0 01.582 0l8.4 4.667a.6.6 0 01.309.524z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.528 7.294l8.18 4.544a.6.6 0 00.583 0l8.209-4.56M12 21v-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>` + '<p>' + element + ' </p>' + '</div>';
       } else if (element === 'Design Inspiration') {
@@ -326,7 +326,7 @@ export const NotionPage = ({
         const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
         cardUrl.href = url.innerHTML;
         cardUrl.setAttribute('target', '_blank');
-        console.log('URL', url.parentElement.parentElement.parentElement);
+        // console.log('URL', url.parentElement.parentElement.parentElement);
       });
     }, 200);
 
@@ -351,10 +351,15 @@ export const NotionPage = ({
                   subcategory.addEventListener('click', (e) => {
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
                     target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                     console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
@@ -385,10 +390,15 @@ export const NotionPage = ({
                 subcategory.addEventListener('click', (e) => {
                   const target = e.target as HTMLButtonElement;
                   const subActives = document.querySelectorAll('.subActive');
-                  subActives.forEach((subActive) => {
-                    subActive.classList.remove('subActive');
-                  });
-                  target.classList.add('subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
+                    target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                   console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
@@ -419,10 +429,15 @@ export const NotionPage = ({
                 subcategory.addEventListener('click', (e) => {
                   const target = e.target as HTMLButtonElement;
                   const subActives = document.querySelectorAll('.subActive');
-                  subActives.forEach((subActive) => {
-                    subActive.classList.remove('subActive');
-                  });
-                  target.classList.add('subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
+                    target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                   console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
@@ -453,10 +468,15 @@ export const NotionPage = ({
                 subcategory.addEventListener('click', (e) => {
                   const target = e.target as HTMLButtonElement;
                   const subActives = document.querySelectorAll('.subActive');
-                  subActives.forEach((subActive) => {
-                    subActive.classList.remove('subActive');
-                  });
-                  target.classList.add('subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
+                    subActives.forEach((subActive) => {
+                      subActive.classList.remove('subActive');
+                    });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
+                    target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                   console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
@@ -497,6 +517,22 @@ export const NotionPage = ({
 
   useEffect(() => {
     setTimeout(() => {
+      const nav = document.querySelector('.notion-collection-view-tabs-row') as HTMLDivElement;
+      nav.style.transition = 'top 0.1s ease-in-out';
+      if (window.innerWidth < 971) {
+        window.addEventListener('scroll', () => {  
+          if (window.scrollY > 64) {
+            nav.style.top = '32px';
+          } else {
+            nav.style.top = '96px';
+          }
+        })
+    }
+    }, 200);
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
       const activeMain = document.querySelector('button.notion-collection-view-tabs-content-item-active');
       console.log(activeMain.children[0].textContent);
 
@@ -509,10 +545,15 @@ export const NotionPage = ({
                   subcategory.addEventListener('click', (e) => {
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
                     target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                     console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
@@ -539,10 +580,15 @@ export const NotionPage = ({
                   subcategory.addEventListener('click', (e) => {
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
                     target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                     console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
@@ -569,10 +615,15 @@ export const NotionPage = ({
                   subcategory.addEventListener('click', (e) => {
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
                     target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                     console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
@@ -599,10 +650,15 @@ export const NotionPage = ({
                   subcategory.addEventListener('click', (e) => {
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
+                    const svgActives = document.querySelectorAll('.svgActive');
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
+                    svgActives.forEach((svgActive) => {
+                      svgActive.classList.remove('svgActive');
+                    });
                     target.classList.add('subActive');
+                    target.previousElementSibling.classList.add('svgActive');
                     console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
