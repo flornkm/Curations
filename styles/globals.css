@@ -331,7 +331,7 @@ border-bottom-right-radius: 8px;
   flex-direction: column;
   width: 100%;
   background-color: #292929;
-  padding: 32px;
+  padding: 24px;
   border-radius: 16px;
 }
 
@@ -355,7 +355,7 @@ border-bottom-right-radius: 8px;
 .contribute-form-send > input {
   width: 100%;
   background-color: #292929;
-  border: 1px solid #3F3F3F;
+  border: 2px solid #3F3F3F;
   color: white;
   padding: 16px;
   border-radius: 8px;
@@ -372,7 +372,7 @@ border-color: #666666;
   background-color: #3F3F3F;
   border: 1px solid #3F3F3F;
   color: white;
-  padding: 16px;
+  padding: 12px 32px 12px 32px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
