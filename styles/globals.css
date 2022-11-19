@@ -287,6 +287,106 @@ border-bottom-right-radius: 8px;
   transform: rotate(180deg);
 }
 
+.contact-icon {
+  position: absolute;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.contact-wrapper {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0d0d0dcd;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+}
+
+.close {
+  position: absolute;
+  width: 60%;
+  cursor: pointer;
+  left: 0;
+  height: 100%;
+}
+
+.contact {
+  width: 40%;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  height: 100%;
+  background-color: #0d0d0d;
+  padding: 48px;
+  border-left: #3F3F3F 1px solid;
+}
+
+.contribute-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #292929;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.contribute-form > h4 {
+  margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.contribute-form > p {
+  font-size: 12px;
+  color: #979797;
+}
+
+.contribute-form-send {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+
+.contribute-form-send > input {
+  width: 100%;
+  background-color: #292929;
+  border: 1px solid #3F3F3F;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.contribute-form-send > input:focus {
+outline: none;
+border-color: #666666;
+}
+
+.contribute-form-send > button {
+  background-color: #3F3F3F;
+  border: 1px solid #3F3F3F;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact > h3 {
+  font-size: 24px;
+}
+
+.contact > p {
+  color: #979797;
+}
+
 .left:hover {
   transform: rotate(180deg) scale(1.1);
 }
@@ -353,7 +453,7 @@ border-bottom-right-radius: 8px;
   font-size: 24px;
   display: flex;
   align-items: center;
-  
+  position: relative;
 }
 
 .notion-title::before {

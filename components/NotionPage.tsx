@@ -312,6 +312,75 @@ export const NotionPage = ({
     g.block = block
   } 
 
+  useEffect(() => {
+    // Animate Contact Wrapper
+    const contactWrapper = document.querySelector('.contact-wrapper') as HTMLElement;
+    const closeField = document.querySelector('.close') as HTMLElement;
+    const notionTitle = document.querySelector('.notion-title') as HTMLElement;
+    contactWrapper.style.transition = 'all 0.3s ease-in-out';
+    contactWrapper.style.right = '-100%';
+    contactWrapper.style.opacity = '0';
+    contactWrapper.style.pointerEvents = 'none';
+    // insert contactIcon in the notion title
+    const check= document.querySelector('.contact-icon');
+    if (check === null) {
+      const contactIcon = '<div class="contact-icon"><svg width="32px" height="32px" stroke-width="1.3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M6 12h6m6 0h-6m0 0V6m0 6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>';
+      notionTitle.innerHTML += contactIcon;
+    }
+    const contact = document.querySelector('.contact-icon') as HTMLElement;
+    contact.style.transition = 'all 0.2s ease-in-out';
+    let clickCounter = 0;
+    contact.addEventListener('click', () => {
+      if (clickCounter === 0) {
+      contact.style.rotate = '45deg';
+      contactWrapper.style.right = '0%';
+      contactWrapper.style.opacity = '1';
+      contactWrapper.style.pointerEvents = 'all';
+      clickCounter++;
+      } else {
+        contact.style.rotate = '0deg';
+        contactWrapper.style.right = '-100%';
+        contactWrapper.style.opacity = '0';
+        contactWrapper.style.pointerEvents = 'none';
+        clickCounter--;
+      }
+    })
+    closeField.addEventListener('click', () => {
+      contact.style.rotate = '0deg';
+      contactWrapper.style.right = '-100%';
+      contactWrapper.style.opacity = '0';
+      contactWrapper.style.pointerEvents = 'none';
+      clickCounter--;
+    });
+
+    const submitButton = document.querySelector('.submitButton') as HTMLElement;
+    const inputLink = document.querySelector('.inputLink') as HTMLInputElement;
+
+    submitButton.addEventListener('click', () => {
+      const link = inputLink.value;
+      if (link === '') {
+        alert('Please enter your link');
+      } else {
+      // if link is not empty, send it to the server
+      fetch("https://discord.com/api/webhooks/1043273738868760686/5nNAF5nCuApaThv8KfdvOz1kPat56KNs_kVbQHjzu5J3EPH8T4qlOKylHmgQEEW0BFwC", {
+        body: JSON.stringify({
+          content: `${link}`,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      })
+        .then(function (res) {
+          console.log(res);
+        })
+        .catch(function (res) {
+          console.log(res);
+        }); 
+      }
+    })
+  }, [])
+
   // list all cards with class name .notion-property-multi_select-item notion-item-default
   // const cards = document.querySelectorAll('.notion-collection-card-property:not(:first-child)');
 
@@ -733,6 +802,25 @@ export const NotionPage = ({
         // NOTE: custom images will only take effect if previewImages is true and
         // if the image has a valid preview image defined in recordMap.preview_images[src]
       />
+        <div className='contact-wrapper'>
+          <div className='close'>
+          </div>
+          <div className='contact'>
+            <h3> About </h3>
+            <p> Curations was founded with one purpose in mind: Enable Designers and Developers to elevate their work by providing them with the best resources possible. </p>
+            <p>This is a free open source project and we would love you to be part of this. If you know any helpful resources, just submit them below.</p>
+            <br/><br/>
+            <div className='contribute-form'>
+                <h4> Submit resource  </h4>
+                <p>Each link will be reviewed by us before implementation</p>
+                <br/>
+                <div className='contribute-form-send'>
+                  <input className='inputLink' placeholder='Enter link'></input>
+                  <button className='submitButton'>Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
