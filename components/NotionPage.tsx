@@ -412,12 +412,6 @@ export const NotionPage = ({
         },
         method: "POST",
       })
-        .then(function (res) {
-          console.log(res);
-        })
-        .catch(function (res) {
-          console.log(res);
-        }); 
         contributeForm.style.display = 'none';
         thanksWrapper.style.display = 'flex';
       } else if (link === '') {
