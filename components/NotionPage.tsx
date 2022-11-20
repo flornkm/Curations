@@ -403,7 +403,7 @@ export const NotionPage = ({
       const thanksWrapper = document.querySelector('.thanks-wrapper') as HTMLElement;
       if (isValidHttpUrl(link)) {
       // if link is not empty, send it to the server
-      fetch("https://discord.com/api/webhooks/1043273738868760686/5nNAF5nCuApaThv8KfdvOz1kPat56KNs_kVbQHjzu5J3EPH8T4qlOKylHmgQEEW0BFwC", {
+      fetch(process.env.DISCORD_HOOK, {
         body: JSON.stringify({
           content: `${link}`,
         }),
