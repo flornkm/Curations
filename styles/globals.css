@@ -499,6 +499,13 @@ border-color: #666666;
   font-size: 12px;
 }
 
+.privacy-link > a{
+  color: #494949;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
 /* .submitButton::after {
   content: "";
   position: absolute;
