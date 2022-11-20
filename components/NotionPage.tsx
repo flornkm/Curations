@@ -12,6 +12,7 @@ import TweetEmbed from 'react-tweet-embed'
 
 import { Loading } from './Loading'
 import { useEffect } from 'react'
+import { useState } from 'react'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -317,10 +318,12 @@ export const NotionPage = ({
     const contactWrapper = document.querySelector('.contact-wrapper') as HTMLElement;
     const closeField = document.querySelector('.close') as HTMLElement;
     const notionTitle = document.querySelector('.notion-title') as HTMLElement;
+    const overlappingNav = document.querySelector('.notion-collection-view-tabs-row') as HTMLElement;
     contactWrapper.style.transition = 'all 0.3s ease-in-out';
     contactWrapper.style.right = '-100%';
     contactWrapper.style.opacity = '0';
     contactWrapper.style.pointerEvents = 'none';
+    document.body.style.overflow = 'initial';
     // insert contactIcon in the notion title
     const check= document.querySelector('.contact-icon');
     if (check === null) {
@@ -336,6 +339,11 @@ export const NotionPage = ({
       contactWrapper.style.right = '0%';
       contactWrapper.style.opacity = '1';
       contactWrapper.style.pointerEvents = 'all';
+      // disable scroll
+      document.body.style.overflow = 'hidden';
+      if (window.innerWidth < 971) {
+        overlappingNav.style.display = 'none';
+      }
       clickCounter++;
       } else {
         contact.style.rotate = '0deg';
@@ -343,6 +351,10 @@ export const NotionPage = ({
         contactWrapper.style.opacity = '0';
         contactWrapper.style.pointerEvents = 'none';
         clickCounter--;
+        document.body.style.overflow = 'initial';
+        if (window.innerWidth < 971) {
+          overlappingNav.style.display = 'flex';
+        }
       }
     })
     closeField.addEventListener('click', () => {
@@ -405,9 +417,9 @@ export const NotionPage = ({
           console.log(res);
         }); 
       } else if (link === '') {
-        alert('Please enter a link');
+        setState('Please enter a link');
       } else {
-        alert('Please enter a valid link');
+        setState('Please enter a valid link');
       }
     })
   }, [])
@@ -438,7 +450,8 @@ export const NotionPage = ({
       mainNav.addEventListener('click', (e) => {
         // Typescript HTML Element button element
         const target = e.target as HTMLButtonElement;
-        console.log(target.textContent);
+
+        window.scrollTo(0, 0);
 
         if (target.textContent == 'Productivity') {
           detachSubcategory();
@@ -782,6 +795,8 @@ export const NotionPage = ({
     }, 200);
   }, [])
 
+  const [myState, setState] = useState('');
+
   return (
     <>
       <Head>
@@ -837,21 +852,41 @@ export const NotionPage = ({
           <div className='close'>
           </div>
           <div className='contact'>
-            <h3> About </h3>
-            <p> Curations was founded with one purpose in mind: Enable Designers and Developers to elevate their work by providing them with the best resources possible. </p>
-            <p>This is a free open source project and we would love you to be part of this. If you know any helpful resources, just submit them below.</p>
-            <br/><br/>
-            <div className='contribute-form'>
-                <h4> Submit resource  </h4>
-                <p>Each link will be reviewed by us before implementation</p>
-                <br/>
-                <div className='contribute-form-send'>
-                  <input className='inputLink' placeholder='Enter link'></input>
-                  <div className='buttonContent'>
-                    <div className='buttonGradient'>
+            <div>
+              <h3> About </h3>
+              <p> Curations was founded with one purpose in mind: Enable Designers and Developers to elevate their work by providing them with the best resources possible. </p>
+              <p>This is a free open source project and we would love you to be part of this. If you know any helpful resources, just submit them below.</p>
+              <br/><br/>
+              <div className='contribute-form'>
+                <div className='icontitle'>
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="8.48535" width="12" height="12" rx="2" transform="rotate(-45 0 8.48535)" fill="#FC4733"/>
+                  </svg>
+                  <h4> Submit resource  </h4>
+                </div>
+                  <p>Each link will be reviewed by us before implementation</p>
+                  <br/>
+                  <div className='contribute-form-send'>
+                    <input className='inputLink' placeholder='Enter link'></input>
+                    <div className='buttonContent'>
+                      <div className='buttonGradient'>
+                      </div>
+                      <button className='submitButton'>Submit</button>
                     </div>
-                    <button className='submitButton'>Submit</button>
-                  </div>
+                </div>
+                <p className='status'>{myState}</p>
+              </div>
+            </div>
+            <div className='footer'>
+              <p>You can also contribute with: </p>
+              <div className='social'>
+                <a href='https://twitter.com/curationshq' target='_blank'>Discord</a>
+                <a href='https://twitter.com/curationshq' target='_blank'>Twitter</a>
+                <a href='https://twitter.com/curationshq' target='_blank'>GitHub</a>
+              </div>
+              <p>This project was built by antonstallboerger.com, floriankiem.com and nilseller.com</p>
+              <div className='privacy'>
+                <a href='https://twitter.com/curationshq' target='_blank'>Privacy Policy</a>
               </div>
             </div>
           </div>

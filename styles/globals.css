@@ -199,6 +199,10 @@ border-bottom-right-radius: 8px;
     translate: all ease-in-out 0.2s;
   }
 
+  div.contact {
+    width: 100%;
+  }
+
   .notion-page-content-inner > div:nth-child(1):after {
     content: "";
     position: absolute;
@@ -324,6 +328,14 @@ border-bottom-right-radius: 8px;
   background-color: #0d0d0d;
   padding: 48px;
   border-left: #3F3F3F 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.contact > p {
+  color: #979797;
 }
 
 .contribute-form {
@@ -335,7 +347,7 @@ border-bottom-right-radius: 8px;
   border-radius: 16px;
 }
 
-.contribute-form > h4 {
+.contribute-form > div > h4 {
   margin-block-start: 0;
     margin-block-end: 0;
     font-size: 18px;
@@ -344,12 +356,14 @@ border-bottom-right-radius: 8px;
 .contribute-form > p {
   font-size: 14px;
   color: #979797;
+  margin: 0;
 }
 
 .contribute-form-send {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  margin-bottom: 16px;
 }
 
 
@@ -378,7 +392,20 @@ border-color: #666666;
   font-size: 14px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
+  opacity: 0.9; 
+}
+
+.footer {
+  font-size: 12px;
   
+}
+
+.icontitle {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .buttonContent {
@@ -388,11 +415,12 @@ border-color: #666666;
 .submitButton {
   position: relative;
   z-index: 100;
+  height: 100%;
 }
 
 .buttonGradient {
-  width: calc(100% + 3px);
-  height: calc(100% + 2px);
+  width: calc(100% + 4px);
+  height: calc(100% + 3px);
   pointer-events: none;
   content: "";
   position: absolute;
@@ -402,6 +430,7 @@ border-color: #666666;
   border-radius: 8px;
   background: linear-gradient(135deg, rgba(139,139,139,1) 0%, rgba(13,13,13,0) 50%);
   transition: all 0.3s ease;
+  border-radius: 9px;
 }
 
 /* .submitButton::after {
