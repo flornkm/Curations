@@ -4,6 +4,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer({
+  env: {
+    DISCORD_HOOK: process.env.DISCORD_HOOK
+  },
   staticPageGenerationTimeout: 300,
   images: {
     domains: [
