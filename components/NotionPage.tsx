@@ -412,8 +412,22 @@ export const NotionPage = ({
         },
         method: "POST",
       })
-        contributeForm.style.display = 'none';
-        thanksWrapper.style.display = 'flex';
+      .then((response) => {
+      if (response.status === 204) {
+        setTimeout(() => {
+          contributeForm.style.display = 'none';
+          thanksWrapper.style.display = 'flex';
+        }, 1000);
+        setTimeout(() => {
+          thanksWrapper.style.display = 'none';
+          contributeForm.style.display = 'flex';
+          inputLink.value = '';
+        }, 5000);
+      }
+      })
+      .catch ((error) => {
+        console.log(error);
+      })
       } else if (link === '') {
         setState('Please enter a link');
       } else {
