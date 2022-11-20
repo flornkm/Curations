@@ -305,6 +305,7 @@ border-bottom-right-radius: 8px;
 
 .contact-wrapper {
   position: fixed;
+  display: flex;
   z-index: 99;
   top: 0;
   left: 0;
@@ -316,16 +317,12 @@ border-bottom-right-radius: 8px;
 }
 
 .close {
-  position: absolute;
-  width: 60%;
-  cursor: pointer;
-  left: 0;
+  flex-grow: 1;
   height: 100%;
 }
 
 .contact {
   max-width: 650px;
-  position: absolute;
   z-index: 100;
   right: 0;
   height: 100%;
