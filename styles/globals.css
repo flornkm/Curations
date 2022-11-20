@@ -359,18 +359,18 @@ border-bottom-right-radius: 8px;
   padding: 24px;
   border-radius: 16px;
   font-size: 14px;
-  color: #979797;
+  color: #f5f5f5;
   margin: 0;
 }
 
 .thanks-wrapper {
   display: none;
   font-size: 24px;
-  color: #979797;
+  color: #f5f5f5;
   font-weight: 600;
   text-align: center; 
   border: 1px solid #2e2e2e;
-  box-shadow: 0px 0px 50px 10px #272727;
+  box-shadow: 0px 0px 50px 10px #292929;
 }
 
 .contribute-form > div > h4 {
