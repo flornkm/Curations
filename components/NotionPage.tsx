@@ -353,6 +353,25 @@ export const NotionPage = ({
       clickCounter--;
     });
 
+    const buttonContent = document.querySelector('.buttonContent') as HTMLElement;
+ 
+    // Log Mouse over buttonContent
+    buttonContent.addEventListener('mousemove', (e) => {
+      var x = e.clientX;
+      var y = e.clientY;
+       
+      // log the mouse position in the console on top of the element buttonContent with left top corner as 0,0
+      // make the x and y position relative to the buttonContent element
+      x = x - buttonContent.getBoundingClientRect().left;
+      y = y - buttonContent.getBoundingClientRect().top;
+      // convert into percentage
+      x = x / buttonContent.offsetWidth * 100;
+      y = y / buttonContent.offsetHeight * 100;
+
+      const buttonGradient = document.querySelector('.buttonGradient') as HTMLElement;
+      buttonGradient.style.background = `radial-gradient(circle at ${Math.round(x)}% ${Math.round(y)}%, #8b8b8b 0%, #00000000 70%)`;
+    });
+
     const submitButton = document.querySelector('.submitButton') as HTMLElement;
     const inputLink = document.querySelector('.inputLink') as HTMLInputElement;
 
@@ -816,7 +835,11 @@ export const NotionPage = ({
                 <br/>
                 <div className='contribute-form-send'>
                   <input className='inputLink' placeholder='Enter link'></input>
-                  <button className='submitButton'>Submit</button>
+                  <div className='buttonContent'>
+                    <div className='buttonGradient'>
+                    </div>
+                    <button className='submitButton'>Submit</button>
+                  </div>
               </div>
             </div>
           </div>
