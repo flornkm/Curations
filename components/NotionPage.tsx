@@ -375,11 +375,19 @@ export const NotionPage = ({
     const submitButton = document.querySelector('.submitButton') as HTMLElement;
     const inputLink = document.querySelector('.inputLink') as HTMLInputElement;
 
+    function isValidHttpUrl(string) {
+      let url;
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;
+      }
+      return url.protocol === "http:" || url.protocol === "https:";
+    }
+
     submitButton.addEventListener('click', () => {
       const link = inputLink.value;
-      if (link === '') {
-        alert('Please enter your link');
-      } else {
+      if (isValidHttpUrl(link)) {
       // if link is not empty, send it to the server
       fetch("https://discord.com/api/webhooks/1043273738868760686/5nNAF5nCuApaThv8KfdvOz1kPat56KNs_kVbQHjzu5J3EPH8T4qlOKylHmgQEEW0BFwC", {
         body: JSON.stringify({
@@ -396,6 +404,10 @@ export const NotionPage = ({
         .catch(function (res) {
           console.log(res);
         }); 
+      } else if (link === '') {
+        alert('Please enter a link');
+      } else {
+        alert('Please enter a valid link');
       }
     })
   }, [])
