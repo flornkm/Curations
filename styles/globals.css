@@ -326,7 +326,10 @@ border-bottom-right-radius: 8px;
   right: 0;
   height: 100%;
   background-color: #0d0d0d;
-  padding: 48px;
+  padding-top: 48px;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-bottom: 48px;
   border-left: #3F3F3F 1px solid;
   display: flex;
   flex-direction: column;
@@ -458,12 +461,16 @@ border-color: #666666;
   flex-direction: row;
   gap: 32px;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .social > a {
   color: #979797;
   text-decoration: none;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .privacy > a {
