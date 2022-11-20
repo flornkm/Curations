@@ -320,7 +320,7 @@ border-bottom-right-radius: 8px;
 }
 
 .contact {
-  width: 40%;
+  max-width: 550px;
   position: absolute;
   z-index: 100;
   right: 0;
@@ -345,25 +345,24 @@ border-bottom-right-radius: 8px;
   background-color: #292929;
   padding: 24px;
   border-radius: 16px;
+  font-size: 14px;
+  color: #979797;
+  margin: 0;
 }
 
 .contribute-form > div > h4 {
   margin-block-start: 0;
     margin-block-end: 0;
     font-size: 18px;
-}
-
-.contribute-form > p {
-  font-size: 14px;
-  color: #979797;
-  margin: 0;
+    color: #f5f5f5;
 }
 
 .contribute-form-send {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 
@@ -371,10 +370,10 @@ border-bottom-right-radius: 8px;
   width: 100%;
   background-color: #292929;
   border: 2px solid #3F3F3F;
-  color: white;
-  padding: 16px;
+  color: #f5f5f5;
+  padding: 12px 16px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -389,15 +388,15 @@ border-color: #666666;
   color: white;
   padding: 12px 32px 12px 32px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
   opacity: 0.9; 
 }
 
-.footer {
+.footer > p{
   font-size: 12px;
-  
+  color: #494949;
 }
 
 .icontitle {
@@ -405,7 +404,6 @@ border-color: #666666;
   flex-direction: row;
   gap: 8px;
   align-items: center;
-  margin-bottom: 8px;
 }
 
 .buttonContent {
@@ -431,6 +429,47 @@ border-color: #666666;
   background: linear-gradient(135deg, rgba(139,139,139,1) 0%, rgba(13,13,13,0) 50%);
   transition: all 0.3s ease;
   border-radius: 9px;
+}
+
+.about-paragraph {
+  font-size: 16px;
+  line-height: 140%;
+  color: #979797;
+  font-weight: 400;
+}
+
+.about-title{
+  font-size: 24px;
+  line-height: 140%;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.status {
+  font-size: 14px;
+  line-height: 140%;
+  color: rgb(252, 71, 51);
+  font-weight: 400;
+  margin: 0%;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+}
+
+.social > a {
+  color: #979797;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.privacy > a {
+  color: #494949;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 /* .submitButton::after {

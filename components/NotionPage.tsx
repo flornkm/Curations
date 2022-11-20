@@ -853,9 +853,9 @@ export const NotionPage = ({
           </div>
           <div className='contact'>
             <div>
-              <h3> About </h3>
-              <p> Curations was founded with one purpose in mind: Enable Designers and Developers to elevate their work by providing them with the best resources possible. </p>
-              <p>This is a free open source project and we would love you to be part of this. If you know any helpful resources, just submit them below.</p>
+              <h3 className = 'about-title'> About </h3>
+              <p className ='about-paragraph'> Curations was founded with one purpose in mind:<br/> Enable Designers and Developers to elevate their work <br/> by providing them with the best resources possible. </p>
+              <p className ='about-paragraph' >This is a free open source project and we would <br/>love you to be part of this. If you know any helpful resources, just submit them below.</p>
               <br/><br/>
               <div className='contribute-form'>
                 <div className='icontitle'>
@@ -865,7 +865,6 @@ export const NotionPage = ({
                   <h4> Submit resource  </h4>
                 </div>
                   <p>Each link will be reviewed by us before implementation</p>
-                  <br/>
                   <div className='contribute-form-send'>
                     <input className='inputLink' placeholder='Enter link'></input>
                     <div className='buttonContent'>
@@ -884,7 +883,7 @@ export const NotionPage = ({
                 <a href='https://twitter.com/curationshq' target='_blank'>Twitter</a>
                 <a href='https://twitter.com/curationshq' target='_blank'>GitHub</a>
               </div>
-              <p>This project was built by antonstallboerger.com, floriankiem.com and nilseller.com</p>
+              <p>Built by antonstallboerger.com, floriankiem.com and nilseller.com</p>
               <div className='privacy'>
                 <a href='https://twitter.com/curationshq' target='_blank'>Privacy Policy</a>
               </div>
