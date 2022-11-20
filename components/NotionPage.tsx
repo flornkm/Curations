@@ -858,8 +858,8 @@ export const NotionPage = ({
           <div className='contact'>
             <div>
               <h3 className = 'about-title'> About </h3>
-              <p className ='about-paragraph'> Curations was founded with one purpose in mind:<br/> Enable Designers and Developers to elevate their work <br/> by providing them with the best resources possible. </p>
-              <p className ='about-paragraph' >This is a free open source project and we would <br/>love you to be part of this. If you know any helpful resources, just submit them below.</p>
+              <p className ='about-paragraph'> Curations was founded with one purpose in mind:<br/> Enable Designers and Developers to elevate their work by providing them with the best resources possible. </p>
+              <p className ='about-paragraph' >This is a free open source project and we would love you to be part of this. If you know any helpful resources, just submit them below.</p>
               <br/><br/>
               <div className='contribute-form'>
                 <div className='icontitle'>
