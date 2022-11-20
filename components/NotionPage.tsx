@@ -399,6 +399,8 @@ export const NotionPage = ({
 
     submitButton.addEventListener('click', () => {
       const link = inputLink.value;
+      const contributeForm = document.querySelector('.contribute-form') as HTMLElement;
+      const thanksWrapper = document.querySelector('.thanks-wrapper') as HTMLElement;
       if (isValidHttpUrl(link)) {
       // if link is not empty, send it to the server
       fetch("https://discord.com/api/webhooks/1043273738868760686/5nNAF5nCuApaThv8KfdvOz1kPat56KNs_kVbQHjzu5J3EPH8T4qlOKylHmgQEEW0BFwC", {
@@ -416,6 +418,8 @@ export const NotionPage = ({
         .catch(function (res) {
           console.log(res);
         }); 
+        contributeForm.style.display = 'none';
+        thanksWrapper.style.display = 'flex';
       } else if (link === '') {
         setState('Please enter a link');
       } else {
@@ -875,17 +879,20 @@ export const NotionPage = ({
                 </div>
                 <p className='status'>{myState}</p>
               </div>
+              <div className='thanks-wrapper'>
+                  <h4>Thank you!</h4>
+              </div>
             </div>
             <div className='footer'>
               <p>You can also contribute with: </p>
               <div className='social'>
-                <a href='https://twitter.com/curationshq' target='_blank'>Discord</a>
+                <a href='https://twitter.com/curationshq' target='_blank'><svg width="24px" height="24px" stroke-width="1.3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Discord</a>
                 <a href='https://twitter.com/curationshq' target='_blank'>Twitter</a>
                 <a href='https://twitter.com/curationshq' target='_blank'>GitHub</a>
               </div>
               <p>Built by antonstallboerger.com, floriankiem.com and nilseller.com</p>
               <div className='privacy'>
-                <a href='https://twitter.com/curationshq' target='_blank'>Privacy Policy</a>
+                <a href='http://localhost:3000/privacy' target='_blank'>Privacy Policy</a>
               </div>
             </div>
           </div>

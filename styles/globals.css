@@ -172,6 +172,10 @@ position: relative;
     -webkit-box-shadow: 0px 12px 24px -8px #0D0D0D; 
     box-shadow: 0px 12px 24px -8px #0D0D0D;
   }
+
+  .contact > div{
+    max-width: 85%;
+  }
 }
 
 .notion-collection-card-cover span, .notion-collection-card-cover img {
@@ -320,7 +324,7 @@ border-bottom-right-radius: 8px;
 }
 
 .contact {
-  max-width: 550px;
+  max-width: 650px;
   position: absolute;
   z-index: 100;
   right: 0;
@@ -334,11 +338,17 @@ border-bottom-right-radius: 8px;
   
 }
 
+.privacy {
+  width: 80%;
+  margin: 0 auto;
+  padding: 32px 0 32px 0;
+}
+
 .contact > p {
   color: #979797;
 }
 
-.contribute-form {
+.contribute-form, .thanks-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -348,6 +358,16 @@ border-bottom-right-radius: 8px;
   font-size: 14px;
   color: #979797;
   margin: 0;
+}
+
+.thanks-wrapper {
+  display: none;
+  font-size: 24px;
+  color: #979797;
+  font-weight: 600;
+  text-align: center; 
+  border: 1px solid #2e2e2e;
+  box-shadow: 0px 0px 50px 10px #272727;
 }
 
 .contribute-form > div > h4 {
@@ -672,16 +692,23 @@ border-color: #666666;
   display: flex;
   align-items: center;
   position: relative;
+  visibility: hidden;
+}
+
+.notion-title > * {
+  visibility: visible;
 }
 
 .notion-title::before {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 256px;
+  height: 28px;
   margin-right: 8px;
-  background-image: url("/favicon.png");
+  background-image: url("../public/curations_logo.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  visibility: visible;
 }
 
 .notion-page-no-cover.notion-page-has-image-icon {
