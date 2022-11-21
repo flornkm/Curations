@@ -403,7 +403,7 @@ export const NotionPage = ({
       const thanksWrapper = document.querySelector('.thanks-wrapper') as HTMLElement;
       if (isValidHttpUrl(link)) {
       // if link is not empty, send it to the server
-      fetch("https://discord.com/api/webhooks/1043273738868760686/5nNAF5nCuApaThv8KfdvOz1kPat56KNs_kVbQHjzu5J3EPH8T4qlOKylHmgQEEW0BFwC", {
+      fetch(process.env.DISCORD_HOOK, {
         body: JSON.stringify({
           content: `${link}`,
         }),
@@ -412,14 +412,22 @@ export const NotionPage = ({
         },
         method: "POST",
       })
-        .then(function (res) {
-          console.log(res);
-        })
-        .catch(function (res) {
-          console.log(res);
-        }); 
-        contributeForm.style.display = 'none';
-        thanksWrapper.style.display = 'flex';
+      .then((response) => {
+      if (response.status === 204) {
+        setTimeout(() => {
+          contributeForm.style.display = 'none';
+          thanksWrapper.style.display = 'flex';
+        }, 1000);
+        setTimeout(() => {
+          thanksWrapper.style.display = 'none';
+          contributeForm.style.display = 'flex';
+          inputLink.value = '';
+        }, 5000);
+      }
+      })
+      .catch ((error) => {
+        console.log(error);
+      })
       } else if (link === '') {
         setState('Please enter a link');
       } else {
