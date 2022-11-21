@@ -203,8 +203,13 @@ border-bottom-right-radius: 8px;
     translate: all ease-in-out 0.2s;
   }
 
+  .contact-wrapper {
+    width: 100%;
+  }
+
   div.contact {
     width: 100%;
+    overflow-y: scroll;
   }
 
   .notion-page-content-inner > div:nth-child(1):after {
