@@ -324,7 +324,7 @@ border-bottom-right-radius: 8px;
 }
 
 .contact {
-  max-width: 650px;
+  max-width: 600px;
   position: absolute;
   z-index: 100;
   right: 0;
@@ -333,7 +333,7 @@ border-bottom-right-radius: 8px;
   padding-top: 48px;
   padding-right: 48px;
   padding-left: 48px;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
   border-left: #3F3F3F 1px solid;
   display: flex;
   flex-direction: column;
