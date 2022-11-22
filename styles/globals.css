@@ -508,6 +508,20 @@ border-color: #666666;
   margin: 0;
   padding: 0;
 }
+
+.privacy-link > a:hover{
+  color: #676767;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.privacy-link {
+  padding-bottom: 32px;
+  display: flex;
+  gap: 16px;
+}
 /* .submitButton::after {
   content: "";
   position: absolute;
