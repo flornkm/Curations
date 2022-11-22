@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Page() {
     return (
         <div className='privacy'>
-            <a href="http://localhost:3000/">
+            <a href="https://curations.tech/">
                 <Image src="/curations_logo.svg" alt="curations" width={128} height={100} />
             </a>
             <h1>Privacy Policy</h1>

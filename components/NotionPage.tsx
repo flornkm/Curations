@@ -904,8 +904,8 @@ export const NotionPage = ({
         </div>
       </div>
       <div className='notion-full-width privacy-link'>
-        <a href='http://localhost:3000/legal-notice'>Legal Notice</a>
-        <a href='http://localhost:3000/privacy-policy'>Privacy Policy</a>
+        <a href='./legal-notice'>Legal Notice</a>
+        <a href='./privacy-policy'>Privacy Policy</a>
       </div>
     </>
   )
