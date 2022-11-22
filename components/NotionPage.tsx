@@ -363,6 +363,7 @@ export const NotionPage = ({
       contactWrapper.style.opacity = '0';
       contactWrapper.style.pointerEvents = 'none';
       clickCounter--;
+      document.body.style.overflow = 'initial';
     });
 
     const buttonContent = document.querySelector('.buttonContent') as HTMLElement;
