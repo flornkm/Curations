@@ -650,7 +650,7 @@ export const NotionPage = ({
           if (window.scrollY > 64) {
             nav.style.top = '32px';
           } else {
-            nav.style.top = '96px';
+            nav.style.top = '80px';
           }
         })
     }

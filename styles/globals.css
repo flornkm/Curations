@@ -188,7 +188,7 @@ border-bottom-right-radius: 8px;
     justify-content: center;
     gap: 4px;
     left: 50%;
-    top: 96px;
+    top: 80px;
     transform: translateX(-50%);
     position: fixed;
     margin: 0 auto;
@@ -747,6 +747,10 @@ border-color: #666666;
 
 .notion-page-no-cover.notion-page-has-image-icon {
   padding-top: 0;
+}
+
+.notion-page-no-cover {
+  margin-top: 0 !important;
 }
 
 .notion-collection-card {
