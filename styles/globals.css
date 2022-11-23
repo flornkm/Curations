@@ -424,8 +424,13 @@ border-color: #666666;
 }
 
 .footer > p{
-  font-size: 12px;
+  font-size: 14px;
   color: #494949;
+}
+
+.footer > p > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .icontitle {
