@@ -333,8 +333,8 @@ border-bottom-right-radius: 8px;
   height: 100%;
   background-color: #0d0d0d;
   padding-top: 48px;
-  padding-right: 48px;
-  padding-left: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
   padding-bottom: 24px;
   border-left: #3F3F3F 1px solid;
   display: flex;
@@ -794,5 +794,50 @@ border-color: #666666;
 
   .notion-collection-view-tabs-row{
     width: 90%;
+  }
+
+  /*about page mobile*/
+  .about-paragraph{
+    font-size: 14px;
+  }
+  .contribute-form-send{
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .submit-subheader{
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .contribute-form, .thanks-wrapper{
+    padding: 20px;
+  }
+
+  .contribute-form-send > input{
+    font-size: 14px;
+  }
+
+  .contribute-form-send > div > button{
+    font-size: 14px;
+  }
+
+  .footer > p > a{
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer > p{
+    font-size: 14px;
+  }
+
+  .social > a{
+    font-size: 16px;
+  }
+
+  .social > a > svg{
+    width: 20px;
+    height: 20px;
   }
 } 
