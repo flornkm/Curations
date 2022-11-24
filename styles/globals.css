@@ -203,6 +203,14 @@ border-bottom-right-radius: 8px;
     translate: all ease-in-out 0.2s;
   }
 
+  .notion-page-content-inner > div > div {
+    padding-top: 0px;
+  }
+
+  .notion-page-no-cover {
+    margin-top: 0px !important;
+  }
+
   .contact-wrapper {
     width: 100%;
   }
@@ -229,7 +237,7 @@ border-bottom-right-radius: 8px;
   }
 
   .subcategory {
-    margin-top: 72px;
+    margin-top: 48px;
   }
 
   .notion-collection-view-tabs-content-item {
@@ -526,130 +534,6 @@ border-color: #666666;
   display: flex;
   gap: 16px;
 }
-/* .submitButton::after {
-  content: "";
-  position: absolute;
-  z-index: 102;
-  width: 85%;
-  height: 1px;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, rgba(13,13,13,0) 0%, rgba(139,139,139,1) 50%, rgba(13,13,13,0) 100%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-  background-size: 200% 200%;
-  transition: opacity 0.3s ease;
-  border-radius: 50px;
-  opacity: 0;
-} */
-
-/* Animated border */
-
-
-/* .submitButton::before {
-  content: "";
-  position: absolute;
-  z-index: 102;
-  width:  85%;
-  height: 1px;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, rgba(13,13,13,0) 0%, rgba(139,139,139,1) 50%, rgba(13,13,13,0) 100%);
-  background-size: 200% 200%;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-  border-radius: 50px;
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.submitButton > span::before {
-  content: "";
-  position: absolute;
-  z-index: 102;
-  width: 1px;
-  height: 85%;
-  top: 50%;
-  left: -1px;
-  transform: translateY(-50%);
-  background: linear-gradient(0deg, rgba(13,13,13,0) 0%, rgba(139,139,139,1) 50%, rgba(13,13,13,0) 100%);
-  background-size: 200% 200%;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-  border-radius: 50px;
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
-  
-}
-
-.submitButton > span::after {
-  content: "";
-  position: absolute;
-  z-index: 102;
-  width: 1px;
-  height: 85%;
-  top: 50%;
-  right: -1px;
-  transform: translateY(-50%);
-  background: linear-gradient(0deg, rgba(13,13,13,0) 0%, rgba(139,139,139,1) 50%, rgba(13,13,13,0) 100%);
-  background-size: 200% 200%;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-  border-radius: 50px;
-  opacity: 0;
-  transition: all 0.3s ease-in-out 0s;
-  
-}
-
-.submitButton:hover::after {
-  opacity: 1;
-  animation: horizontAnim 3s ease 0s infinite reverse backwards;
-  animation-delay: 1s;
-}
-
-.submitButton:hover > span::before {
-  opacity: 1;
-  animation: verticalAnim 3s ease 0s infinite reverse backwards; 
-  animation-delay: 0.5s;
-}
-
-.submitButton:hover > span::after {
-  opacity: 1;
-  animation: verticalAnim 3s ease 0s infinite normal forwards; 
-  animation-delay: 2s;
-}
-
-
-.submitButton:hover::before {
-  opacity: 1;
-  animation: horizontAnim 3s ease 0s infinite normal forwards;
-}
-
-@keyframes horizontAnim {
-	0% {
-		background-position-x: 0%;
-	}
-  50% {
-		background-position-x: 100%;
-	}
-  100% {
-		background-position-x: 0%;
-	}
-}
-
-@keyframes verticalAnim {
-	0% {
-		background-position-y: 0%;
-	}
-  50% {
-		background-position-y: 100%;
-	}
-  100% {
-		background-position-y: 0%;
-	}
-} */
 
 .contact > h3 {
   font-size: 24px;
@@ -747,10 +631,6 @@ border-color: #666666;
 
 .notion-page-no-cover.notion-page-has-image-icon {
   padding-top: 0;
-}
-
-.notion-page-no-cover {
-  margin-top: 0 !important;
 }
 
 .notion-collection-card {

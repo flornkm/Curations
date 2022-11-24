@@ -464,6 +464,7 @@ export const NotionPage = ({
         // Typescript HTML Element button element
         const target = e.target as HTMLButtonElement;
 
+        document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft = 0;
         window.scrollTo(0, 0);
 
         if (target.textContent == 'Productivity') {
