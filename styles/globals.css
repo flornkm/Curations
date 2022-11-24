@@ -139,7 +139,7 @@ position: relative;
 .notion-collection-card-cover {
   border-radius: 8px;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .notion-page-title .notion-page-icon-inline {
