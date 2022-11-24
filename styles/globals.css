@@ -311,9 +311,18 @@ border-bottom-right-radius: 8px;
 .contact-icon {
   position: absolute;
   right: 0;
-  color: white;
+  color: #27262C;
   cursor: pointer;
   z-index: 101;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.contact-icon:hover {
+  color: #27262C;
+  background-color: rgb(227, 227, 227);
 }
 
 .contact-wrapper {

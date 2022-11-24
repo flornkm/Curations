@@ -106,7 +106,6 @@ export const NotionPage = ({
   }
 
   const title = getPageTitle(recordMap)
-  console.log(title, recordMap)
 
   const subProductivity = [];
   const subDesign = [];
@@ -115,27 +114,19 @@ export const NotionPage = ({
 
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
-    console.log('Subcategory Productivity: '+item.value)
     subProductivity.push(item.value);
-    console.log(subProductivity);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema["K[S^"].options.map((item) => {
-    console.log('Subcategory Design: '+item.value);
     subDesign.push(item.value);
-    console.log(subDesign);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.Pbex.options.map((item) => {
-    console.log('Subcategory Learning: '+item.value);
     subLearning.push(item.value);
-    console.log(subLearning);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.zQcd.options.map((item) => {
-    console.log('Subcategory Development: '+item.value);
     subDevelopment.push(item.value);
-    console.log(subDevelopment);
   })
 
   // Append the subcategory component after the notion class notion-collection-view-tabs-row
@@ -249,50 +240,6 @@ export const NotionPage = ({
     });
     subcategory.classList.add('subcategory');
 
-    // Add Arrow Div to Subcategory
-    /*
-    const arrow = document.createElement('span');
-    const arrowIcon = '<div><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>'
-    arrow.innerHTML = arrowIcon;
-    arrow.classList.add('arrow');
-
-    function appendArrow() {
-      subcategory.appendChild(arrow);
-    }
-
-    // Log childrens of subcategory
-    if (subcategory.children.length > 10 && window.innerWidth > 1400 && window.innerWidth < 1600) {
-      appendArrow();
-    }
-
-    if (subcategory.children.length > 14 && window.innerWidth > 1800) {
-      appendArrow();
-    }
-  
-
-      arrow.addEventListener('click', () => {
-        document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft += document.querySelector('.subcategory').scrollWidth;
-        console.log(document.querySelector('.subcategory').scrollWidth);
-        console.log(document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft);
-        if (document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft !== 0) {
-          const arrowLeft = document.createElement('span');
-          const arrowLeftIcon = '<div><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>'
-          arrowLeft.innerHTML = arrowLeftIcon;
-          arrowLeft.classList.add('arrow');
-          arrowLeft.classList.add('left');
-          arrow.remove();
-          subcategory.appendChild(arrowLeft);
-          arrowLeft.addEventListener('click', () => {
-            document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft -= document.querySelector('.subcategory').scrollWidth;
-            if (document.querySelector('.notion-page-content-inner').children[0].children[0].scrollLeft === 0) {
-              // Remove left arrow and add right arrow
-              arrowLeft.remove();
-              appendArrow()
-            }
-          });
-        }
-    });*/
-    // After the tabs row, append the subcategory
     tabsRow.after(subcategory);
   }
 
@@ -451,14 +398,12 @@ export const NotionPage = ({
         const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
         cardUrl.href = url.innerHTML;
         cardUrl.setAttribute('target', '_blank');
-        // console.log('URL', url.parentElement.parentElement.parentElement);
       });
     }, 200);
 
     const mainNav = document.querySelector('.notion-collection-view-tabs-row');
     const subNav = document.querySelector('.subcategory');
 
-    console.log(mainNav);
     if (mainNav) {
       mainNav.addEventListener('click', (e) => {
         // Typescript HTML Element button element
@@ -487,18 +432,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                    console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
                       if (card.innerHTML == target.innerText) {
-                        console.log(card.parentElement.parentElement);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                        console.log(card.innerHTML);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                       } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                        console.log('All');
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       }
                     })
@@ -526,18 +467,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                  console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
                     if (card.innerHTML == target.innerText) {
-                      console.log(card.parentElement.parentElement);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                      console.log(card.innerHTML);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                     } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                      console.log('All');
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     }
                   })
@@ -565,18 +502,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                  console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
                     if (card.innerHTML == target.innerText) {
-                      console.log(card.parentElement.parentElement);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                      console.log(card.innerHTML);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                     } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                      console.log('All');
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     }
                   })
@@ -604,18 +537,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                  console.log(target.textContent);
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
                     if (card.innerHTML == target.innerText) {
-                      console.log(card.parentElement.parentElement);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                      console.log(card.innerHTML);
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                     } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                      console.log('All');
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     }
                   })
@@ -633,7 +562,6 @@ export const NotionPage = ({
                 const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
                 cardUrl.href = url.innerHTML;
                 cardUrl.setAttribute('target', '_blank');
-                console.log('URL', url.parentElement.parentElement.parentElement);
           });
         }, 200);
 
@@ -661,7 +589,6 @@ export const NotionPage = ({
   useEffect(() => {
     setTimeout(() => {
       const activeMain = document.querySelector('button.notion-collection-view-tabs-content-item-active');
-      console.log(activeMain.children[0].textContent);
 
       if (activeMain.children[0].textContent == 'Productivity') {
         detachSubcategory();
@@ -681,18 +608,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                    console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
                       if (card.innerHTML == target.innerText) {
-                        console.log(card.parentElement.parentElement);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                        console.log(card.innerHTML);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                       } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                        console.log('All');
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       }
                     })
@@ -716,18 +639,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                    console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
                       if (card.innerHTML == target.innerText) {
-                        console.log(card.parentElement.parentElement);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                        console.log(card.innerHTML);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                       } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                        console.log('All');
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       }
                     })
@@ -751,18 +670,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                    console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
                       if (card.innerHTML == target.innerText) {
-                        console.log(card.parentElement.parentElement);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                        console.log(card.innerHTML);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                       } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                        console.log('All');
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       }
                     })
@@ -786,18 +701,14 @@ export const NotionPage = ({
                     });
                     target.classList.add('subActive');
                     target.previousElementSibling.classList.add('svgActive');
-                    console.log(target.textContent);
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
                       if (card.innerHTML == target.innerText) {
-                        console.log(card.parentElement.parentElement);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
-                        console.log(card.innerHTML);
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                       } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
-                        console.log('All');
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       }
                     })
@@ -893,6 +804,7 @@ export const NotionPage = ({
                   <h4>Thank you!</h4>
               </div>
             </div>
+            <a href="https://www.producthunt.com/posts/curations?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-curations" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368614&theme=neutral" alt="Curations - Stunning&#0032;tools&#0044;&#0032;served&#0032;daily | Product Hunt" width="250" height="54" /></a>
             <div className='footer'>
               <p>You can also contribute with: </p>
               <div className='social'>
