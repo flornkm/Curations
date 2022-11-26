@@ -396,7 +396,7 @@ export const NotionPage = ({
       const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
       urls.forEach((url) => {
         const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
-        cardUrl.href = url.innerHTML;
+        cardUrl.href = url.innerHTML + '?ref=curations.tech';
         cardUrl.setAttribute('target', '_blank');
       });
     }, 200);
