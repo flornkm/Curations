@@ -804,8 +804,8 @@ export const NotionPage = ({
                   <h4>Thank you!</h4>
               </div>
             </div>
-            <a href="https://www.producthunt.com/posts/curations?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-curations" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368614&theme=neutral" alt="Curations - Stunning&#0032;tools&#0044;&#0032;served&#0032;daily | Product Hunt" width="250" height="54" /></a>
             <div className='footer'>
+            <a href="https://www.producthunt.com/posts/curations?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-curations" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368614&theme=neutral" alt="Curations - Stunning&#0032;tools&#0044;&#0032;served&#0032;daily | Product Hunt" width="250" height="54" /></a>
               <p>You can also contribute with: </p>
               <div className='social'>
                 <a href='https://discord.gg/EKHkxHHU' target='_blank'><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.49" fill="none" xmlns="http://www.w3.org/2000/svg" color="#979797"><path d="M5.5 16c5 2.5 8 2.5 13 0M15.5 17.5l1 2s4.171-1.328 5.5-3.5c0-1 .53-8.147-3-10.5-1.5-1-4-1.5-4-1.5l-1 2h-2" stroke="#979797" stroke-width="1.49" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.528 17.5l-1 2s-4.171-1.328-5.5-3.5c0-1-.53-8.147 3-10.5 1.5-1 4-1.5 4-1.5l1 2h2" stroke="#979797" stroke-width="1.49" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 14c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2 1.5.895 1.5 2-.672 2-1.5 2zM15.5 14c-.828 0-1.5-.895-1.5-2s.672-2 1.5-2 1.5.895 1.5 2-.672 2-1.5 2z" stroke="#979797" stroke-width="1.49" stroke-linecap="round" stroke-linejoin="round"></path></svg>Discord</a>

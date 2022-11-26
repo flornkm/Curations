@@ -725,6 +725,10 @@ border-color: #666666;
     font-size: 14px;
   }
 
+  .buttonGradient{
+    display: none;
+  }
+
   .footer > p > a{
     font-size: 14px;
     text-decoration: none;
