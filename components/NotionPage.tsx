@@ -372,7 +372,7 @@ export const NotionPage = ({
           thanksWrapper.style.display = 'none';
           contributeForm.style.display = 'flex';
           inputLink.value = '';
-        }, 5000);
+        }, 1500);
       }
       })
       .catch ((error) => {
