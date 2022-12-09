@@ -183,6 +183,20 @@ border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
 }
 
+@media screen and (max-width: 1750px) {
+.notion-page-content-inner > div:nth-child(1):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(13, 13, 13, 0), #0D0D0D);
+  }
+}
+
 @media screen and (max-width: 970px) {
   .notion-collection-view-tabs-row {
     justify-content: center;
@@ -219,18 +233,6 @@ border-bottom-right-radius: 8px;
     width: 100%;
     overflow-y: scroll;
   }
-
-  .notion-page-content-inner > div:nth-child(1):after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 30%;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(to right, rgba(13, 13, 13, 0), #0D0D0D);
-    }
 
   .go-top {
     top: 16px;
@@ -360,14 +362,19 @@ border-bottom-right-radius: 8px;
   
 }
 
-.privacy {
+.content {
   width: 80%;
   margin: 0 auto;
   padding: 32px 0 32px 0;
 }
 
-.privacy p {
+.content p {
   color: #979797;
+}
+
+.grab {
+  cursor: grabbing !important;
+  cursor: -webkit-grabbing !important;
 }
 
 .contact > p {
@@ -526,7 +533,7 @@ border-color: #666666;
   gap: 8px;
 }
 
-.privacy > a {
+.content > a {
   color: #494949;
   text-decoration: none;
   font-size: 12px;
@@ -587,7 +594,22 @@ border-color: #666666;
 
 .notion-collection-view-tabs-content-item:hover {
   border-radius: 100px;
-  background-color: #1D1C21;
+  background-color: #00000000;
+}
+
+.notion-collection-view-tabs-content-item {
+position: relative;
+z-index: 1;
+}
+
+.nav-rectangle {
+  height: 86%;
+  width: 100px;
+  position: absolute;
+  background-color: #27262C;
+  left: 3px;
+  border-radius: 100px;
+  transition: all ease-in-out 0.2s;
 }
 
 .notion-collection-view-type-title {
@@ -602,7 +624,6 @@ border-color: #666666;
 
 .notion-collection-view-tabs-content-item-active {
   font-weight: 400;
-  background-color: #27262C !important;
   border-radius: 100px;
   border: 0px;
 }

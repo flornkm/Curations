@@ -395,6 +395,53 @@ export const NotionPage = ({
 
   useEffect(() => {
     setTimeout(() => {
+      // Navigation Rectangle Navigation 
+      const navLinks = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+      const activeLink = document.querySelector('.notion-collection-view-tabs-content-item-active') as HTMLElement;
+      
+      // Create a div rectangle in .notion-collection-view-tabs-row 
+      const navRectangle = document.createElement('div');
+      navRectangle.classList.add('nav-rectangle');
+      document.querySelector('.notion-collection-view-tabs-row').appendChild(navRectangle);
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navRectangle.style.width = `${link.offsetWidth}px`;
+          navRectangle.style.left = `${link.offsetLeft}px`;
+        })
+      })
+      navRectangle.style.width = `${activeLink.offsetWidth}px`;
+      navRectangle.style.left = `${activeLink.offsetLeft}px`;
+
+      // Navigation scroll
+      const slider = document.querySelector('.notion-page-content-inner').children[0].children[0] as HTMLElement;
+      // slideChilds as array of HTMLElement
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('grab');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('grab');
+      });
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('grab');
+      });
+      slider.addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 1;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+
       const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
       urls.forEach((url) => {
         const cardUrl = url.parentElement.parentElement.parentElement as HTMLLinkElement
@@ -766,7 +813,7 @@ export const NotionPage = ({
           Code,
           Collection,
           Equation,
-          Pdf,
+          Pdf,  
           Modal,
           Tweet
         }}
