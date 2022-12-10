@@ -484,7 +484,7 @@ export const NotionPage = ({
                     const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                     // Filter the cards
                     cards.forEach((card) => {
-                      if (card.innerHTML == target.innerText) {
+                      if (card.parentElement.innerText.includes(target.innerText)) {
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                       } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
                         card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
@@ -519,7 +519,7 @@ export const NotionPage = ({
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
-                    if (card.innerHTML == target.innerText) {
+                    if (card.parentElement.innerText.includes(target.innerText)) {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
@@ -554,7 +554,7 @@ export const NotionPage = ({
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
-                    if (card.innerHTML == target.innerText) {
+                    if (card.parentElement.innerText.includes(target.innerText)) {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
@@ -589,13 +589,18 @@ export const NotionPage = ({
                   const cards = document.querySelectorAll('.notion-property-multi_select-item.notion-item-default');
                   // Filter the cards
                   cards.forEach((card) => {
-                    if (card.innerHTML == target.innerText) {
+                    if (card.parentElement.innerText.includes(target.innerText)) {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     } else if (card.innerHTML != target.innerText && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group') && target.innerText != 'All') {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
                     } else if (target.innerText == 'All' && !card.parentElement.parentElement.parentElement.parentElement.classList.contains('notion-collection-group')) {
                       card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
                     }
+
+                    // if (card.parentElement.innerText.includes(target.innerText)) {
+                    //   console.log('yes!!!!');
+                    //   card.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+                    // } 
                   })
                 })
               })
