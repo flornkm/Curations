@@ -22,6 +22,7 @@ export default function Page() {
                     <li>Main Navigation is now a fluid rectangle that morphs based on users input.</li>
                     <li>Sub Categories are now scrollable even without a trackpad or touch device, simply through holding and panning it with a mouse.</li>
                     <li>We have implemented this page which features newest updates.</li>
+                    <li>Tools can now be in more than one subcategories.</li>
                 </ul>
             </div>
             <div className='update-block'>

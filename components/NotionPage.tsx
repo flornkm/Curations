@@ -872,6 +872,7 @@ export const NotionPage = ({
         </div>
       </div>
       <div className='notion-full-width privacy-link'>
+        <a href='./new'>What's new?</a>
         <a href='./legal-notice'>Legal Notice</a>
         <a href='./privacy-policy'>Privacy Policy</a>
       </div>
