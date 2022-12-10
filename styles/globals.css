@@ -769,3 +769,20 @@ z-index: 1;
     height: 20px;
   }
 } 
+
+.update-block {
+  margin: 64px 0;
+}
+
+.heading-col {
+  display: flex;
+}
+
+.heading-col > svg {
+  color: #FC4733;
+}
+
+.heading-col > h1 {
+  margin: none;
+  margin-block-end: 0;
+}
