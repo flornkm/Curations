@@ -537,6 +537,11 @@ border-color: #666666;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: all ease 0.15s;
+}
+
+.social>a:hover {
+  color: #d6d6d6;
 }
 
 .content > a {
@@ -683,6 +688,13 @@ z-index: 1;
   background-color: transparent;
   transition: all 0.3s ease;
   box-shadow: none;
+}
+
+@media screen and (min-width: 970px) {
+  .notion-collection-view-tabs-content-item:hover {
+    border-radius: 100px;
+    background-color: #5754702c;
+  }
 }
 
 .notion-collection-card:hover {
