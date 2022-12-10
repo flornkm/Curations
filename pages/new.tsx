@@ -8,7 +8,11 @@ export default function Page() {
                 <Image src="/curations_logo.svg" alt="curations" width={128} height={100} />
             </a>
             <div className='heading-col'>
-                <svg width="32px" height="32px" stroke-width="1.47" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M12 2v4M12 18v4M22 12h-4M6 12H2M4.929 4.929l2.828 2.828M16.243 16.243l2.828 2.828M19.071 4.929l-2.828 2.828M7.757 16.243L4.93 19.07" stroke="currentColor" stroke-width="1.47" stroke-linecap="round" stroke-linejoin="round"></path></svg><h1>What's new?</h1>
+                <div className='icon-wrapper'>
+                    <div className='rect'></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M208.9,144a15.8,15.8,0,0,1-10.5,15l-52.2,19.2L127,230.4a16,16,0,0,1-30,0L77.8,178.2,25.6,159a16,16,0,0,1,0-30l52.2-19.2L97,57.6a16,16,0,0,1,30,0l19.2,52.2L198.4,129A15.8,15.8,0,0,1,208.9,144ZM152,48h16V64a8,8,0,0,0,16,0V48h16a8,8,0,0,0,0-16H184V16a8,8,0,0,0-16,0V32H152a8,8,0,0,0,0,16Zm88,32h-8V72a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0V96h8a8,8,0,0,0,0-16Z"></path></svg>
+                </div>
+                <h1>What's new?</h1>
             </div>
             <p>A quick view on which features we have implemented in the past.</p>
             <div className='update-block'>
@@ -19,6 +23,10 @@ export default function Page() {
                     <li>Sub Categories are now scrollable even without a trackpad or touch device, simply through holding and panning it with a mouse.</li>
                     <li>We have implemented this page which features newest updates.</li>
                 </ul>
+            </div>
+            <div className='update-block'>
+                <h2>2022-08-12</h2>
+                <p>This update implemented some bugfixes and changed the duration of the "Thank you"-message in the submit form.</p>
             </div>
         </div>
     )
