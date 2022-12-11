@@ -15,6 +15,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../public/font/JetBrainsMono-Bold.woff2');
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -183,6 +189,20 @@ border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
 }
 
+@media screen and (max-width: 1750px) {
+.notion-page-content-inner > div:nth-child(1):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(13, 13, 13, 0), #0D0D0D);
+  }
+}
+
 @media screen and (max-width: 970px) {
   .notion-collection-view-tabs-row {
     justify-content: center;
@@ -219,18 +239,6 @@ border-bottom-right-radius: 8px;
     width: 100%;
     overflow-y: scroll;
   }
-
-  .notion-page-content-inner > div:nth-child(1):after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 30%;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(to right, rgba(13, 13, 13, 0), #0D0D0D);
-    }
 
   .go-top {
     top: 16px;
@@ -360,14 +368,19 @@ border-bottom-right-radius: 8px;
   
 }
 
-.privacy {
+.content {
   width: 80%;
   margin: 0 auto;
   padding: 32px 0 32px 0;
 }
 
-.privacy p {
+.content p {
   color: #979797;
+}
+
+.grab {
+  cursor: grabbing !important;
+  cursor: -webkit-grabbing !important;
 }
 
 .contact > p {
@@ -524,9 +537,14 @@ border-color: #666666;
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: all ease 0.15s;
 }
 
-.privacy > a {
+.social>a:hover {
+  color: #d6d6d6;
+}
+
+.content > a {
   color: #494949;
   text-decoration: none;
   font-size: 12px;
@@ -587,7 +605,22 @@ border-color: #666666;
 
 .notion-collection-view-tabs-content-item:hover {
   border-radius: 100px;
-  background-color: #1D1C21;
+  background-color: #00000000;
+}
+
+.notion-collection-view-tabs-content-item {
+position: relative;
+z-index: 1;
+}
+
+.nav-rectangle {
+  height: 86%;
+  width: 100px;
+  position: absolute;
+  background-color: #27262C;
+  left: 3px;
+  border-radius: 100px;
+  transition: all ease-in-out 0.2s;
 }
 
 .notion-collection-view-type-title {
@@ -602,7 +635,6 @@ border-color: #666666;
 
 .notion-collection-view-tabs-content-item-active {
   font-weight: 400;
-  background-color: #27262C !important;
   border-radius: 100px;
   border: 0px;
 }
@@ -656,6 +688,13 @@ border-color: #666666;
   background-color: transparent;
   transition: all 0.3s ease;
   box-shadow: none;
+}
+
+@media screen and (min-width: 970px) {
+  .notion-collection-view-tabs-content-item:hover {
+    border-radius: 100px;
+    background-color: #5754702c;
+  }
 }
 
 .notion-collection-card:hover {
@@ -748,3 +787,63 @@ border-color: #666666;
     height: 20px;
   }
 } 
+
+.update-block {
+  margin: 64px 0;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #3F3F3F;
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+  background: radial-gradient(circle, #0D0D0D 0%, #0D0D0D 100%);
+}
+
+.update-block:hover {
+  background: rgb(13,13,13);
+  background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(22,1,1,1) 100%);
+  border-color:rgb(252, 71, 51);
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(219, 24, 24, 0.271);
+  box-shadow: 0px 10px 50px 0px rgba(219, 24, 24, 0.271);
+}
+
+.update-block > h2 {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.heading-col {
+  display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.heading-col > h1 {
+  margin: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.icon-wrapper > svg {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: #0D0D0D;
+}
+
+.rect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: #FC4733;
+  border-radius: 4px;
+}
