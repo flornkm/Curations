@@ -544,6 +544,14 @@ border-color: #666666;
   color: #d6d6d6;
 }
 
+.signature>a{
+  text-decoration: underline !important;
+}
+
+.signature>a:hover{
+  color: #d6d6d6;
+}
+
 .content > a {
   color: #494949;
   text-decoration: none;
@@ -770,7 +778,6 @@ z-index: 1;
 
   .footer > p > a{
     font-size: 14px;
-    text-decoration: none;
     color: inherit;
   }
 
