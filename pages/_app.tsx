@@ -9,9 +9,20 @@ import 'react-notion-x/src/styles.css'
 
 import '../styles/globals.css'
 
+import { useEffect } from 'react'
+
 import { Analytics } from '@vercel/analytics/react';
+import TagManager from "react-gtm-module";
+
+const tagManagerArgs = {
+  id: "GTM-KDHCP8C",
+}
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, [])
+
   return (
   <div>
     <Component {...pageProps}/>
