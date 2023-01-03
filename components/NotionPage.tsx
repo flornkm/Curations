@@ -461,8 +461,6 @@ export const NotionPage = ({
 
     if (mainNav) {
       mainNav.addEventListener('click', (e) => {
-        console.log(asPath);
-
         // Typescript HTML Element button element
         const target = e.target as HTMLButtonElement;
 
@@ -643,12 +641,12 @@ export const NotionPage = ({
             }, 200);
         }
         if (target.textContent == 'All') {
-          detachSubcategory();  
-        }
+          detachSubcategory(); 
 
-        router.push({
-          pathname: '/',
-       }, undefined, { shallow: true})
+          router.push({
+            pathname: '/',
+         }, undefined, { shallow: true})
+        }
 
         setTimeout(() => {
           const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
@@ -658,6 +656,8 @@ export const NotionPage = ({
                 cardUrl.setAttribute('target', '_blank');
           });
         }, 200);
+
+        console.log(asPath);
 
       });
     }
@@ -694,6 +694,15 @@ export const NotionPage = ({
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
+
+                    router.push({
+                      pathname: '/',
+                      query: {
+                         category: "productivity",  // update the query param
+                         subcategory: target.innerText
+                      }
+                   }, undefined, { shallow: true})
+
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
@@ -725,6 +734,15 @@ export const NotionPage = ({
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
+
+                    router.push({
+                      pathname: '/',
+                      query: {
+                         category: "design",  // update the query param
+                         subcategory: target.innerText
+                      }
+                   }, undefined, { shallow: true})
+
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
@@ -756,6 +774,15 @@ export const NotionPage = ({
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
+
+                    router.push({
+                      pathname: '/',
+                      query: {
+                         category: "learning",  // update the query param
+                         subcategory: target.innerText
+                      }
+                   }, undefined, { shallow: true})
+
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
@@ -787,6 +814,15 @@ export const NotionPage = ({
                     const target = e.target as HTMLButtonElement;
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
+
+                    router.push({
+                      pathname: '/',
+                      query: {
+                         category: "development",  // update the query param
+                         subcategory: target.innerText
+                      }
+                   }, undefined, { shallow: true})
+
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
                     });
