@@ -284,7 +284,6 @@ export const NotionPage = ({
       setTimeout(() => {
         const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
 
-        if (!document.querySelector('.notion-collection-view-tabs-content-item-active').innerHTML.includes('All')) {
           if (router.query.category) {
             mainCategories.forEach((mainCategory) => {
               if (mainCategory.innerText.toLowerCase() === router.query.category) {
@@ -293,10 +292,6 @@ export const NotionPage = ({
               }
             })
           }
-        } else {
-          load.current = true;
-          mainCategories[0].click();
-        }
       }, 200)
     }
 
