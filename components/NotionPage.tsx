@@ -280,6 +280,21 @@ export const NotionPage = ({
     g.block = block
   } 
 
+  // If the router.query is not empty click a tab
+  useEffect(() => {
+    const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+
+    if (router.query.category) {
+      mainCategories.forEach((mainCategory) => {
+        if (mainCategory.innerText.toLowerCase() === router.query.category) {
+          mainCategory.click();
+          console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
+        }
+      })
+    }
+    
+  }, [router.query])
+
   useEffect(() => {
     // Animate Contact Wrapper
     const contactWrapper = document.querySelector('.contact-wrapper') as HTMLElement;
@@ -887,6 +902,8 @@ export const NotionPage = ({
       } else if (activeMain.children[0].textContent == 'All') {
         detachSubcategory();
       }
+
+      
     }, 200);
   }, [])
 }
