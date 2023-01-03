@@ -105,6 +105,8 @@ export const NotionPage = ({
     return null
   }
 
+  const dev = false;
+
   const title = getPageTitle(recordMap)
 
   const subProductivity = [];
@@ -112,21 +114,43 @@ export const NotionPage = ({
   const subLearning = [];
   const subDevelopment = [];
 
+  const asPath = router.asPath;
 
+
+    // list all cards with class name .notion-property-multi_select-item notion-item-default
+  // const cards = document.querySelectorAll('.notion-collection-card-property:not(:first-child)');
+
+  const socialDescription = 'Giving you the best resources to learn and grow as a developer, designer, entrepreneur or whoever you are. We are a community of people who are passionate about learning and sharing knowledge.';
+  const socialImage =
+    'https://curations.tech/curations_social_image.jpg'
+
+  if (!dev) {
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
     subProductivity.push(item.value);
+    setTimeout(() => {
+      router.replace('/design');
+    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema["K[S^"].options.map((item) => {
     subDesign.push(item.value);
+    setTimeout(() => {
+      router.replace('/development');
+    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.Pbex.options.map((item) => {
     subLearning.push(item.value);
+    setTimeout(() => {
+      router.replace('/productivity');
+    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.zQcd.options.map((item) => {
     subDevelopment.push(item.value);
+    setTimeout(() => {
+      router.replace('/learning');
+    }, 1000);
   })
 
   // Append the subcategory component after the notion class notion-collection-view-tabs-row
@@ -386,13 +410,6 @@ export const NotionPage = ({
     })
   }, [])
 
-  // list all cards with class name .notion-property-multi_select-item notion-item-default
-  // const cards = document.querySelectorAll('.notion-collection-card-property:not(:first-child)');
-
-  const socialDescription = 'Giving you the best resources to learn and grow as a developer, designer, entrepreneur or whoever you are. We are a community of people who are passionate about learning and sharing knowledge.';
-  const socialImage =
-    'https://curations.tech/curations_social_image.jpg'
-
   useEffect(() => {
     setTimeout(() => {
       // Navigation Rectangle Navigation 
@@ -455,6 +472,8 @@ export const NotionPage = ({
 
     if (mainNav) {
       mainNav.addEventListener('click', (e) => {
+        console.log(asPath);
+
         // Typescript HTML Element button element
         const target = e.target as HTMLButtonElement;
 
@@ -773,12 +792,14 @@ export const NotionPage = ({
       }
     }, 200);
   }, [])
+}
 
   const [myState, setState] = useState('');
 
   return (
     <>
       <Head>
+        <>
         {socialDescription && (
           <>
             <meta name='description' content={socialDescription} />
@@ -796,6 +817,7 @@ export const NotionPage = ({
         ) : (
           <meta name='twitter:card' content='summary' />
         )}
+        </>
 
         <title>{title}</title>
         <meta property='og:title' content={title} />

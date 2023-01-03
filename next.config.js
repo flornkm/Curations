@@ -7,7 +7,7 @@ module.exports = withBundleAnalyzer({
   env: {
     DISCORD_HOOK: process.env.DISCORD_HOOK
   },
-  staticPageGenerationTimeout: 300,
+  staticPageGenerationTimeout: 1000,
   images: {
     unoptimized: true,
     domains: [
