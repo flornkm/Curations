@@ -287,12 +287,15 @@ export const NotionPage = ({
     if (router.query.category) {
       mainCategories.forEach((mainCategory) => {
         if (mainCategory.innerText.toLowerCase() === router.query.category) {
+          localStorage.clear()
+          
+          // do not change collection view if the category is already selected
           mainCategory.click();
           console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
         }
       })
     }
-    
+
   }, [router.query])
 
   useEffect(() => {
