@@ -280,7 +280,7 @@ export const NotionPage = ({
     g.block = block
   } 
 
-  // If the router.query is not empty click a tab
+  // If the router.query is not empty click a tab but only do it one time
   useEffect(() => {
     setTimeout(() => {
       const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
@@ -288,17 +288,29 @@ export const NotionPage = ({
       if (router.query.category) {
         mainCategories.forEach((mainCategory) => {
           if (mainCategory.innerText.toLowerCase() === router.query.category) {
-            localStorage.clear()
 
             // do not change collection view if the category is already selected
-            mainCategory.click();
-            console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
+            if (!router.query.subcategory) {
+              mainCategory.click();
+              console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
+            }
+
+            // if the subcategory is not empty click a subcategory
+            if (router.query.subcategory) {
+              const subCategories = document.querySelectorAll('.subcategory > div') as NodeListOf<HTMLElement>;
+              subCategories.forEach((subCategory) => {
+                if (subCategory.innerText.toLowerCase() === router.query.subcategory) {
+                  subCategory.click();
+                  console.log('clicking sub category: ' + subCategory.innerText.toLowerCase());
+                }
+              })
+            }
           }
         })
       }
-    }, 1000)
+    }, 200)
 
-  }, [router.query])
+  }, [router.query.category, router.query.subcategory])
 
   useEffect(() => {
     // Animate Contact Wrapper
@@ -517,7 +529,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "productivity",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -568,7 +580,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "design",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -619,7 +631,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "learning",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -670,7 +682,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "development",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -759,7 +771,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "productivity",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -799,7 +811,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "design",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -839,7 +851,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "learning",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
@@ -879,7 +891,7 @@ export const NotionPage = ({
                       pathname: '/',
                       query: {
                          category: "development",  // update the query param
-                         subcategory: target.innerText
+                         subcategory: target.innerText.toLocaleLowerCase()
                       }
                    }, undefined, { shallow: true})
 
