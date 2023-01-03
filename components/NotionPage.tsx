@@ -405,27 +405,6 @@ export const NotionPage = ({
   }, [])
 
   useEffect(() => {
-
-    setTimeout(() => {
-      let mainCats = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
-
-      mainCats.forEach(cat => {
-        if (router.query.category.includes(cat.innerText.toLowerCase())) {
-          cat.click();
-          router.push({
-            pathname: '/',
-            query: {
-               category: router.query.category
-            }
-         }, undefined, { shallow: true})
-        }
-      })
-    }, 1000);
-
-      // if router query includes design, development, productivity or learning 
-  }, [router.query]);
-
-  useEffect(() => {
     setTimeout(() => {
 
       // Navigation Rectangle Navigation 
@@ -911,6 +890,32 @@ export const NotionPage = ({
     }, 200);
   }, [])
 }
+
+useEffect(() => {
+
+  setTimeout(() => {
+    let mainCats = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+
+    mainCats.forEach(cat => {
+      if (router.query.category.includes(cat.innerText.toLowerCase())) {
+        cat.click();
+        router.push({
+          pathname: '/',
+          query: {
+             category: router.query.category
+          }
+       }, undefined, { shallow: true})
+      } else if (router.query.category.includes('')) {
+        mainCats[0].click();
+        router.push({
+          pathname: '/',
+       }, undefined, { shallow: true})
+      }
+    })
+  }, 1000);
+
+    // if router query includes design, development, productivity or learning 
+}, [router.query]);
 
   const [myState, setState] = useState('');
 
