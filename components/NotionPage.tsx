@@ -128,50 +128,18 @@ export const NotionPage = ({
   if (!dev) {
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
     subProductivity.push(item.value);
-    setTimeout(() => {
-      router.push({
-        pathname: '/',
-        query: {
-           category: "design"  // update the query param
-        }
-     }, undefined, { shallow: true})
-    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema["K[S^"].options.map((item) => {
     subDesign.push(item.value);
-    setTimeout(() => {
-      router.push({
-        pathname: '/',
-        query: {
-           category: "development"  // update the query param
-        }
-     }, undefined, { shallow: true})
-    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.Pbex.options.map((item) => {
     subLearning.push(item.value);
-    setTimeout(() => {
-      router.push({
-        pathname: '/',
-        query: {
-           category: "productivity"  // update the query param
-        }
-     }, undefined, { shallow: true})
-    }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.zQcd.options.map((item) => {
     subDevelopment.push(item.value);
-    setTimeout(() => {
-      router.push({
-        pathname: '/',
-        query: {
-           category: "learning"  // update the query param
-        }
-     }, undefined, { shallow: true})
-    }, 1000);
   })
 
   // Append the subcategory component after the notion class notion-collection-view-tabs-row
@@ -505,6 +473,13 @@ export const NotionPage = ({
           detachSubcategory();
           appendSubcategory(subProductivity);
 
+          router.push({
+            pathname: '/',
+            query: {
+               category: "productivity"  // update the query param
+            }
+         }, undefined, { shallow: true})
+
               // Add Event Listener to each subcategory
               setTimeout(() => {
                 const subcategorys = document.querySelectorAll('.subcategory div');
@@ -539,6 +514,13 @@ export const NotionPage = ({
         if (target.textContent == 'Design') {
           detachSubcategory();
           appendSubcategory(subDesign);
+
+          router.push({
+            pathname: '/',
+            query: {
+               category: "design"  // update the query param
+            }
+         }, undefined, { shallow: true})
 
              // Add Event Listener to each subcategory
              setTimeout(() => {
@@ -575,6 +557,13 @@ export const NotionPage = ({
           detachSubcategory();
           appendSubcategory(subLearning);
 
+          router.push({
+            pathname: '/',
+            query: {
+               category: "learning"  // update the query param
+            }
+         }, undefined, { shallow: true})
+
             // Add Event Listener to each subcategory
             setTimeout(() => {
               const subcategorys = document.querySelectorAll('.subcategory div');
@@ -609,6 +598,13 @@ export const NotionPage = ({
         if (target.textContent == 'Development') {
           detachSubcategory();
           appendSubcategory(subDevelopment);
+
+          router.push({
+            pathname: '/',
+            query: {
+               category: "development"  // update the query param
+            }
+         }, undefined, { shallow: true})
 
             // Add Event Listener to each subcategory
             setTimeout(() => {
@@ -649,6 +645,10 @@ export const NotionPage = ({
         if (target.textContent == 'All') {
           detachSubcategory();  
         }
+
+        router.push({
+          pathname: '/',
+       }, undefined, { shallow: true})
 
         setTimeout(() => {
           const urls = document.querySelectorAll('.notion-property-text') as NodeListOf<HTMLAnchorElement>;
