@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useRef } from 'react'
 
 import { ExtendedRecordMap } from 'notion-types'
 import { getPageTitle } from 'notion-utils'
@@ -114,10 +115,7 @@ export const NotionPage = ({
   const subLearning = [];
   const subDevelopment = [];
 
-  const designRef = React.useRef(null);
-  const productivityRef = React.useRef(null);
-  const learningRef = React.useRef(null);
-  const developmentRef = React.useRef(null);
+  const load = useRef(false as Boolean);
 
   const asPath = router.asPath;
   const currPage = router.query.pageId;
@@ -282,18 +280,20 @@ export const NotionPage = ({
 
   // If the router.query is not empty click a tab but only do it one time
   useEffect(() => {
-    setTimeout(() => {
-      const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+    if (load.current === false) {
+      setTimeout(() => {
+        const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
 
-      if (router.query.category) {
-        mainCategories.forEach((mainCategory) => {
-          if (mainCategory.innerText.toLowerCase() === router.query.category) {
-
-            mainCategory.click();
-          }
-        })
-      }
-    }, 200)
+        if (router.query.category) {
+          mainCategories.forEach((mainCategory) => {
+            if (mainCategory.innerText.toLowerCase() === router.query.category) {
+              load.current = true;
+              mainCategory.click();
+            }
+          })
+        }
+      }, 200)
+    }
 
   }, [router.query.category, router.query.subcategory])
 
@@ -510,13 +510,13 @@ export const NotionPage = ({
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "productivity",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "productivity",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -561,13 +561,13 @@ export const NotionPage = ({
                   const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "design",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "design",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -612,13 +612,13 @@ export const NotionPage = ({
                   const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "learning",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "learning",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -663,13 +663,13 @@ export const NotionPage = ({
                   const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "development",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "development",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -752,13 +752,13 @@ export const NotionPage = ({
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "productivity",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "productivity",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -792,13 +792,13 @@ export const NotionPage = ({
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "design",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "design",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -832,13 +832,13 @@ export const NotionPage = ({
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "learning",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "learning",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
@@ -872,13 +872,13 @@ export const NotionPage = ({
                     const subActives = document.querySelectorAll('.subActive');
                     const svgActives = document.querySelectorAll('.svgActive');
 
-                    router.push({
-                      pathname: '/',
-                      query: {
-                         category: "development",  // update the query param
-                         subcategory: target.innerText.toLocaleLowerCase()
-                      }
-                   }, undefined, { shallow: true})
+                  //   router.push({
+                  //     pathname: '/',
+                  //     query: {
+                  //        category: "development",  // update the query param
+                  //        subcategory: target.innerText.toLocaleLowerCase()
+                  //     }
+                  //  }, undefined, { shallow: true})
 
                     subActives.forEach((subActive) => {
                       subActive.classList.remove('subActive');
