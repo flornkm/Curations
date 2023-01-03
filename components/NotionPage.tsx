@@ -114,6 +114,11 @@ export const NotionPage = ({
   const subLearning = [];
   const subDevelopment = [];
 
+  const designRef = React.useRef(null);
+  const productivityRef = React.useRef(null);
+  const learningRef = React.useRef(null);
+  const developmentRef = React.useRef(null);
+
   const asPath = router.asPath;
   const currPage = router.query.pageId;
 
@@ -400,8 +405,28 @@ export const NotionPage = ({
   }, [])
 
   useEffect(() => {
+
     setTimeout(() => {
-      console.log(router.query);
+      let mainCats = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+
+      mainCats.forEach(cat => {
+        if (router.query.category.includes(cat.innerText.toLowerCase())) {
+          cat.click();
+          router.push({
+            pathname: '/',
+            query: {
+               category: router.query.category
+            }
+         }, undefined, { shallow: true})
+        }
+      })
+    }, 1000);
+
+      // if router query includes design, development, productivity or learning 
+  }, [router.query]);
+
+  useEffect(() => {
+    setTimeout(() => {
 
       // Navigation Rectangle Navigation 
       const navLinks = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
