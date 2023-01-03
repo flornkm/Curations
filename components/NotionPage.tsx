@@ -289,22 +289,7 @@ export const NotionPage = ({
         mainCategories.forEach((mainCategory) => {
           if (mainCategory.innerText.toLowerCase() === router.query.category) {
 
-            // do not change collection view if the category is already selected
-            if (!router.query.subcategory) {
-              mainCategory.click();
-              console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
-            }
-
-            // if the subcategory is not empty click a subcategory
-            if (router.query.subcategory) {
-              const subCategories = document.querySelectorAll('.subcategory > div') as NodeListOf<HTMLElement>;
-              subCategories.forEach((subCategory) => {
-                if (subCategory.innerText.toLowerCase() === router.query.subcategory) {
-                  subCategory.click();
-                  console.log('clicking sub category: ' + subCategory.innerText.toLowerCase());
-                }
-              })
-            }
+            mainCategory.click();
           }
         })
       }
