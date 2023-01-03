@@ -115,6 +115,7 @@ export const NotionPage = ({
   const subDevelopment = [];
 
   const asPath = router.asPath;
+  const currPage = router.query.pageId;
 
 
     // list all cards with class name .notion-property-multi_select-item notion-item-default
@@ -129,7 +130,10 @@ export const NotionPage = ({
     subProductivity.push(item.value);
     setTimeout(() => {
       router.push({
-        pathname: '/design',
+        pathname: '/',
+        query: {
+           category: "design"  // update the query param
+        }
      }, undefined, { shallow: true})
     }, 1000);
   })
@@ -138,7 +142,10 @@ export const NotionPage = ({
     subDesign.push(item.value);
     setTimeout(() => {
       router.push({
-        pathname: '/development',
+        pathname: '/',
+        query: {
+           category: "development"  // update the query param
+        }
      }, undefined, { shallow: true})
     }, 1000);
   })
@@ -147,7 +154,10 @@ export const NotionPage = ({
     subLearning.push(item.value);
     setTimeout(() => {
       router.push({
-        pathname: '/productivity',
+        pathname: '/',
+        query: {
+           category: "productivity"  // update the query param
+        }
      }, undefined, { shallow: true})
     }, 1000);
   })
@@ -156,7 +166,10 @@ export const NotionPage = ({
     subDevelopment.push(item.value);
     setTimeout(() => {
       router.push({
-        pathname: '/learning',
+        pathname: '/',
+        query: {
+           category: "learning"  // update the query param
+        }
      }, undefined, { shallow: true})
     }, 1000);
   })
