@@ -282,19 +282,21 @@ export const NotionPage = ({
 
   // If the router.query is not empty click a tab
   useEffect(() => {
-    const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
+    setTimeout(() => {
+      const mainCategories = document.querySelectorAll('.notion-collection-view-tabs-content-item') as NodeListOf<HTMLElement>;
 
-    if (router.query.category) {
-      mainCategories.forEach((mainCategory) => {
-        if (mainCategory.innerText.toLowerCase() === router.query.category) {
-          localStorage.clear()
-          
-          // do not change collection view if the category is already selected
-          mainCategory.click();
-          console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
-        }
-      })
-    }
+      if (router.query.category) {
+        mainCategories.forEach((mainCategory) => {
+          if (mainCategory.innerText.toLowerCase() === router.query.category) {
+            localStorage.clear()
+
+            // do not change collection view if the category is already selected
+            mainCategory.click();
+            console.log('clicking main category: ' + mainCategory.innerText.toLowerCase());
+          }
+        })
+      }
+    }, 1000)
 
   }, [router.query])
 
