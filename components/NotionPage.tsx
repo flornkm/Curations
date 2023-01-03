@@ -291,6 +291,8 @@ export const NotionPage = ({
               mainCategory.click();
             }
           })
+        } else {
+          mainCategories[0].click();
         }
       }, 200)
     }
