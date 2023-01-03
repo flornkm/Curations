@@ -128,28 +128,36 @@ export const NotionPage = ({
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema[":HNW"].options.map((item) => {
     subProductivity.push(item.value);
     setTimeout(() => {
-      router.replace('/design');
+      router.push({
+        pathname: '/design',
+     }, undefined, { shallow: true})
     }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema["K[S^"].options.map((item) => {
     subDesign.push(item.value);
     setTimeout(() => {
-      router.replace('/development');
+      router.push({
+        pathname: '/development',
+     }, undefined, { shallow: true})
     }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.Pbex.options.map((item) => {
     subLearning.push(item.value);
     setTimeout(() => {
-      router.replace('/productivity');
+      router.push({
+        pathname: '/productivity',
+     }, undefined, { shallow: true})
     }, 1000);
   })
 
   recordMap.collection['c5681206-1c5f-42ed-9550-6084dbdcab26'].value.schema.zQcd.options.map((item) => {
     subDevelopment.push(item.value);
     setTimeout(() => {
-      router.replace('/learning');
+      router.push({
+        pathname: '/learning',
+     }, undefined, { shallow: true})
     }, 1000);
   })
 
