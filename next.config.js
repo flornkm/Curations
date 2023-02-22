@@ -1,22 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-})
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
 
-module.exports = withBundleAnalyzer({
-  env: {
-    DISCORD_HOOK: process.env.DISCORD_HOOK
-  },
-  staticPageGenerationTimeout: 1000,
-  images: {
-    unoptimized: true,
-    domains: [
-      'www.notion.so',
-      'notion.so',
-      'images.unsplash.com',
-      'pbs.twimg.com',
-      's3.us-west-2.amazonaws.com'
-    ],
-    formats: ['image/avif', 'image/webp']
-  }
-})
+module.exports = nextConfig

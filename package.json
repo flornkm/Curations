@@ -1,40 +1,24 @@
 {
-  "name": "notion-x-example-full",
-  "version": "6.15.6",
+  "name": "curations",
+  "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "deploy": "vercel deploy"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@notionhq/client": "^1.0.4",
-    "@vercel/analytics": "^0.1.4",
-    "classnames": "^2.3.1",
-    "got": "^12.0.2",
-    "iconoir-react": "^5.4.0",
-    "lqip-modern": "^2.0.0",
-    "next": "^12.1.0",
-    "notion-client": "^6.15.6",
-    "notion-compat": "^6.15.6",
-    "notion-utils": "^6.15.6",
-    "p-map": "^5.3.0",
-    "p-memoize": "^6.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-notion-x": "^6.15.6",
-    "react-tweet-embed": "^2.0.0"
+    "@next/font": "13.1.6",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^12.1.0",
-    "@types/node": "^16.11.2",
-    "@types/react": "18.0.24",
-    "cross-env": "^7.0.3",
-    "typescript": "^4.6.2"
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
