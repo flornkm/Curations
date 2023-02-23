@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Inter } from "@next/font/google";
 import Navigation from "@/components/Navigation";
@@ -7,15 +8,19 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState({ category: "all" });
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     console.log(category);
 
     fetch("/api/supabase")
       .then((res) => res.json())
-      .then((data) => console.log(data));
-      
+      .then((data) => {
+        setLoading(false);
+        setItems([...data]);
+      });
   }, [category]);
 
   return (
@@ -28,6 +33,36 @@ export default function Home() {
       </Head>
       <main className="pl-[5%] pr-[5%]">
         <Navigation setCategory={setCategory} />
+        {(loading && (
+          <div className="flex justify-center items-center h-[75vh]">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-500"></div>
+          </div>
+        )) ||
+          (!loading && (
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {items.map((item) => (
+                  <Link key={item.id} href={item.link} className="bg-white rounded-lg shadow-lg">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={500}
+                      height={500}
+                    />
+                    <div className="p-4">
+                      <Image
+                        src={item.favicon}
+                        alt={item.title}
+                        width={20}
+                        height={20}
+                      />
+                      <h3 className="text-xl font-bold">{item.name}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
       </main>
     </>
   );

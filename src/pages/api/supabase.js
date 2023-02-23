@@ -1,18 +1,14 @@
-import { SupabaseClient } from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 
 export default async function handler(req, res) {
-  const supabase = new SupabaseClient(
+  const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
+  let { data } = await supabase.from('curations').select()
 
-  const { data, error } = await supabase.from("curations").select("*");
-
-  console.log(data);
+  console.log(data)
 
   res.status(200).json(data);
 }
