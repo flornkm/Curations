@@ -6,9 +6,18 @@ export default async function handler(req, res) {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
-  let { data } = await supabase.from('curations').select()
+  const category = req.query.category;
 
-  console.log(data)
+  if (category === "all") {
+    const { data } = await supabase.from("curations").select("*");
 
-  res.status(200).json(data);
+    res.status(200).json(data);
+  } else {
+    const { data } = await supabase
+      .from("curations")
+      .select("*")
+      .eq("category", category);
+
+    res.status(200).json(data);
+  }
 }

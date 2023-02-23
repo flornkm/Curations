@@ -84,7 +84,7 @@ export default function Navigation(props) {
         />
       </div>
       <Icon.Plus
-        className="bg-white rounded-full p-0.5 cursor-pointer"
+        className="bg-white rounded-full p-0.5 cursor-pointer text-black"
         fontSize={24}
       />
     </div>
