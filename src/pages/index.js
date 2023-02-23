@@ -1,15 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useState } from 'react'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import Navigation from '@/components/Navigation'
+import Head from "next/head";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Inter } from "@next/font/google";
+import Navigation from "@/components/Navigation";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [category, setCategory] = useState('all')
-  const [subcategory, setSubcategory] = useState('all')
+  const [category, setCategory] = useState({ category: "all" });
+
+  useEffect(() => {
+    console.log(category);
+
+    fetch("/api/supabase")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+      
+  }, [category]);
 
   return (
     <>
@@ -20,9 +27,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="pl-[5%] pr-[5%]">
-        <Navigation category={category} subcategory={subcategory} />
-        
+        <Navigation setCategory={setCategory} />
       </main>
     </>
-  )
+  );
 }
