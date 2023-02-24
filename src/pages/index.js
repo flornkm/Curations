@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Inter } from "@next/font/google";
 import Navigation from "@/components/Navigation";
 import About from "@/components/About";
@@ -12,8 +12,11 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState({ category: "all" });
   const [items, setItems] = useState([]);
+  const sidebarWrapper = useRef();
+  const plusIcon = useRef();
+  const navigation = useRef();
 
-  useEffect(() => {
+  const loadItems = () => {
     setLoading(true);
     fetch("/api/supabase?category=" + category.category)
       .then((res) => res.json())
@@ -21,6 +24,16 @@ export default function Home() {
         setLoading(false);
         setItems([...data]);
       });
+  };
+
+  useEffect(() => {
+    loadItems();
+
+    window.addEventListener("scroll", (e) => {
+      if (e.target.documentElement.scrollTop > 35)
+        navigation.current.classList.remove("max-md:translate-y-14");
+      else navigation.current.classList.add("max-md:translate-y-14");
+    });
   }, [category]);
 
   return (
@@ -31,21 +44,26 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="pl-[5%] pr-[5%]">
-        <Navigation setCategory={setCategory} />
+      <main className="pl-[5%] pr-[5%] min-h-[200vh]">
+        <Navigation
+          navigation={navigation}
+          setCategory={setCategory}
+          sidebarWrapper={sidebarWrapper}
+          plusIcon={plusIcon}
+        />
         {(loading && (
           <div className="flex justify-center items-center h-[75vh]">
             <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-500"></div>
           </div>
         )) ||
           (!loading && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-10 max-md:pt-12">
               {items.map((item) => (
                 <Link
                   target="_blank"
                   key={item.id}
                   href={item.link}
-                  className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-none focus:ring focus:ring-red-300"
+                  className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
                 >
                   <Image
                     src={item.image}
@@ -68,7 +86,7 @@ export default function Home() {
               ))}
             </div>
           ))}
-          <About />
+        <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
       </main>
     </>
   );
