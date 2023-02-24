@@ -28,18 +28,18 @@ export default function Navigation(props) {
   };
 
   return (
-    <div className="w-full flex justify-between py-8 place-items-center">
+    <div className="w-full flex justify-between px-[2%] h-24 place-items-center">
       <Link href="/">
         <Image
           loader={imgLoader}
           src="/images/curations_logo.png"
           alt="Curations Logo"
-          className="max-h-7 object-contain"
+          className="max-h-7 object-contain object-left"
           width={200}
           height={200}
         />
       </Link>
-      <div ref={props.navigation} className="flex place-items-center p-1 rounded-full ring-2 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-md:translate-y-14 transition-all duration-100">
+      <div ref={props.navigation} className="flex place-items-center p-1 rounded-full ring-2 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-lg:w-[90%] max-lg:justify-between max-lg:translate-y-16 transition-all duration-100">
         <div
           ref={mainNavigation.all}
           onClick={(e) => handleNavigation(e)}

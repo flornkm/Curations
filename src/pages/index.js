@@ -31,8 +31,8 @@ export default function Home() {
 
     window.addEventListener("scroll", (e) => {
       if (e.target.documentElement.scrollTop > 35)
-        navigation.current.classList.remove("max-md:translate-y-14");
-      else navigation.current.classList.add("max-md:translate-y-14");
+        navigation.current.classList.remove("max-lg:translate-y-16");
+      else navigation.current.classList.add("max-lg:translate-y-16");
     });
   }, [category]);
 
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
         )) ||
           (!loading && (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-10 max-md:pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
               {items.map((item) => (
                 <Link
                   target="_blank"
