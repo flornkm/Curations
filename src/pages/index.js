@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 import { Inter } from "@next/font/google";
 import Navigation from "@/components/Navigation";
@@ -15,32 +16,58 @@ export default function Home() {
   const sidebarWrapper = useRef();
   const plusIcon = useRef();
   const navigation = useRef();
+  const router = useRouter();
 
-  const loadItems = () => {
+  const categoryURL = router.query;
+
+  const loadCategoryItems = () => {
     setLoading(true);
     fetch("/api/supabase?category=" + category.category)
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
         setItems([...data]);
+        if (category.category.toLowerCase() !== "all") {
+        router.push({
+          pathname: "/",
+          query: { category: category.category },
+        });
+      } else {
+        router.push({
+          pathname: "/",
+        });
+      }
       });
   };
 
-  const handleCategory = (itemName) => {
+  const loadSubcategoryItems = (itemName) => {
     setLoading(true);
     fetch(
       "/api/supabase?category=" + category.category + "&subCategory=" + itemName
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setLoading(false);
         setItems([...data]);
+        if (itemName.toLowerCase() !== "all") {
+          router.push({
+            pathname: "/",
+            query: {
+              category: category.category,
+              subcategory: itemName.toLowerCase(),
+            },
+          });
+        } else {
+          router.push({
+            pathname: "/",
+            query: { category: category.category },
+          });
+        }
       });
   };
 
   useEffect(() => {
-    loadItems();
+    loadCategoryItems();
 
     window.addEventListener("scroll", (e) => {
       if (e.target.documentElement.scrollTop > 35)
@@ -64,7 +91,7 @@ export default function Home() {
           setCategory={setCategory}
           sidebarWrapper={sidebarWrapper}
           plusIcon={plusIcon}
-          handleCategory={handleCategory}
+          handleCategory={loadSubcategoryItems}
         />
         {(loading && (
           <div className="flex justify-center items-center h-[75vh]">
@@ -90,7 +117,7 @@ export default function Home() {
                   <div className="flex gap-4 place-items-center">
                     <Image
                       src={item.favicon}
-                      alt={item.title}
+                      alt={item.title + " favicon"}
                       width={16}
                       height={16}
                       className="object-contain"

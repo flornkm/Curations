@@ -5,7 +5,7 @@ export default function Navigation(props) {
   return (
     <div
       ref={props.sidebarWrapper}
-      className="fixed z-20 top-0 right-0 bottom-0 w-full flex transition-all duration-700 opacity-0 translate-x-[100%]"
+      className="fixed z-40 top-0 right-0 bottom-0 w-full flex transition-all duration-700 opacity-0 translate-x-[100%]"
     >
       <div
         className="flex-grow max-md:hidden"

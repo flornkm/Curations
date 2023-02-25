@@ -24,6 +24,7 @@ export default function Navigation(props) {
     loop: false,
     align: 0,
     dragFree: true,
+    containScroll: "keepSnaps",
   });
 
   const designCategory = [
@@ -224,7 +225,7 @@ export default function Navigation(props) {
         </Link>
         <div
           ref={props.navigation}
-          className="flex place-items-center p-1 rounded-full ring-1 z-50 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-lg:w-[90%] max-lg:justify-between max-lg:translate-y-16 transition-all duration-100"
+          className="flex place-items-center p-1 rounded-full ring-1 z-40 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-lg:w-[90%] max-lg:justify-between max-lg:translate-y-16 transition-all duration-100"
         >
           <div
             ref={mainNavigation.all}
@@ -313,6 +314,7 @@ export default function Navigation(props) {
           setSubCategory={setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
+          emblaApi={emblaApi}
         />
       )}
       {props.category.category === "development" && (
@@ -323,6 +325,7 @@ export default function Navigation(props) {
           setSubCategory={setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
+          emblaApi={emblaApi}
         />
       )}
       {props.category.category === "productivity" && (
@@ -333,6 +336,7 @@ export default function Navigation(props) {
           setSubCategory={setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
+          emblaApi={emblaApi}
         />
       )}
       {props.category.category === "learning" && (
@@ -343,6 +347,7 @@ export default function Navigation(props) {
           setSubCategory={setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
+          emblaApi={emblaApi}
         />
       )}
     </>
