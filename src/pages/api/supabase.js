@@ -7,9 +7,27 @@ export default async function handler(req, res) {
   );
 
   const category = req.query.category;
+  const subCategory = req.query.subCategory;
 
-  if (category === "all") {
-    const { data } = await supabase.from("curations").select("*");
+  if (!subCategory) {
+    if (category === "all") {
+      const { data } = await supabase.from("curations").select("*");
+
+      res.status(200).json(data);
+    } else {
+      const { data } = await supabase
+        .from("curations")
+        .select("*")
+        .eq("category", category);
+
+      res.status(200).json(data);
+    }
+  } else if (subCategory !== "All") {
+    const { data } = await supabase
+      .from("curations")
+      .select("*")
+      .eq("category", category)
+      .eq(category.toLowerCase(), subCategory.toLowerCase());
 
     res.status(200).json(data);
   } else {

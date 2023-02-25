@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import * as Icon from "iconoir-react";
 import useEmblaCarousel from "embla-carousel-react";
+import Subcategory from "@/components/Subcategory";
 
 export default function Navigation(props) {
   const mainNavigation = {
@@ -23,11 +24,7 @@ export default function Navigation(props) {
     loop: false,
     align: 0,
     dragFree: true,
-  });   
-
-  const handleCategory = (itemName) => {
-    setSubCategory(itemName);
-  }
+  });
 
   const designCategory = [
     {
@@ -88,6 +85,119 @@ export default function Navigation(props) {
     },
   ];
 
+  const developmentCategory = [
+    {
+      name: "All",
+      icon: <Icon.Globe />,
+    },
+    {
+      name: "Tools",
+      icon: <Icon.Tools />,
+    },
+    {
+      name: "Frameworks",
+      icon: <Icon.Calculator />,
+    },
+    {
+      name: "Repositories",
+      icon: <Icon.GitHub />,
+    },
+    {
+      name: "IDEs",
+      icon: <Icon.CodeBrackets />,
+    },
+    {
+      name: "Coding Info",
+      icon: <Icon.InputField />,
+    },
+    {
+      name: "CSS",
+      icon: <Icon.Css3 />,
+    },
+  ];
+
+  const productivityCategory = [
+    {
+      name: "All",
+      icon: <Icon.Globe />,
+    },
+    {
+      name: "Tools",
+      icon: <Icon.Tools />,
+    },
+    {
+      name: "Analytics",
+      icon: <Icon.LineSpace />,
+    },
+    {
+      name: "Survey",
+      icon: <Icon.SquareWave />,
+    },
+    {
+      name: "Typing",
+      icon: <Icon.KeyAltBack />,
+    },
+    {
+      name: "Presentations",
+      icon: <Icon.Presentation />,
+    },
+    {
+      name: "Mac Apps",
+      icon: <Icon.Apple />,
+    },
+    {
+      name: "Audiovisual",
+      icon: <Icon.VideoCamera />,
+    },
+    {
+      name: "File Sharing",
+      icon: <Icon.AddFolder />,
+    },
+    {
+      name: "Job Boards",
+      icon: <Icon.Suggestion />,
+    },
+  ];
+
+  const learningCategory = [
+    {
+      name: "All",
+      icon: <Icon.Globe />,
+    },
+    {
+      name: "Startups",
+      icon: <Icon.Rocket />,
+    },
+    {
+      name: "Material",
+      icon: <Icon.Book />,
+    },
+    {
+      name: "Blog",
+      icon: <Icon.PageFlip />,
+    },
+    {
+      name: "Resource Pages",
+      icon: <Icon.SquareWave />,
+    },
+    {
+      name: "Books",
+      icon: <Icon.BookmarkBook />,
+    },
+    {
+      name: "Documentations",
+      icon: <Icon.VideoProjector />,
+    },
+    {
+      name: "Quotes",
+      icon: <Icon.Quote />,
+    },
+    {
+      name: "YT Videos",
+      icon: <Icon.Play />,
+    },
+  ];
+
   const handleNavigation = (e) => {
     const target = e.target;
     const targetPos = target.offsetLeft;
@@ -125,21 +235,30 @@ export default function Navigation(props) {
           </div>
           <div
             ref={mainNavigation.design}
-            onClick={(e) => handleNavigation(e)}
+            onClick={(e) => {
+              handleNavigation(e);
+              setSubCategory("All");
+            }}
             className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
           >
             Design
           </div>
           <div
             ref={mainNavigation.development}
-            onClick={(e) => handleNavigation(e)}
+            onClick={(e) => {
+              handleNavigation(e);
+              setSubCategory("All");
+            }}
             className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
           >
             Development
           </div>
           <div
             ref={mainNavigation.productivity}
-            onClick={(e) => handleNavigation(e)}
+            onClick={(e) => {
+              handleNavigation(e);
+              setSubCategory("All");
+            }}
             className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
           >
             Productivity
@@ -147,7 +266,10 @@ export default function Navigation(props) {
           <div
             ref={mainNavigation.learning}
             href="/learning"
-            onClick={(e) => handleNavigation(e)}
+            onClick={(e) => {
+              handleNavigation(e);
+              setSubCategory("All");
+            }}
             className="z-10 cursor-pointer px-4 py-2 max-md:px-2 hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
           >
             Learning
@@ -184,33 +306,44 @@ export default function Navigation(props) {
         />
       </div>
       {props.category.category === "design" && (
-        <div
-          className="emblaRef cursor-grab mb-10 px-6 overflow-hidden py-1"
-          ref={emblaRef}
-        >
-          <div className="embla__container">
-            {designCategory.map((item, index) => {
-              return (
-                <div key={index} className="embla__slide">
-                  <div
-                    onClick={() => {
-                      handleCategory(item.name);
-                    }}
-                    className={
-                      "flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all hover:text-white hover:bg-zinc-900 ring-1 hover:ring-zinc-700 rounded-lg " +
-                      (subCategory === item.name
-                        ? "ring-zinc-700 bg-zinc-900 text-white"
-                        : "text-zinc-400 ring-zinc-800")
-                    }
-                  >
-                    <div>{item.icon}</div>
-                    <p className="text-sm font-medium">{item.name}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        <Subcategory
+          subcategoryItems={designCategory}
+          subCategory={subCategory}
+          emblaRef={emblaRef}
+          setSubCategory={setSubCategory}
+          handleNavigation={handleNavigation}
+          handleCategory={props.handleCategory}
+        />
+      )}
+      {props.category.category === "development" && (
+        <Subcategory
+          subcategoryItems={developmentCategory}
+          subCategory={subCategory}
+          emblaRef={emblaRef}
+          setSubCategory={setSubCategory}
+          handleNavigation={handleNavigation}
+          handleCategory={props.handleCategory}
+        />
+      )}
+      {props.category.category === "productivity" && (
+        <Subcategory
+          subcategoryItems={productivityCategory}
+          subCategory={subCategory}
+          emblaRef={emblaRef}
+          setSubCategory={setSubCategory}
+          handleNavigation={handleNavigation}
+          handleCategory={props.handleCategory}
+        />
+      )}
+      {props.category.category === "learning" && (
+        <Subcategory
+          subcategoryItems={learningCategory}
+          subCategory={subCategory}
+          emblaRef={emblaRef}
+          setSubCategory={setSubCategory}
+          handleNavigation={handleNavigation}
+          handleCategory={props.handleCategory}
+        />
       )}
     </>
   );

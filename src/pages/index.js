@@ -26,6 +26,19 @@ export default function Home() {
       });
   };
 
+  const handleCategory = (itemName) => {
+    setLoading(true);
+    fetch(
+      "/api/supabase?category=" + category.category + "&subCategory=" + itemName
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setLoading(false);
+        setItems([...data]);
+      });
+  };
+
   useEffect(() => {
     loadItems();
 
@@ -51,6 +64,7 @@ export default function Home() {
           setCategory={setCategory}
           sidebarWrapper={sidebarWrapper}
           plusIcon={plusIcon}
+          handleCategory={handleCategory}
         />
         {(loading && (
           <div className="flex justify-center items-center h-[75vh]">
@@ -82,7 +96,12 @@ export default function Home() {
                       className="object-contain"
                     />
                     <h3 className="font-medium">{item.name}</h3>
-                    <p>{item.design && item.design}{item.development && item.development}{item.productivity && item.productivity}{item.learning && item.learning}</p>
+                    <p>
+                      {item.design && item.design}
+                      {item.development && item.development}
+                      {item.productivity && item.productivity}
+                      {item.learning && item.learning}
+                    </p>
                   </div>
                 </Link>
               ))}
