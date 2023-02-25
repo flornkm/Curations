@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as Icon from "iconoir-react";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -21,8 +21,13 @@ export default function Navigation(props) {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    align: "start",
-  });
+    align: 0,
+    dragFree: true,
+  });   
+
+  const handleCategory = (itemName) => {
+    setSubCategory(itemName);
+  }
 
   const designCategory = [
     {
@@ -48,7 +53,39 @@ export default function Navigation(props) {
     {
       name: "Mockups",
       icon: <Icon.Laptop />,
-    }
+    },
+    {
+      name: "3D Assets",
+      icon: <Icon.Axes />,
+    },
+    {
+      name: "Colors",
+      icon: <Icon.ColorWheel />,
+    },
+    {
+      name: "Fonts",
+      icon: <Icon.Type />,
+    },
+    {
+      name: "Illustrations",
+      icon: <Icon.DesignPencil />,
+    },
+    {
+      name: "Design Studios",
+      icon: <Icon.Building />,
+    },
+    {
+      name: "Product Pages",
+      icon: <Icon.ShoppingBag />,
+    },
+    {
+      name: "Figma",
+      icon: <Icon.Figma />,
+    },
+    {
+      name: "Design Systems",
+      icon: <Icon.SystemRestart />,
+    },
   ];
 
   const handleNavigation = (e) => {
@@ -147,12 +184,25 @@ export default function Navigation(props) {
         />
       </div>
       {props.category.category === "design" && (
-        <div className="emblaRef cursor-grab mb-10 px-6 overflow-hidden py-1" ref={emblaRef}>
+        <div
+          className="emblaRef cursor-grab mb-10 px-6 overflow-hidden py-1"
+          ref={emblaRef}
+        >
           <div className="embla__container">
             {designCategory.map((item, index) => {
               return (
                 <div key={index} className="embla__slide">
-                  <div onClick={() => {setSubCategory(item.name)}} className={"flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all min-w-20 hover:text-white hover:bg-zinc-900 ring-1 hover:ring-zinc-700 rounded-lg " + (subCategory === item.name ? "ring-zinc-700 bg-zinc-900 text-white" : "text-zinc-400 ring-zinc-800")}>
+                  <div
+                    onClick={() => {
+                      handleCategory(item.name);
+                    }}
+                    className={
+                      "flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all hover:text-white hover:bg-zinc-900 ring-1 hover:ring-zinc-700 rounded-lg " +
+                      (subCategory === item.name
+                        ? "ring-zinc-700 bg-zinc-900 text-white"
+                        : "text-zinc-400 ring-zinc-800")
+                    }
+                  >
                     <div>{item.icon}</div>
                     <p className="text-sm font-medium">{item.name}</p>
                   </div>
