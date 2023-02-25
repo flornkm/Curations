@@ -47,6 +47,7 @@ export default function Home() {
       <main className="pl-[5%] pr-[5%] min-h-[200vh]">
         <Navigation
           navigation={navigation}
+          category={category}
           setCategory={setCategory}
           sidebarWrapper={sidebarWrapper}
           plusIcon={plusIcon}

@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "13.1.6",
     "@supabase/supabase-js": "^2.8.0",
+    "embla-carousel-react": "^7.0.9",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "iconoir-react": "^6.3.0",
