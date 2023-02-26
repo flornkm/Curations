@@ -1,24 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { useRef } from "react";
 import * as Icon from "iconoir-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Subcategory from "@/components/Subcategory";
 
 export default function Navigation(props) {
-  const mainNavigation = {
-    all: useRef(),
-    design: useRef(),
-    development: useRef(),
-    productivity: useRef(),
-    learning: useRef(),
-  };
-  const rect = useRef();
+  const router = useRouter();
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
-
-  const [subCategory, setSubCategory] = useState("All");
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -204,10 +196,21 @@ export default function Navigation(props) {
     const targetPos = target.offsetLeft;
     const targetWidth = target.offsetWidth;
 
-    rect.current.style.transform = `translateX(${targetPos}px)`;
-    rect.current.style.width = `${targetWidth}px`;
+    props.rect.current.style.transform = `translateX(${targetPos}px)`;
+    props.rect.current.style.width = `${targetWidth}px`;
 
-    props.setCategory({ category: target.innerText.toLowerCase() });
+    if (target.innerText === "Code") {
+      props.setCategory({ category: "development" });
+    }
+    if (target.innerText !== "Code") {
+      props.setCategory({ category: target.innerText.toLowerCase() });
+    }
+
+    if (target.innerText !== "All") {
+      props.handleCategory(target.innerText.toLowerCase(), "All");
+    } else {
+      props.loadCategoryItems("all");
+    }
   };
 
   return (
@@ -225,58 +228,101 @@ export default function Navigation(props) {
         </Link>
         <div
           ref={props.navigation}
-          className="flex place-items-center p-1 rounded-full ring-1 z-40 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-lg:w-[90%] max-lg:justify-between max-lg:translate-y-16 transition-all duration-100"
+          className="flex place-items-center p-1 rounded-full ring-2 z-40 ring-zinc-800 text-sm font-medium text-white fixed translate-x-[-50%] left-[50%] bg-[#0D0D0D] max-lg:w-[90%] max-lg:justify-between max-lg:translate-y-16 transition-all duration-100 max-md:text-[12px]"
         >
           <div
-            ref={mainNavigation.all}
-            onClick={(e) => handleNavigation(e)}
+            ref={props.mainNavigation.all}
+            onClick={(e) => {
+              handleNavigation(e);
+              router.push("/");
+            }}
             className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:hidden"
           >
             All
           </div>
           <div
-            ref={mainNavigation.design}
+            ref={props.mainNavigation.design}
             onClick={(e) => {
               handleNavigation(e);
-              setSubCategory("All");
+              props.setSubCategory("All");
+              if (router.query.category !== "design") {
+                router.push({
+                  pathname: "/",
+                  query: { category: "design" },
+                });
+              }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
           >
             Design
           </div>
           <div
-            ref={mainNavigation.development}
+            ref={props.mainNavigation.development}
             onClick={(e) => {
               handleNavigation(e);
-              setSubCategory("All");
+              props.setSubCategory("All");
+              if (router.query.category !== "development") {
+                router.push({
+                  pathname: "/",
+                  query: { category: "development" },
+                });
+              }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-sm:hidden"
           >
             Development
           </div>
           <div
-            ref={mainNavigation.productivity}
+            ref={props.mainNavigation.code}
             onClick={(e) => {
               handleNavigation(e);
-              setSubCategory("All");
+              props.setSubCategory("All");
+              if (router.query.category !== "development") {
+                router.push({
+                  pathname: "/",
+                  query: { category: "development" },
+                });
+              }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] sm:hidden max-md:w-full max-md:text-center"
+          >
+            Code
+          </div>
+          <div
+            ref={props.mainNavigation.productivity}
+            onClick={(e) => {
+              handleNavigation(e);
+              props.setSubCategory("All");
+              if (router.query.category !== "productivity") {
+                router.push({
+                  pathname: "/",
+                  query: { category: "productivity" },
+                });
+              }
+            }}
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
           >
             Productivity
           </div>
           <div
-            ref={mainNavigation.learning}
+            ref={props.mainNavigation.learning}
             href="/learning"
             onClick={(e) => {
               handleNavigation(e);
-              setSubCategory("All");
+              props.setSubCategory("All");
+              if (router.query.category !== "learning") {
+                router.push({
+                  pathname: "/",
+                  query: { category: "learning" },
+                });
+              }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
           >
             Learning
           </div>
           <div
-            ref={rect}
+            ref={props.rect}
             className={
               "transition-all h-9 w-12 bg-zinc-800 rounded-full absolute z-0 left-0 duration-300 translate-x-1 max-md:w-16"
             }
@@ -309,45 +355,49 @@ export default function Navigation(props) {
       {props.category.category === "design" && (
         <Subcategory
           subcategoryItems={designCategory}
-          subCategory={subCategory}
+          subCategory={props.subCategory}
           emblaRef={emblaRef}
-          setSubCategory={setSubCategory}
+          setSubCategory={props.setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
+          category={props.category}
         />
       )}
       {props.category.category === "development" && (
         <Subcategory
           subcategoryItems={developmentCategory}
-          subCategory={subCategory}
+          subCategory={props.subCategory}
           emblaRef={emblaRef}
-          setSubCategory={setSubCategory}
+          setSubCategory={props.setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
+          category={props.category}
         />
       )}
       {props.category.category === "productivity" && (
         <Subcategory
           subcategoryItems={productivityCategory}
-          subCategory={subCategory}
+          subCategory={props.subCategory}
           emblaRef={emblaRef}
-          setSubCategory={setSubCategory}
+          setSubCategory={props.setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
+          category={props.category}
         />
       )}
       {props.category.category === "learning" && (
         <Subcategory
           subcategoryItems={learningCategory}
-          subCategory={subCategory}
+          subCategory={props.subCategory}
           emblaRef={emblaRef}
-          setSubCategory={setSubCategory}
+          setSubCategory={props.setSubCategory}
           handleNavigation={handleNavigation}
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
+          category={props.category}
         />
       )}
     </>

@@ -1,80 +1,107 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/router";
-import { useState, useEffect, useRef } from "react";
-import { Inter } from "@next/font/google";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import About from "@/components/About";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+export default function Curations() {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState({ category: "all" });
+  const [subCategory, setSubCategory] = useState("All");
   const [items, setItems] = useState([]);
-  const sidebarWrapper = useRef();
-  const plusIcon = useRef();
-  const navigation = useRef();
+  const sidebarWrapper = useRef(null);
+  const plusIcon = useRef(null);
+  const navigation = useRef(null);
+  const rect = useRef();
   const router = useRouter();
-
-  const categoryURL = router.query;
-
-  const loadCategoryItems = () => {
-    setLoading(true);
-    fetch("/api/supabase?category=" + category.category)
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        setItems([...data]);
-        if (category.category.toLowerCase() !== "all") {
-        router.push({
-          pathname: "/",
-          query: { category: category.category },
-        });
-      } else {
-        router.push({
-          pathname: "/",
-        });
-      }
-      });
+  const mainNavigation = {
+    all: useRef(),
+    design: useRef(),
+    development: useRef(),
+    code: useRef(),
+    productivity: useRef(),
+    learning: useRef(),
   };
 
-  const loadSubcategoryItems = (itemName) => {
-    setLoading(true);
-    fetch(
-      "/api/supabase?category=" + category.category + "&subCategory=" + itemName
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        setItems([...data]);
-        if (itemName.toLowerCase() !== "all") {
-          router.push({
-            pathname: "/",
-            query: {
-              category: category.category,
-              subcategory: itemName.toLowerCase(),
-            },
-          });
-        } else {
-          router.push({
-            pathname: "/",
-            query: { category: category.category },
-          });
-        }
-      });
-  };
+  const moveRect = useCallback(() => {
+    if (router.query.category === "design") {
+      mainNavigation.design.current.offsetLeft;
+      mainNavigation.design.current.offsetWidth;
+      rect.current.style.transform = `translateX(${mainNavigation.design.current.offsetLeft}px)`;
+      rect.current.style.width = `${mainNavigation.design.current.offsetWidth}px`;
+    } else if (
+      router.query.category === "development" ||
+      router.query.category === "code"
+    ) {
+      mainNavigation.development.current.offsetLeft;
+      mainNavigation.development.current.offsetWidth;
+      rect.current.style.transform = `translateX(${mainNavigation.development.current.offsetLeft}px)`;
+      rect.current.style.width = `${mainNavigation.development.current.offsetWidth}px`;
+    } else if (router.query.category === "productivity") {
+      mainNavigation.productivity.current.offsetLeft;
+      mainNavigation.productivity.current.offsetWidth;
+      rect.current.style.transform = `translateX(${mainNavigation.productivity.current.offsetLeft}px)`;
+      rect.current.style.width = `${mainNavigation.productivity.current.offsetWidth}px`;
+    } else if (router.query.category === "learning") {
+      mainNavigation.learning.current.offsetLeft;
+      mainNavigation.learning.current.offsetWidth;
+      rect.current.style.transform = `translateX(${mainNavigation.learning.current.offsetLeft}px)`;
+      rect.current.style.width = `${mainNavigation.learning.current.offsetWidth}px`;
+    }
+  }, [router.query.category]);
 
   useEffect(() => {
-    loadCategoryItems();
+    if (router.isReady) {
+      if (
+        router.query.category !== undefined &&
+        router.query.subcategory === undefined
+      ) {
+        moveRect();
+        setCategory({ category: router.query.category });
+        loadSubcategoryItems(router.query.category, "All");
+      } else if (
+        router.query.category !== undefined &&
+        router.query.subcategory !== undefined
+      ) {
+        moveRect();
+        loadSubcategoryItems(router.query.category, router.query.subcategory);
+        setCategory({ category: router.query.category });
+        if (router.query.subcategory.includes("-")) {
+          router.query.subcategory = router.query.subcategory.replace(
+            /-/g,
+            " "
+          );
+        }
+        setSubCategory(router.query.subcategory);
+      } else {
+        loadCategoryItems("all");
+      }
+    }
+  }, [router]);
 
-    window.addEventListener("scroll", (e) => {
-      if (e.target.documentElement.scrollTop > 35)
-        navigation.current.classList.remove("max-lg:translate-y-16");
-      else navigation.current.classList.add("max-lg:translate-y-16");
-    });
-  }, [category]);
+  const loadCategoryItems = (category) => {
+    setLoading(true);
+    fetch("/api/supabase?category=" + category)
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        setItems(data);
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const loadSubcategoryItems = (category, itemName) => {
+    setLoading(true);
+    fetch("/api/supabase?category=" + category + "&subCategory=" + itemName)
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        setItems(data);
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
@@ -86,12 +113,17 @@ export default function Home() {
       </Head>
       <main className="pl-[5%] pr-[5%] min-h-[200vh]">
         <Navigation
+          mainNavigation={mainNavigation}
           navigation={navigation}
           category={category}
           setCategory={setCategory}
           sidebarWrapper={sidebarWrapper}
           plusIcon={plusIcon}
           handleCategory={loadSubcategoryItems}
+          subCategory={subCategory}
+          setSubCategory={setSubCategory}
+          loadCategoryItems={loadCategoryItems}
+          rect={rect}
         />
         {(loading && (
           <div className="flex justify-center items-center h-[75vh]">
@@ -100,38 +132,39 @@ export default function Home() {
         )) ||
           (!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
-              {items.map((item) => (
-                <Link
-                  target="_blank"
-                  key={item.id}
-                  href={item.link}
-                  className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={500}
-                    height={500}
-                    className="rounded-lg"
-                  />
-                  <div className="flex gap-4 place-items-center">
+              {items &&
+                items.map((item) => (
+                  <Link
+                    target="_blank"
+                    key={item.id}
+                    href={item.link}
+                    className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
+                  >
                     <Image
-                      src={item.favicon}
-                      alt={item.title + " favicon"}
-                      width={16}
-                      height={16}
-                      className="object-contain"
+                      src={item.image}
+                      alt={item.title}
+                      width={500}
+                      height={500}
+                      className="rounded-lg"
                     />
-                    <h3 className="font-medium">{item.name}</h3>
-                    <p>
-                      {item.design && item.design}
-                      {item.development && item.development}
-                      {item.productivity && item.productivity}
-                      {item.learning && item.learning}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+                    <div className="flex gap-4 place-items-center">
+                      <Image
+                        src={item.favicon}
+                        alt={item.title + " favicon"}
+                        width={16}
+                        height={16}
+                        className="object-contain"
+                      />
+                      <h3 className="font-medium">{item.name}</h3>
+                      <p>
+                        {item.design && item.design}
+                        {item.development && item.development}
+                        {item.productivity && item.productivity}
+                        {item.learning && item.learning}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
             </div>
           ))}
         <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
