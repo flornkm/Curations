@@ -20,18 +20,30 @@ export default function Subcategory(props) {
                       item.name = item.name.replace(/ /g, "-");
                     }
                     props.handleCategory(props.category.category, item.name);
-                    router.push(
-                      {
-                        pathname: "/",
-                        query: {
-                          category: props.category.category,
-                          subcategory: item.name.toLowerCase(), 
-                        }
-                      },
-                      undefined,
-                      { shallow: true }
-                    );
-
+                    if (item.name !== "all") {
+                      router.push(
+                        {
+                          pathname: "/",
+                          query: {
+                            category: props.category.category,
+                            subcategory: item.name.toLowerCase(),
+                          },
+                        },
+                        undefined,
+                        { shallow: true }
+                      );
+                    } else {
+                      router.push(
+                        {
+                          pathname: "/",
+                          query: {
+                            category: props.category.category,
+                          },
+                        },
+                        undefined,
+                        { shallow: true }
+                      );
+                    }
                   }}
                   className={
                     "flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all hover:text-white hover:bg-zinc-900 ring-1 hover:ring-zinc-700 rounded-lg " +
