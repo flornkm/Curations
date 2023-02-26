@@ -37,8 +37,13 @@ export default function Curations() {
     ) {
       mainNavigation.development.current.offsetLeft;
       mainNavigation.development.current.offsetWidth;
+      if (window.innerWidth > 768) {
       rect.current.style.transform = `translateX(${mainNavigation.development.current.offsetLeft}px)`;
       rect.current.style.width = `${mainNavigation.development.current.offsetWidth}px`;
+      } else {
+      rect.current.style.transform = `translateX(${mainNavigation.code.current.offsetLeft}px)`;
+      rect.current.style.width = `${mainNavigation.code.current.offsetWidth}px`;
+      }
     } else if (router.query.category === "productivity") {
       mainNavigation.productivity.current.offsetLeft;
       mainNavigation.productivity.current.offsetWidth;
@@ -102,6 +107,14 @@ export default function Curations() {
       })
       .catch((error) => console.log(error));
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      if (e.target.documentElement.scrollTop > 35)
+        navigation.current.classList.remove("max-lg:translate-y-16");
+      else navigation.current.classList.add("max-lg:translate-y-16");
+    });
+  }, []);
 
   return (
     <>

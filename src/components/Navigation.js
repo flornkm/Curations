@@ -252,7 +252,7 @@ export default function Navigation(props) {
                 });
               }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] flex-grow max-lg:text-center"
           >
             Design
           </div>
@@ -284,7 +284,7 @@ export default function Navigation(props) {
                 });
               }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] sm:hidden max-md:w-full max-md:text-center"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] flex-grow sm:hidden max-md:text-center"
           >
             Code
           </div>
@@ -300,13 +300,12 @@ export default function Navigation(props) {
                 });
               }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] flex-grow max-lg:text-center"
           >
             Productivity
           </div>
           <div
             ref={props.mainNavigation.learning}
-            href="/learning"
             onClick={(e) => {
               handleNavigation(e);
               props.setSubCategory("All");
@@ -317,7 +316,7 @@ export default function Navigation(props) {
                 });
               }
             }}
-            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] max-md:w-full max-md:text-center"
+            className="z-10 cursor-pointer px-4 py-2 max-md:px-2 max-md:text-sm hover:bg-zinc-800 hover:bg-opacity-50 transition-all rounded-full max-md:text-[12px] flex-grow max-lg:text-center"
           >
             Learning
           </div>
@@ -344,10 +343,12 @@ export default function Navigation(props) {
                 "translate-x-[100%]"
               );
               props.plusIcon.current.classList.add("rotate-45");
+              document.body.style.overflow = "hidden";
             } else {
               props.sidebarWrapper.current.classList.add("opacity-0");
               props.sidebarWrapper.current.classList.add("translate-x-[100%]");
               props.plusIcon.current.classList.remove("rotate-45");
+              document.body.style.overflow = "auto";
             }
           }}
         />

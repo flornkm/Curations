@@ -20,7 +20,7 @@ export default function Subcategory(props) {
                       item.name = item.name.replace(/ /g, "-");
                     }
                     props.handleCategory(props.category.category, item.name);
-                    if (item.name !== "all") {
+                    if (item.name.toLowerCase() !== "all") {
                       router.push(
                         {
                           pathname: "/",
