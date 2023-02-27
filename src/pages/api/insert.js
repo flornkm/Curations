@@ -3,11 +3,21 @@ import { createClient } from "@supabase/supabase-js";
 import https from "https";
 
 async function getBrowserInstance() {
-  const executablePath = process.platform === "win32"
-  ? "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-  : process.platform === "linux"
-  ? "/usr/bin/google-chrome"
-  : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  const executablePath = "/usr/bin/google-chrome";
+
+  if (!executablePath) {
+    // running locally
+    const puppeteer = require("puppeteer");
+    return puppeteer.launch({
+      args: chromium.args,
+      headless: true,
+      defaultViewport: {
+        width: 1280,
+        height: 720,
+      },
+      ignoreHTTPSErrors: true,
+    });
+  }
 
   return chromium.puppeteer.launch({
     args: chromium.args,
@@ -57,9 +67,7 @@ export default async (req, res) => {
 
     if (error) {
       console.error(error);
-      res
-        .status(500)
-        .json({ message: "Error saving screenshot to database." });
+      res.status(500).json({ message: "Error saving screenshot to database." });
     } else {
       res.status(200).json({ message: "Screenshot saved to database." });
     }
@@ -72,4 +80,3 @@ export default async (req, res) => {
     }
   }
 };
-
