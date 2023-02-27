@@ -3,7 +3,11 @@ import { createClient } from "@supabase/supabase-js";
 import https from "https";
 
 async function getBrowserInstance() {
-  const executablePath = await chromium.executablePath;
+  const executablePath = process.platform === "win32"
+  ? "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+  : process.platform === "linux"
+  ? "/usr/bin/google-chrome"
+  : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
   return chromium.puppeteer.launch({
     args: chromium.args,
