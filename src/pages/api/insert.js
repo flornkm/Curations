@@ -1,9 +1,10 @@
 import chromium from "chrome-aws-lambda";
 import { createClient } from "@supabase/supabase-js";
 import https from "https";
+import fs from "fs";
 
 async function getBrowserInstance() {
-  const executablePath = "/usr/bin/google-chrome";
+  const executablePath = await chromium.executablePath;
 
   if (!executablePath) {
     // running locally
@@ -40,7 +41,6 @@ export default async (req, res) => {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
   name = name.replace(/\s/g, "_");
-
   try {
     browser = await getBrowserInstance();
     let page = await browser.newPage();
