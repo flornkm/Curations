@@ -1,5 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import fs from "fs";
 
 async function fetchScreenshot(url) {
   const endpoint = `https://api.curations.tech/api/screenshot?url=${encodeURIComponent(
@@ -41,14 +40,6 @@ export default async (req, res) => {
       cacheControl: "3600",
       upsert: false,
       contentType: "image/webp",
-      size: 434,
-      width: 434,
-      height: 700,
-      resize: {
-        fit: "cover",
-        width: 434,
-        height: 700,
-      },
     });
 
   if (error) {
