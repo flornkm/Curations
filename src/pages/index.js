@@ -169,12 +169,6 @@ export default function Curations() {
                         className="object-contain"
                       />
                       <h3 className="font-medium">{item.name}</h3>
-                      <p>
-                        {item.design && item.design}
-                        {item.development && item.development}
-                        {item.productivity && item.productivity}
-                        {item.learning && item.learning}
-                      </p>
                     </div>
                   </Link>
                 ))}

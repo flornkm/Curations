@@ -52,6 +52,7 @@ export default async (req, res) => {
         category: category.toLowerCase(),
         design: subcategory.toLowerCase(),
         image: name + ".webp",
+        link: imageUrl,
         favicon: "test",
       },
     ]);
