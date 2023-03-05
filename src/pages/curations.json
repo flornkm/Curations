@@ -1,0 +1,3512 @@
+[
+  {
+    "web-scraper-order": "1678016167-1752",
+    "link": "https://roomgpt.io/?ref=curations.tech",
+    "name": "RoomGPT",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1753",
+    "link": "https://www.stryds.com/?ref=curations.tech",
+    "name": "Stryds",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1754",
+    "link": "https://museapp.com/?ref=curations.tech",
+    "name": "Muse",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1755",
+    "link": "https://www.cedric.design/?ref=curations.tech",
+    "name": "Cédric",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1756",
+    "link": "https://www.basedash.com/?ref=curations.tech",
+    "name": "Basedash",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1757",
+    "link": "https://tightype.com/?ref=curations.tech",
+    "name": "TIGHTYPE™",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1758",
+    "link": "https://mnmll.ist/?ref=curations.tech",
+    "name": "Mnmllist",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1759",
+    "link": "https://liveblocks.io/?ref=curations.tech",
+    "name": "Liveblocks",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1760",
+    "link": "https://beta.tldraw.com/?ref=curations.tech",
+    "name": "tldraw",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1761",
+    "link": "https://navigator.designdisciplin.com/?ref=curations.tech",
+    "name": "Design Navigator",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1762",
+    "link": "https://goholler.ai/?ref=curations.tech",
+    "name": "Holler",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1763",
+    "link": "https://penpot.app/?ref=curations.tech",
+    "name": "Penpot",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1764",
+    "link": "https://stitches.dev/?ref=curations.tech",
+    "name": "Stitches",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1765",
+    "link": "https://workos.com/?ref=curations.tech",
+    "name": "WorkOS",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1766",
+    "link": "https://www.napkin.one/?ref=curations.tech",
+    "name": "Napkin",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1767",
+    "link": "https://artifact.news/?ref=curations.tech",
+    "name": "Artifact",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1768",
+    "link": "https://minimalissimo.com/?ref=curations.tech",
+    "name": "Minimalissimo",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1769",
+    "link": "https://resend.com/?ref=curations.tech",
+    "name": "Resend",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1770",
+    "link": "https://withcompound.com/?ref=curations.tech",
+    "name": "Compound",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1771",
+    "link": "https://www.sequoiacap.com/arc/?ref=curations.tech",
+    "name": "Sequoia Arc",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1772",
+    "link": "https://www.shadergradient.co/?ref=curations.tech",
+    "name": "Shader Gradient",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1773",
+    "link": "https://swr.vercel.app/?ref=curations.tech",
+    "name": "SWR",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1774",
+    "link": "https://moko-app.com/?ref=curations.tech",
+    "name": "Moko-app",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1775",
+    "link": "https://www.journal.do/?ref=curations.tech",
+    "name": "Journal",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1776",
+    "link": "https://evervault.com/?ref=curations.tech",
+    "name": "Evervault",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1777",
+    "link": "https://www.twilio.com/?ref=curations.tech",
+    "name": "Twilio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1778",
+    "link": "https://devdojo.com/?ref=curations.tech",
+    "name": "DevDojo",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1779",
+    "link": "https://readymag.com/?ref=curations.tech",
+    "name": "Readymag",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1780",
+    "link": "https://evervault.com/?ref=curations.tech",
+    "name": "Evervault",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1781",
+    "link": "https://ui.land/?ref=curations.tech",
+    "name": "ui.land",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1782",
+    "link": "https://mafs.dev/?ref=curations.tech",
+    "name": "Mafs",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1783",
+    "link": "https://www.graswald3d.com/?ref=curations.tech",
+    "name": "Graswald",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1784",
+    "link": "https://yarmill.app/?ref=curations.tech",
+    "name": "Yarmill",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1785",
+    "link": "https://httpie.io/?ref=curations.tech",
+    "name": "HTTPie",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1786",
+    "link": "https://www.able.com/?ref=curations.tech",
+    "name": "Able",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1787",
+    "link": "https://midwam.com/en?ref=curations.tech",
+    "name": "MIDWAM",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1788",
+    "link": "https://foundation.app/worlds?ref=curations.tech",
+    "name": "Worlds | Foundation",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1789",
+    "link": "https://logsnag.com/?ref=curations.tech",
+    "name": "LogSnag",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1790",
+    "link": "https://precedent.vercel.app/?ref=curations.tech",
+    "name": "Precedent",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1791",
+    "link": "https://www.byjer.com/desktop-wallpapers?ref=curations.tech",
+    "name": "Jerry-Lee Bosmans",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1792",
+    "link": "https://www.hanko.io/?ref=curations.tech",
+    "name": "Hanko",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1793",
+    "link": "https://www.resemble.ai/?ref=curations.tech",
+    "name": "Resemble AI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1794",
+    "link": "https://virgilabloh.com/free-game/?ref=curations.tech",
+    "name": "Virgil Abloh FREE-GAME",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1795",
+    "link": "https://pipe.com/?ref=curations.tech",
+    "name": "Pipe",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1796",
+    "link": "https://www.builder.ai/?ref=curations.tech",
+    "name": "Builder.ai",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1797",
+    "link": "https://www.niclas.co/?ref=curations.tech",
+    "name": "Niclas Ernst",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1798",
+    "link": "https://resend.com/?ref=curations.tech",
+    "name": "Resend",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1799",
+    "link": "https://neoplants.com/?ref=curations.tech",
+    "name": "Neoplants",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1800",
+    "link": "https://teleporthq.io/?ref=curations.tech",
+    "name": "TeleportHQ",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1801",
+    "link": "https://uiw.tf/?ref=curations.tech",
+    "name": "uiwtf",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1802",
+    "link": "https://vitor.com/?ref=curations.tech",
+    "name": "Vitor Lourenço",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1803",
+    "link": "https://www.openline.ai/?ref=curations.tech",
+    "name": "Openline",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1804",
+    "link": "https://qualify.june.so/?ref=curations.tech",
+    "name": "June",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1805",
+    "link": "https://www.nan.fyi/?ref=curations.tech",
+    "name": "Not a Number",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1806",
+    "link": "https://www.codux.com/?ref=curations.tech",
+    "name": "Codux",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1807",
+    "link": "https://www.editorx.com/?ref=curations.tech",
+    "name": "Editor X",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1808",
+    "link": "https://bubble.io/?ref=curations.tech",
+    "name": "Bubble",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1809",
+    "link": "https://www.joshuas.world/?ref=curations.tech",
+    "name": "Joshua's World",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1810",
+    "link": "https://wope.com/?ref=curations.tech",
+    "name": "Wope",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1811",
+    "link": "https://www.constancesouville.com/?ref=curations.tech",
+    "name": "Constance Souville",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1812",
+    "link": "https://www.joyofreact.com/?ref=curations.tech",
+    "name": "The Joy of React",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1813",
+    "link": "https://www.prisma.io/?ref=curations.tech",
+    "name": "Prisma",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1814",
+    "link": "https://glass.photo/?ref=curations.tech",
+    "name": "Glass",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1815",
+    "link": "https://studio.swiperjs.com/?ref=curations.tech",
+    "name": "Swiper Studio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1816",
+    "link": "https://smalltribe.studio/?ref=curations.tech",
+    "name": "small tribe",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1817",
+    "link": "https://reallygoodemails.com/?ref=curations.tech",
+    "name": "Really Good Emails",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1818",
+    "link": "https://react-wrap-balancer.vercel.app/?ref=curations.tech",
+    "name": "React Wrap Balancer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1819",
+    "link": "https://mobileui.app/?ref=curations.tech",
+    "name": "MobileUI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1820",
+    "link": "https://vipp.com/de?ref=curations.tech",
+    "name": "Vipp",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1821",
+    "link": "https://bguillaume.fr/?ref=curations.tech",
+    "name": "Guillaume Berthonneau",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1822",
+    "link": "https://www.colophon-foundry.org/?ref=curations.tech",
+    "name": "Colophon",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1823",
+    "link": "https://signalfoundry.com/?ref=curations.tech",
+    "name": "Signal",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1824",
+    "link": "https://plausible.io/?ref=curations.tech",
+    "name": "Plausible",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1825",
+    "link": "https://wearemotto.com/?ref=curations.tech",
+    "name": "Motto",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1826",
+    "link": "https://foundation.app/drops?ref=curations.tech",
+    "name": "Drops | Foundation",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1827",
+    "link": "https://next-auth.js.org/?ref=curations.tech",
+    "name": "NextAuth.js",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1828",
+    "link": "https://geist-ui.dev/en-us?ref=curations.tech",
+    "name": "Geist UI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1829",
+    "link": "https://lfe.org/?ref=curations.tech",
+    "name": "Los Feliz",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1830",
+    "link": "https://deximal.com/?ref=curations.tech",
+    "name": "Deximal",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1831",
+    "link": "https://www.timothyricks.com/?ref=curations.tech",
+    "name": "T.RICKS",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1832",
+    "link": "https://fedor.design/?ref=curations.tech",
+    "name": "Fedor Shkliarau",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1833",
+    "link": "https://www.logicandrhythm.com/?ref=curations.tech",
+    "name": "Logic + Rhythm",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1834",
+    "link": "https://www.balsa.com/?ref=curations.tech",
+    "name": "Balsa",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1835",
+    "link": "https://cotypefoundry.com/?ref=curations.tech",
+    "name": "CoType Foundry",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1836",
+    "link": "https://displaay.net/?ref=curations.tech",
+    "name": "Displaay",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1837",
+    "link": "https://foundry.basement.studio/?ref=curations.tech?ref=curations.tech",
+    "name": "BASEMENT FOUNDRY",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1838",
+    "link": "https://www.luzi-type.ch/?ref=curations.tech",
+    "name": "Luzi Type Foundry",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1839",
+    "link": "https://bento.me/en/home?ref=curations.tech",
+    "name": "Bento",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1840",
+    "link": "https://www.multivault.com/?ref=curations.tech",
+    "name": "MULTI",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1841",
+    "link": "https://bloom.craftwork.design/?ref=curations.tech",
+    "name": "Bloom",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1842",
+    "link": "https://blnkdigital.com/?ref=curations.tech",
+    "name": "BLNK",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1843",
+    "link": "https://panelbear.com/?ref=curations.tech",
+    "name": "Panelbear",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1844",
+    "link": "https://www.mural.co/?ref=curations.tech",
+    "name": "Mural",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1845",
+    "link": "https://www.meetjamie.ai/?ref=curations.tech",
+    "name": "jamie",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1846",
+    "link": "https://app.ideapage.xyz/?ref=curations.tech",
+    "name": "LoopGenius",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1847",
+    "link": "https://tana.inc/?ref=curations.tech",
+    "name": "Tana",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1848",
+    "link": "https://poolsuite.net/?ref=curations.tech",
+    "name": "Poolsuite",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1849",
+    "link": "https://www.toukan.io/?ref=curations.tech",
+    "name": "Toukan",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1850",
+    "link": "https://www.gitpod.io/?ref=curations.tech",
+    "name": "Gitpod",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1851",
+    "link": "https://glitch.com/?ref=curations.tech",
+    "name": "Glitch",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1852",
+    "link": "https://encore.dev/?ref=curations.tech",
+    "name": "Encore",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1853",
+    "link": "https://render.com/?ref=curations.tech",
+    "name": "Render",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1854",
+    "link": "https://codepen.io/trending?ref=curations.tech",
+    "name": "Codepen",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1855",
+    "link": "https://svelte.dev/?ref=curations.tech",
+    "name": "Svelte",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1856",
+    "link": "https://super.so/?ref=curations.tech",
+    "name": "Super",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1857",
+    "link": "https://www.checklist.design/?ref=curations.tech",
+    "name": "Checklist Design",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1858",
+    "link": "https://teachablemachine.withgoogle.com/?ref=curations.tech",
+    "name": "Teachable Machine",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1859",
+    "link": "https://www.electronjs.org/?ref=curations.tech",
+    "name": "Electron",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1860",
+    "link": "https://designsprintkit.withgoogle.com/?ref=curations.tech",
+    "name": "Design Sprints",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1861",
+    "link": "https://github.com/features/copilot/?ref=curations.tech",
+    "name": "GitHub Copilot",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1862",
+    "link": "https://products.ls.graphics/blaaamm/?ref=curations.tech",
+    "name": "Blaaam!",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1863",
+    "link": "https://isometrica.xyz/?ref=curations.tech",
+    "name": "Isometrica 3D Constructor",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1864",
+    "link": "https://3dicons.co/?ref=curations.tech",
+    "name": "3dicons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1865",
+    "link": "https://www.flshfrm.com/?ref=curations.tech",
+    "name": "Flashfom",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1866",
+    "link": "https://etterstudio.com/index/?ref=curations.tech",
+    "name": "Etter Studio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1867",
+    "link": "https://sup.xyz/?ref=curations.tech",
+    "name": "Sup.",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1868",
+    "link": "https://www.raus.life/?ref=curations.tech",
+    "name": "Raus",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1869",
+    "link": "https://tiptap.dev/?ref=curations.tech",
+    "name": "Tiptap Editor",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1870",
+    "link": "https://abeyang.framer.website/?ref=curations.tech",
+    "name": "Abe Yang",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1871",
+    "link": "https://studiorotate.com/?ref=curations.tech",
+    "name": "Rotate°",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1872",
+    "link": "https://bentobox.framer.website/?ref=curations.tech",
+    "name": "My Bento Box",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1873",
+    "link": "https://www.fontshare.com/?ref=curations.tech",
+    "name": "Fontshare",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1874",
+    "link": "https://moonbow.photography/?ref=curations.tech",
+    "name": "Moonbow",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1875",
+    "link": "https://oni-icons.com/svg/?ref=curations.tech",
+    "name": "Oni Icons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1876",
+    "link": "https://iconsvg.xyz/?ref=curations.tech",
+    "name": "ICONSVG",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1877",
+    "link": "https://jakedowsmith.studio/?ref=curations.tech",
+    "name": "Jake Dow-Smith Studio",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1878",
+    "link": "http://www.cambio.website/?ref=curations.tech",
+    "name": "Cambio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1879",
+    "link": "https://www.aaraalto.com/?ref=curations.tech",
+    "name": "Aaron Aalto",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1880",
+    "link": "https://weekops.com/?ref=curations.tech",
+    "name": "WeekOps",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1881",
+    "link": "https://fever.acervo.studio/matches?ref=curations.tech",
+    "name": "F",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1882",
+    "link": "https://www.nathansmith.design/?ref=curations.tech",
+    "name": "Nathan Smith",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1883",
+    "link": "https://www.play.studio/?ref=curations.tech",
+    "name": "Play",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1884",
+    "link": "https://www.vilinskyy.com/?ref=curations.tech",
+    "name": "Alexander Vilinskyy",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1885",
+    "link": "https://gadget.dev/?ref=curations.tech",
+    "name": "Gadget",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1886",
+    "link": "https://copilot.money/?ref=curations.tech",
+    "name": "Copilot",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1887",
+    "link": "https://nextra.site/?ref=curations.tech",
+    "name": "Nextra",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1888",
+    "link": "https://lennythieuleux.com/?ref=curations.tech",
+    "name": "Lenny Thieuleux",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1889",
+    "link": "http://www.edvardscott.com/?ref=curations.tech",
+    "name": "Edvard Scott",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1890",
+    "link": "https://nota.md/?ref=curations.tech",
+    "name": "Nota",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1891",
+    "link": "https://replicate.com/?ref=curations.tech",
+    "name": "Replicate",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1892",
+    "link": "https://www.aviv-katz.com/?ref=curations.tech",
+    "name": "Aviv Katz",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1893",
+    "link": "https://play.date/?ref=curations.tech",
+    "name": "Playdate",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1894",
+    "link": "https://www.emory.co.nz/?ref=curations.tech",
+    "name": "Emory Fierlinger",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1895",
+    "link": "https://anagram.club/?ref=curations.tech",
+    "name": "Anagram Club",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1896",
+    "link": "https://headlessui.com/?ref=curations.tech",
+    "name": "Headless UI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1897",
+    "link": "https://neat.run/?ref=curations.tech",
+    "name": "Neat",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1898",
+    "link": "https://components.ai/?ref=curations.tech",
+    "name": "Components AI",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1899",
+    "link": "https://odins-crow.com/?ref=curations.tech",
+    "name": "Odin's Crow",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1900",
+    "link": "https://sabato.studio/?ref=curations.tech",
+    "name": "SABATO",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1901",
+    "link": "https://satori-syntax-highlighter.vercel.app/?ref=curations.tech",
+    "name": "Satori Syntax Highlighter",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1902",
+    "link": "https://burocratik.com/?ref=curations.tech",
+    "name": "We are Büro",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1903",
+    "link": "https://hematogenix.com/?ref=curations.tech",
+    "name": "Hematogenix",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1904",
+    "link": "https://morningstar.ventures/#mission?ref=curations.tech",
+    "name": "Morningstar Ventures",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1905",
+    "link": "https://www.sherruble.rocks/?ref=curations.tech",
+    "name": "Anna Sherruble",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1906",
+    "link": "https://andyhardy.co/?ref=curations.tech",
+    "name": "Andy Hardy",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1907",
+    "link": "https://angularicons.com/?ref=curations.tech",
+    "name": "Angular Icons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1908",
+    "link": "https://henryheffernan.com/?ref=curations.tech",
+    "name": "Henry Heffernan",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1909",
+    "link": "https://marble.studio/?ref=curations.tech",
+    "name": "Marble",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1910",
+    "link": "https://id-c.se/?ref=curations.tech",
+    "name": "ID—C",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1911",
+    "link": "https://norm.store/?ref=curations.tech",
+    "name": "Norm",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1912",
+    "link": "https://www.tremor.so/?ref=curations.tech",
+    "name": "Tremor",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1913",
+    "link": "https://www.theofficegroup.com/?ref=curations.tech",
+    "name": "TOG",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1914",
+    "link": "https://swmansion.com/?ref=curations.tech",
+    "name": "Software Mansion",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1915",
+    "link": "https://www.taylornowotny.com/?ref=curations.tech",
+    "name": "Taylor Nowotny",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1916",
+    "link": "https://www.cortes.us/?ref=curations.tech",
+    "name": "Dennis Cortés",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1917",
+    "link": "https://www.getstark.co/?ref=curations.tech",
+    "name": "Stark",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1918",
+    "link": "https://www.logicandrhythm.com/?ref=curations.tech",
+    "name": "Logic + Rhythm",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1919",
+    "link": "https://www.heyy.ai/?ref=curations.tech",
+    "name": "heyy",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1920",
+    "link": "https://flowapp.info/?ref=curations.tech",
+    "name": "Flow",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1921",
+    "link": "https://www.untitledui.com/?ref=curations.tech",
+    "name": "Untitled UI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1922",
+    "link": "https://pitch.com/?ref=curations.tech",
+    "name": "Pitch",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1923",
+    "link": "https://appelnowitzki.com/en/identity/?ref=curations.tech",
+    "name": "CREATING IDENTITY",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1924",
+    "link": "https://localdesk.de/fonts?ref=curations.tech",
+    "name": "Local Desk",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1925",
+    "link": "https://www.typemates.com/fonts?ref=curations.tech",
+    "name": "TypeMates",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1926",
+    "link": "https://abcdinamo.com/?ref=curations.tech",
+    "name": "Dinamo Typefaces",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1927",
+    "link": "https://www.grillitype.com/?ref=curations.tech",
+    "name": "Grilli Type",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1928",
+    "link": "https://nicelydone.club/?ref=curations.tech",
+    "name": "Nicelydone",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1929",
+    "link": "https://www.uxlibrary.org/?ref=curations.tech",
+    "name": "UX Library",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1930",
+    "link": "https://liam.is/?ref=curations.tech",
+    "name": "Liam",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1931",
+    "link": "https://futicons.com/?ref=curations.tech",
+    "name": "Futicons",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1932",
+    "link": "https://natto.dev/?ref=curations.tech",
+    "name": "natto",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1933",
+    "link": "https://www.vedantpatel.com/?ref=curations.tech",
+    "name": "Vedant Patel",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1934",
+    "link": "https://www.arpaldsn.com/?ref=curations.tech",
+    "name": "Arpal",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1935",
+    "link": "https://www.snagpeople.com/?ref=curations.tech",
+    "name": "Snagpeople",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1936",
+    "link": "https://www.buck.co/?ref=curations.tech",
+    "name": "BUCK",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1937",
+    "link": "https://primer.io/?ref=curations.tech",
+    "name": "Primer",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1938",
+    "link": "https://getkirby.com/?ref=curations.tech",
+    "name": "Kirby",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1939",
+    "link": "https://www.nathansmith.design/?ref=curations.tech",
+    "name": "Nathan Smith",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1940",
+    "link": "https://replit.com/?ref=curations.tech",
+    "name": "Replit",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1941",
+    "link": "https://vanschneider.com/colors?ref=curations.tech",
+    "name": "Color Claim",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1942",
+    "link": "https://layers.design/collections/mockups/devices?ref=curations.tech",
+    "name": "Layers Design",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1943",
+    "link": "https://artboard.studio/mockup-items?ref=curations.tech",
+    "name": "Artboard Studio",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1944",
+    "link": "https://www.raycast.com/?ref=curations.tech",
+    "name": "Raycast",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1945",
+    "link": "https://www.figma.com/community/file/1179035622147112084?ref=curations.tech",
+    "name": "Goat design system",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1946",
+    "link": "https://www.superlist.com/#signup?ref=curations.tech",
+    "name": "Superlist",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1947",
+    "link": "https://www.dylanbrouwer.design/?ref=curations.tech",
+    "name": "Dylan Brouwer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1948",
+    "link": "https://dennissnellenberg.com/?ref=curations.tech",
+    "name": "Dennis Snellenberg",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1949",
+    "link": "https://www.iconwerk.com/?ref=curations.tech",
+    "name": "iconwerk",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1950",
+    "link": "https://makelemonade.wtf/?ref=curations.tech",
+    "name": "Make Lemonade",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1951",
+    "link": "https://aiaiai.audio/?ref=curations.tech",
+    "name": "AIAIAI Audio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1952",
+    "link": "https://sebastiancuri.com/?ref=curations.tech",
+    "name": "Sebastian Curi",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1953",
+    "link": "https://scale.com/?ref=curations.tech",
+    "name": "Scale AI",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1954",
+    "link": "https://code.visualstudio.com/?ref=curations.tech",
+    "name": "Visual Studio Code",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1955",
+    "link": "https://texts.com/?ref=curations.tech",
+    "name": "Texts",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1956",
+    "link": "https://linear.app/?ref=curations.tech",
+    "name": "Linear",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1957",
+    "link": "https://threads.com/?region=eu?ref=curations.tech",
+    "name": "Threads",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1958",
+    "link": "https://www.figma.com/?fuid=?ref=curations.tech",
+    "name": "Figma",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1959",
+    "link": "https://fiberplane.com/?ref=curations.tech",
+    "name": "Fiberplane",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1960",
+    "link": "https://www.studio2am.co/?ref=curations.tech",
+    "name": "Studio 2am",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1961",
+    "link": "https://madmachine.io/?ref=curations.tech",
+    "name": "MadMachine",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1962",
+    "link": "https://www.relvaokellermann.com/?ref=curations.tech",
+    "name": "RELVĀOKELLERMANN",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1963",
+    "link": "https://www.openline.ai/?ref=curations.tech",
+    "name": "Openline",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1964",
+    "link": "https://geohot.github.io/blog/?ref=curations.tech",
+    "name": "geohot",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1965",
+    "link": "https://kinsta.com/application-hosting/?ref=curations.tech",
+    "name": "Kinsta®",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1966",
+    "link": "https://the-brandidentity.com/index?ref=curations.tech",
+    "name": "Index",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1967",
+    "link": "https://superface.ai/?ref=curations.tech",
+    "name": "Superface.ai",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1968",
+    "link": "https://earthview.withgoogle.com/qesm-al-wahat-ad-dakhlah-egypt-14663?ref=curations.tech",
+    "name": "Earth View",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1969",
+    "link": "https://sooprun.com/?ref=curations.tech",
+    "name": "Alex Suprun",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1970",
+    "link": "https://resumer.design/?ref=curations.tech",
+    "name": "Resumer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1971",
+    "link": "https://www.abstract.com/?ref=curations.tech",
+    "name": "Abstract",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1972",
+    "link": "https://www.variabrewing.com/?ref=curations.tech",
+    "name": "Varia Brewing",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1973",
+    "link": "https://wordmark.it/?ref=curations.tech",
+    "name": "Wordmark",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-1974",
+    "link": "https://storytale.io/?ref=curations.tech",
+    "name": "Storytale",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1975",
+    "link": "https://bond-agency.com/?ref=curations.tech",
+    "name": "BOND",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1976",
+    "link": "https://principles.design/?ref=curations.tech",
+    "name": "Design Principles",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1977",
+    "link": "https://wireframe.co/?ref=curations.tech",
+    "name": "Wireframe",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1978",
+    "link": "https://mockup.maison/?ref=curations.tech",
+    "name": "Mockup.Maison",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1979",
+    "link": "https://bvd.se/?ref=curations.tech",
+    "name": "BVD",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1980",
+    "link": "https://artdirected.design/?ref=curations.tech",
+    "name": "Art Directed",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1981",
+    "link": "https://kurppahosk.com/?ref=curations.tech",
+    "name": "Kurppa Hosk",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1982",
+    "link": "https://benditomockup.com/?ref=curations.tech",
+    "name": "Bendito Mockup",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1983",
+    "link": "https://the-templates.com/?ref=curations.tech",
+    "name": "THE TEMPLATES",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1984",
+    "link": "https://www.s48mockups.com/?ref=curations.tech",
+    "name": "S48-Mockups",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1985",
+    "link": "https://www.re-public.com/en/?ref=curations.tech",
+    "name": "Re-public",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1986",
+    "link": "https://homies.craftwork.design/?ref=curations.tech",
+    "name": "Homies",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1987",
+    "link": "https://bielkeyang.com/?ref=curations.tech",
+    "name": "Bielke&Yang",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1988",
+    "link": "https://www.tsto.org/?ref=curations.tech",
+    "name": "TSTO",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1989",
+    "link": "https://aku.co/?ref=curations.tech",
+    "name": "AKU",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1990",
+    "link": "https://rogatty.com/?ref=curations.tech",
+    "name": "Zuzanna Rogatty",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-1991",
+    "link": "https://sdg.no/?ref=curations.tech",
+    "name": "Scandinavian Design Group",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1992",
+    "link": "https://sapiens.ui8.net/6f3c3c2?ref=curations.tech",
+    "name": "Sapiens",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1993",
+    "link": "https://www.dev-box.app/?ref=curations.tech",
+    "name": "DevBox",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1994",
+    "link": "https://superscene.pro/?ref=curations.tech",
+    "name": "Superscene 5.0",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1995",
+    "link": "https://martingauer.com/?ref=curations.tech",
+    "name": "Martin Gauer",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1996",
+    "link": "https://www.shapr3d.com/?ref=curations.tech",
+    "name": "Shapr3D",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-1997",
+    "link": "https://www.aninix.com/?ref=curations.tech",
+    "name": "Aninix",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1998",
+    "link": "https://www.kukarella.com/?ref=curations.tech",
+    "name": "Kukarella",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-1999",
+    "link": "https://rsms.me/inter/?ref=curations.tech",
+    "name": "Inter",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2000",
+    "link": "https://electronicmaterialsoffice.com/?ref=curations.tech",
+    "name": "Electronic Materials Office®",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2001",
+    "link": "https://skiff.com/crypto?ref=curations.tech",
+    "name": "Skiff",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2002",
+    "link": "https://themindgym.com/?ref=curations.tech",
+    "name": "MindGym UK",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2003",
+    "link": "https://ibuildmyideas.com/?ref=curations.tech",
+    "name": "Jordan Singer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2004",
+    "link": "https://howtotalktowhitekidsaboutracism.com/?ref=curations.tech",
+    "name": "HTWKR",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2005",
+    "link": "https://getstage.app/?ref=curations.tech",
+    "name": "Stage",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2006",
+    "link": "https://partners.cpeople.ru/en/?ref=curations.tech",
+    "name": "CreativePeople Crew",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2007",
+    "link": "https://www.booksread.by/?ref=curations.tech",
+    "name": "Books Read By",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2008",
+    "link": "https://extraset.ch/?ref=curations.tech",
+    "name": "Extraset",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2009",
+    "link": "https://www.sanalabs.com/?ref=curations.tech",
+    "name": "Sana Labs",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2010",
+    "link": "https://literal.club/?ref=curations.tech",
+    "name": "Literal",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2011",
+    "link": "https://grotesque.basement.studio/?ref=curations.tech",
+    "name": "basement grotesque",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2012",
+    "link": "https://circa.so/?ref=curations.tech",
+    "name": "Circa",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2013",
+    "link": "https://gumroad.com/?ref=curations.tech",
+    "name": "Gumroad",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2014",
+    "link": "https://www.milieugrotesque.com/typefaces/?ref=curations.tech",
+    "name": "Milieu Grotesque",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2015",
+    "link": "https://wearemotto.com/?ref=curations.tech",
+    "name": "Motto",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2016",
+    "link": "https://www.liux.eco/?ref=curations.tech",
+    "name": "LIUX",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2017",
+    "link": "https://www.davorgzelic.com/?ref=curations.tech",
+    "name": "Davor G. Zelic",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2018",
+    "link": "https://www.arcadia.com/?ref=curations.tech",
+    "name": "Arcadia",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2019",
+    "link": "https://things.morflax.com/?ref=curations.tech",
+    "name": "Morflax things",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2020",
+    "link": "https://code-components.plasmic.site/?ref=curations.tech",
+    "name": "Plasmic",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2021",
+    "link": "https://www.rovoassembly.com/?ref=curations.tech",
+    "name": "Assembly",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2022",
+    "link": "https://www.gruev.space/?ref=curations.tech",
+    "name": "Vladimir Gruev",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2023",
+    "link": "https://www.tombeale.co.uk/?ref=curations.tech",
+    "name": "Tom Beale",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2024",
+    "link": "https://abcdinamo.com/?ref=curations.tech",
+    "name": "Dinamo",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2025",
+    "link": "https://velvetyne.fr/?ref=curations.tech",
+    "name": "VTF",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2026",
+    "link": "https://www.stockholmdesignlab.se/?ref=curations.tech",
+    "name": "Stockholm Design Lab",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2027",
+    "link": "https://horizon-ui.com/?ref=curations.tech",
+    "name": "Horizon UI",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2028",
+    "link": "https://www.figma.com/community/plugin/1160642826057169962/Figma-Autoname?ref=curations.tech",
+    "name": "Figma Autoname",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2029",
+    "link": "https://www.sunsama.com/?ref=curations.tech",
+    "name": "Sunsama",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2030",
+    "link": "https://github.com/raunofreiberg/inspx?ref=curations.tech",
+    "name": "Inspx",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2031",
+    "link": "https://www.alyssax.com/?ref=curations.tech",
+    "name": "Alyssa X",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2032",
+    "link": "https://comma.ai/?ref=curations.tech",
+    "name": "comma.ai",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2033",
+    "link": "https://univer.se/?ref=curations.tech",
+    "name": "Univer.se",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2034",
+    "link": "https://height.app/?home?ref=curations.tech",
+    "name": "Height",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2035",
+    "link": "https://formcarry.com/?ref=curations.tech",
+    "name": "Formcarry",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2036",
+    "link": "https://www.figma.com/blog/welcome-to-the-wip/?ref=curations.tech",
+    "name": "Figma Blog",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2037",
+    "link": "https://oh.studio/?ref=curations.tech",
+    "name": "OH.STUDIO",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2038",
+    "link": "https://www.jery.team/?ref=curations.tech",
+    "name": "JERY",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2039",
+    "link": "https://jitter.video/?ref=curations.tech",
+    "name": "Jitter",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2040",
+    "link": "https://timokuilder.com/?ref=curations.tech",
+    "name": "Timo Kuilder",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2041",
+    "link": "https://tweek.so/?ref=curations.tech",
+    "name": "Tweek Calendar",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2042",
+    "link": "https://copilot.money/?ref=curations.tech",
+    "name": "Copilot",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2043",
+    "link": "https://www.bencross.xyz/#?ref=curations.tech",
+    "name": "Ben Cross",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2044",
+    "link": "https://linusrogge.com/?ref=curations.tech",
+    "name": "Linus Rogge",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2045",
+    "link": "https://www.designmethodsfinder.com/?ref=curations.tech",
+    "name": "Design Methods Finder",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2046",
+    "link": "https://www.wordtune.com/?ref=curations.tech",
+    "name": "Wordtune",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2047",
+    "link": "https://www.slim.app/#how-it-works?ref=curations.tech",
+    "name": "Slim",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2048",
+    "link": "https://alef-estate.com/en/?ref=curations.tech",
+    "name": "Alef Estate",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2049",
+    "link": "https://www.piktogramm.de/de/?ref=curations.tech",
+    "name": "otl aicher piktogramme",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2050",
+    "link": "https://designcode.io/?ref=curations.tech",
+    "name": "Design+Code",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2051",
+    "link": "https://pythonsandbox.dev/zpuxlt5vfqgf?file=main.py?ref=curations.tech",
+    "name": "Python Sandbox",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2052",
+    "link": "https://hireyay.com/?ref=curations.tech",
+    "name": "HireYaY",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2053",
+    "link": "https://www.animaapp.com/?ref=curations.tech",
+    "name": "Anima",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2054",
+    "link": "https://sdw.space/?ref=curations.tech",
+    "name": "Sebastiaan de With",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2055",
+    "link": "https://studiopaack.fr/?ref=curations.tech",
+    "name": "StudioPaack",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2056",
+    "link": "https://ryry.io/?ref=curations.tech",
+    "name": "Ryan Miyoshi",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2057",
+    "link": "https://gk3.website/?ref=curations.tech",
+    "name": "George Kedenburg III",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2058",
+    "link": "https://studiofreight.com/?ref=curations.tech",
+    "name": "Studio Freight",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2059",
+    "link": "https://bruno-simon.com/?ref=curations.tech",
+    "name": "Bruno Simon",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2060",
+    "link": "https://spline.design/?ref=curations.tech",
+    "name": "Spline",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2061",
+    "link": "https://david-hckh.com/?ref=curations.tech",
+    "name": "David",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2062",
+    "link": "https://openai.com/?ref=curations.tech",
+    "name": "OpenAI",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2063",
+    "link": "https://www.studioultra.co/?ref=curations.tech",
+    "name": "Ultra",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2064",
+    "link": "https://advanced.team/?ref=curations.tech",
+    "name": "Advanced Team",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2065",
+    "link": "https://foundersbook.co/?ref=curations.tech",
+    "name": "Founders' Book",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2066",
+    "link": "https://www.shadergradient.co/comingsoon?ref=curations.tech",
+    "name": "Shader Gradient",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2067",
+    "link": "https://pangrampangram.com/?ref=curations.tech",
+    "name": "Pangram Pangram Foundry",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2068",
+    "link": "https://www.barrettrm.com/?ref=curations.tech",
+    "name": "Barrett RM Type",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2069",
+    "link": "https://scrimba.com/learn/learnreact?ref=curations.tech",
+    "name": "Scrimba",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2070",
+    "link": "https://www.copy.ai/?ref=curations.tech",
+    "name": "Copy.ai",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2071",
+    "link": "https://llamalife.co/?ref=curations.tech",
+    "name": "Llama Life",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2072",
+    "link": "https://randoma11y.com/?ref=curations.tech",
+    "name": "Randoma11y",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2073",
+    "link": "https://alphredo.app/?ref=curations.tech",
+    "name": "Alphredo",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2074",
+    "link": "https://www.radix-ui.com/colors?ref=curations.tech",
+    "name": "Radix UI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2075",
+    "link": "https://tailwindcss.com/docs/customizing-colors?ref=curations.tech",
+    "name": "Tailwind CSS",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2076",
+    "link": "https://colorinspire.webflow.io/?ref=curations.tech",
+    "name": "Colorinspire",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2077",
+    "link": "https://picular.co/?ref=curations.tech",
+    "name": "Picular",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2078",
+    "link": "https://noeldelgado.github.io/shadowlord/#3a1f65?ref=curations.tech",
+    "name": "Shadowlord",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2079",
+    "link": "https://www.futurefonts.xyz/?ref=curations.tech",
+    "name": "Future Fonts",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2080",
+    "link": "https://www.postman.com/?ref=curations.tech",
+    "name": "Postman",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2081",
+    "link": "https://simulate.com/?ref=curations.tech",
+    "name": "SIMULATE",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2082",
+    "link": "https://wetransfer.com/explore/all-features?ref=curations.tech",
+    "name": "WeTransfer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2083",
+    "link": "https://go.theorg.com/b2c-influencer-lp-1/?utm_source=YouTube&amp;utm_medium=video&amp;utm_campaign=2205_i_jobsearch&amp;utm_content=fryingpan?ref=curations.tech",
+    "name": "The Org",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2084",
+    "link": "https://www.typeform.com/?ref=curations.tech",
+    "name": "Typeform",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2085",
+    "link": "https://www.openpeeps.com/?ref=curations.tech",
+    "name": "Open Peep",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2086",
+    "link": "https://setups.co/?ref=curations.tech",
+    "name": "Setups",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2087",
+    "link": "https://argument.gmbh/?ref=curations.tech",
+    "name": "ARGUMENT",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2088",
+    "link": "https://benjaminhutter.de/?ref=curations.tech",
+    "name": "Benjamin Hutter",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2089",
+    "link": "https://fresh-folk.com/?ref=curations.tech",
+    "name": "Fresh Folk",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2090",
+    "link": "https://www.opendoodles.com/?ref=curations.tech",
+    "name": "Open Doodles",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2091",
+    "link": "https://iradesign.io/?ref=curations.tech",
+    "name": "IRA Design",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2092",
+    "link": "https://www.humaaans.com/?ref=curations.tech",
+    "name": "Humaaans",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2093",
+    "link": "https://undraw.co/illustrations?ref=curations.tech",
+    "name": "unDraw",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2094",
+    "link": "https://klim.co.nz/collections/soehne/?ref=curations.tech",
+    "name": "Söhne Collection",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2095",
+    "link": "https://pizzapizza.io/?ref=curations.tech",
+    "name": "Pizza Pizza",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2096",
+    "link": "https://shop.studioinnate.com/type/?ref=curations.tech",
+    "name": "Studio Innate",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2097",
+    "link": "https://craftwork.design/downloads/category/graphics/fonts/?ref=curations.tech",
+    "name": "Craftwork",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2098",
+    "link": "https://supply.family/product-category/fonts/?ref=curations.tech",
+    "name": "Supply.Family",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2099",
+    "link": "https://www.riptype.xyz/?ref=curations.tech",
+    "name": "Riptype Foundry",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2100",
+    "link": "https://klim.co.nz/retail-fonts/?ref=curations.tech",
+    "name": "Klim Type Foundry",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2101",
+    "link": "https://www.swisstypefaces.com/fonts/?ref=curations.tech",
+    "name": "Swiss Typefaces",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2102",
+    "link": "https://socio-type.com/?ref=curations.tech",
+    "name": "Sociotype",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2103",
+    "link": "https://typeof.net/Iosevka/?ref=curations.tech",
+    "name": "Iosevka",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2104",
+    "link": "https://www.erikdkennedy.com/projects/figtree.html?ref=curations.tech",
+    "name": "Figtree",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2105",
+    "link": "https://icons.mono.company/?ref=curations.tech",
+    "name": "Mono Icons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2106",
+    "link": "https://myicons.co/?ref=curations.tech",
+    "name": "Myicons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2107",
+    "link": "https://iconic.app/?ref=curations.tech",
+    "name": "Iconic",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2108",
+    "link": "https://ionic.io/ionicons?ref=curations.tech",
+    "name": "Ionicons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2109",
+    "link": "https://123d.one/products/universal-icon-set/?ref=curations.tech",
+    "name": "Universal Icon Set",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2110",
+    "link": "http://iconsax.io/?ref=curations.tech",
+    "name": "Iconsax",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2111",
+    "link": "https://openmoji.org/?ref=curations.tech",
+    "name": "OpenMoji",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2112",
+    "link": "https://thenounproject.com/?ref=curations.tech",
+    "name": "Noun Project",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2113",
+    "link": "https://www.wonder.me/?ref=curations.tech",
+    "name": "Wonder",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2114",
+    "link": "https://cindori.com/sensei?ref=curations.tech",
+    "name": "Sensei",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2115",
+    "link": "https://designthreads.report/?ref=curations.tech",
+    "name": "Design Threads",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2116",
+    "link": "https://miro.com/ways-we-work/?ref=curations.tech",
+    "name": "The Ways We Work | Miro",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2117",
+    "link": "https://www.unleash.so/?ref=creativerly?ref=curations.tech",
+    "name": "Unleash",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2118",
+    "link": "https://hop.io/?ref=curations.tech",
+    "name": "Hop",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2119",
+    "link": "https://fewcurated.com/?ref=curations.tech",
+    "name": "Few",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2120",
+    "link": "https://pager.xyz/?ref=curations.tech",
+    "name": "Pager",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2121",
+    "link": "https://podcast.humbleteam.com/?ref=curations.tech",
+    "name": "CTRL SHIFT!",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2122",
+    "link": "https://vercel.com/home?ref=curations.tech",
+    "name": "Vercel",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2123",
+    "link": "https://appfigures.com/?ref=curations.tech",
+    "name": "Appfigures",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2124",
+    "link": "https://rauno.me/?ref=curations.tech",
+    "name": "Rauno Freiberg",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2125",
+    "link": "https://ui.gallery/?ref=curations.tech",
+    "name": "User Interface Gallery",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2126",
+    "link": "https://docus.dev/?ref=curations.tech",
+    "name": "Docus",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2127",
+    "link": "https://www.amie.so/?ref=curations.tech",
+    "name": "Amie",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2128",
+    "link": "https://alexandersandberg.com/apps/balance/?ref=curations.tech",
+    "name": "Balance",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2129",
+    "link": "https://tx.shadcn.com/?ref=curations.tech",
+    "name": "Taxonomy",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2130",
+    "link": "https://www.contentlayer.dev/?ref=curations.tech",
+    "name": "Contentlayer",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2131",
+    "link": "https://bureau.cool/?ref=curations.tech",
+    "name": "Bureau Cool",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2132",
+    "link": "https://1password.com/?utm_source=future1p&amp;utm_campaign=passkeys?ref=curations.tech",
+    "name": "1Password",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2133",
+    "link": "https://en.tokenstreet.com/?ref=curations.tech",
+    "name": "tokenstreet",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2134",
+    "link": "https://www.heymeta.com/?ref=curations.tech",
+    "name": "HEY META",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2135",
+    "link": "https://savee.it/?ref=curations.tech",
+    "name": "SAVEE",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2136",
+    "link": "https://create.t3.gg/?ref=curations.tech",
+    "name": "Create T3 App",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2137",
+    "link": "https://www.withdiode.com/?ref=curations.tech",
+    "name": "Diode",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2138",
+    "link": "https://apps.apple.com/us/app/any-distance-share-workouts/id1545233932?ref=curations.tech",
+    "name": "Any Distance",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2139",
+    "link": "https://cash.app/?ref=godly?ref=curations.tech",
+    "name": "Cash App",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2140",
+    "link": "https://www.danieltriendl.com/?ref=curations.tech",
+    "name": "Daniel Triendl",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2141",
+    "link": "https://www.curations.tech/%3Cform%20action=%22https://www.polywork.com/%22%20target=%22_blank%22%3E%3Cinput%20type=%22submit%22%20value=%22https://www.polywork.com/%22%20class=%22nested-form-link%20notion-link%22%3E%3C/form%3E?ref=curations.tech",
+    "name": "Polywork",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2142",
+    "link": "https://mouthwash.studio/?ref=curations.tech",
+    "name": "Mouthwash Studio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2143",
+    "link": "https://vercel.com/design/autocomplete?ref=curations.tech",
+    "name": "Geist",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2144",
+    "link": "https://www.notion.so/ai?ref=curations.tech",
+    "name": "Notion AI",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2145",
+    "link": "https://www.mike.computer/?ref=curations.tech",
+    "name": "Mike Lamont",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2146",
+    "link": "https://plain.com/?ref=curations.tech",
+    "name": "Plain",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2147",
+    "link": "https://www.dive.club/?ref=curations.tech",
+    "name": "Dive",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2148",
+    "link": "https://paint.diagram.com/?ref=curations.tech",
+    "name": "Paint",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2149",
+    "link": "https://liveblocks.io/?ref=curations.tech",
+    "name": "Liveblocks",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2150",
+    "link": "https://www.samara.com/backyard?ref=curations.tech",
+    "name": "Backyard",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2151",
+    "link": "https://access.mymind.com/colors?ref=curations.tech",
+    "name": "mymind - colors",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2152",
+    "link": "https://www.colorsandfonts.com/?ref=curations.tech",
+    "name": "Colors & Fonts",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2153",
+    "link": "https://feedback.fish/?ref=curations.tech",
+    "name": "Feedback Fish",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2154",
+    "link": "https://www.figma.com/community/plugin/1029671634406705647/Magic-Marker?ref=curations.tech",
+    "name": "Magic Marker",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2155",
+    "link": "https://presenting.app/?ref=curations.tech",
+    "name": "Presenting",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2156",
+    "link": "https://ideaclarity.co/?ref=curations.tech",
+    "name": "Idea Clarity",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2157",
+    "link": "https://viewport.co/?ref=curations.tech",
+    "name": "Viewport",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2158",
+    "link": "https://payloadcms.com/?ref=curations.tech",
+    "name": "Payload CMS",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2159",
+    "link": "https://www.descript.com/?ref=curations.tech",
+    "name": "Descript",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2160",
+    "link": "https://vanschneider.com/blog/?ref=curations.tech",
+    "name": "The DESK Magazine",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2161",
+    "link": "https://www.sebastianschoenheit.co/?ref=curations.tech",
+    "name": "Sebastian Schönheit",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2162",
+    "link": "https://www.novia.studio/?ref=curations.tech",
+    "name": "Michael Novia",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2163",
+    "link": "https://tr.af/glyphs?ref=curations.tech",
+    "name": "glyphs",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2164",
+    "link": "https://www.common.wtf/?ref=curations.tech",
+    "name": "common.wtf",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2165",
+    "link": "https://rsms.me/raster/?ref=curations.tech",
+    "name": "Raster",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2166",
+    "link": "https://www.benjaminedgar.com/?ref=curations.tech",
+    "name": "BENJAMIN EDGAR",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2167",
+    "link": "https://seed.line.me/index_en.html?ref=curations.tech",
+    "name": "LINE Seed",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2168",
+    "link": "https://arvinleeuwis.xyz/?ref=curations.tech",
+    "name": "ARVIN LEEUWIS",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2169",
+    "link": "https://nevflynn.com/?ref=curations.tech",
+    "name": "Nev Flynn",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2170",
+    "link": "https://thedesignsystem.guide/?ref=curations.tech",
+    "name": "The Design System Guide",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2171",
+    "link": "https://swiftui.design/code?ref=curations.tech",
+    "name": "SwiftUI Prototype Kit",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2172",
+    "link": "https://am-arc.com/?ref=curations.tech",
+    "name": "AM-ARC",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2173",
+    "link": "https://www.swoosh.nike/?ref=curations.tech",
+    "name": ".SWOOSH",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2174",
+    "link": "http://ready.so/?ref=curations.tech",
+    "name": "Ready",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2175",
+    "link": "https://planetscale.com/?ref=curations.tech",
+    "name": "PlanetScale",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2176",
+    "link": "https://retro.wannathis.one/?utm_source=email&amp;utm_campaign=retro?ref=curations.tech",
+    "name": "Retro",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2177",
+    "link": "https://www.snctstudio.com/?ref=curations.tech",
+    "name": "snct studio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2178",
+    "link": "https://studio.morflax.com/?ref=curations.tech",
+    "name": "Morflax studio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2179",
+    "link": "https://www.bunchof.design/?ref=awwwards?ref=curations.tech",
+    "name": "Bunch of icons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2180",
+    "link": "https://www.kaedim3d.com/?ref=curations.tech",
+    "name": "Kaedim",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2181",
+    "link": "https://superhuman.fun/?ref=curations.tech",
+    "name": "Superhuman",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2182",
+    "link": "https://atlason.com/?ref=curations.tech",
+    "name": "Atlason",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2183",
+    "link": "https://www.studioheed.com/?ref=curations.tech",
+    "name": "Studio HEED",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2184",
+    "link": "https://angelvaliente.com/?ref=curations.tech",
+    "name": "ANGEL VALIENTE",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2185",
+    "link": "https://basement.studio/?ref=curations.tech",
+    "name": "basement.studio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2186",
+    "link": "https://tomwinsla.de/?ref=curations.tech",
+    "name": "Tom Winslade",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2187",
+    "link": "https://www.baker.studio/?ref=curations.tech",
+    "name": "Nicholas Baker",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2188",
+    "link": "https://www.atomus.io/?ref=curations.tech",
+    "name": "Atomus®",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2189",
+    "link": "https://tomorrow-happens.studio/?ref=curations.tech",
+    "name": "Tomorrow Happens",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2190",
+    "link": "https://www.s2victor.com/?ref=curations.tech",
+    "name": "S2VICTOR",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2191",
+    "link": "https://www.paulfaivret.com/?ref=curations.tech",
+    "name": "Paul Faivret",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2192",
+    "link": "https://oio.studio/?ref=curations.tech",
+    "name": "oio",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2193",
+    "link": "https://experiencewelcome.com/?ref=curations.tech",
+    "name": "Welcome",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2194",
+    "link": "https://www.heyvalentin.club/?ref=curations.tech",
+    "name": "Valentin Galmand",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2195",
+    "link": "https://www.screen.studio/?ref=curations.tech",
+    "name": "Screen Studio",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2196",
+    "link": "https://www.nan.fyi/?ref=curations.tech",
+    "name": "Not a Number",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2197",
+    "link": "https://lazy.so/?ref=curations.tech",
+    "name": "Lazy",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2198",
+    "link": "https://www.aaronrolston.com/?ref=curations.tech",
+    "name": "Aaron Rolston",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2199",
+    "link": "https://www.rewind.ai/?ref=curations.tech",
+    "name": "Rewind",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2200",
+    "link": "https://klart.io/public/62677d25082ce9784ec8fc11?ref=curations.tech",
+    "name": "Klart",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2201",
+    "link": "https://www.maruni.com/en/?ref=curations.tech",
+    "name": "Maruni Wood",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2202",
+    "link": "https://www.framer.com/motion/?ref=curations.tech",
+    "name": "Framer Motion",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2203",
+    "link": "https://www.womp.com/?ref=curations.tech",
+    "name": "Womp",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2204",
+    "link": "https://www.artek.fi/en/?ref=curations.tech",
+    "name": "Artek",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2205",
+    "link": "https://globe.framer.website/?ref=curations.tech",
+    "name": "Globe for Framer",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2206",
+    "link": "https://framer.supply/?ref=curations.tech",
+    "name": "Framer Supply",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2207",
+    "link": "https://www.landingfolio.com/?ref=curations.tech",
+    "name": "Landingfolio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2208",
+    "link": "https://withcompound.com/?ref=curations.tech",
+    "name": "Compound",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2209",
+    "link": "https://railway.app/?ref=curations.tech",
+    "name": "Railway",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2210",
+    "link": "https://rive.app/?ref=curations.tech",
+    "name": "Rive",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2211",
+    "link": "https://astroship.web3templates.com/?ref=curations.tech",
+    "name": "Astroship",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2212",
+    "link": "https://www.designdisciplin.com/?ref=curations.tech",
+    "name": "Design Disciplin",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2213",
+    "link": "https://pusher.com/?ref=curations.tech",
+    "name": "Pusher",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2214",
+    "link": "https://mathworld.wolfram.com/MandelbrotSet.html?ref=curations.tech",
+    "name": "Mandelbrot",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2215",
+    "link": "https://www.gareth-hughes.com/?ref=curations.tech",
+    "name": "Gareth Hughes",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2216",
+    "link": "https://www.dmcg.co/?ref=curations.tech",
+    "name": "David McGillivray",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2217",
+    "link": "https://studio-standard.co/collections/mockups?page=1?ref=curations.tech",
+    "name": "Studio Standard",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2218",
+    "link": "https://previewed.app/?ref=curations.tech",
+    "name": "Previewed",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2219",
+    "link": "https://www.ls.graphics/?ref=curations.tech",
+    "name": "Lstore Graphics",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2220",
+    "link": "https://supply.family/?ref=curations.tech",
+    "name": "Supply.Family",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2221",
+    "link": "https://www.studiolenzing.com/?ref=curations.tech",
+    "name": "Studio Lenzing",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2222",
+    "link": "https://studioblackburn.com/?ref=curations.tech",
+    "name": "Studio Blackburn",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2223",
+    "link": "https://monkeytype.com/?ref=curations.tech",
+    "name": "Monkeytype",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2224",
+    "link": "https://sindresorhus.com/today?ref=curations.tech",
+    "name": "Today",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2225",
+    "link": "https://www.yourtempo.co/?ref=curations.tech",
+    "name": "Tempo",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2226",
+    "link": "https://www.brandbird.app/?ref=curations.tech",
+    "name": "BrandBird",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2227",
+    "link": "https://teenage.engineering/?ref=curations.tech",
+    "name": "teenage engineering",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2228",
+    "link": "https://www.elvinaprasad.com/?ref=curations.tech",
+    "name": "Elvina Prasad",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2229",
+    "link": "https://abstract.wannathis.one/?ref=curations.tech",
+    "name": "Abstract 3d graphics",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2230",
+    "link": "https://www.campsite.design/?ref=curations.tech",
+    "name": "Campsite",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2231",
+    "link": "https://www.anron.pro/?ref=curations.tech",
+    "name": "Anron",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2232",
+    "link": "https://beta.tome.app/?ref=curations.tech",
+    "name": "Tome",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2233",
+    "link": "https://squareup.com/us/en?ref=curations.tech",
+    "name": "Square",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2234",
+    "link": "https://www.pixelmator.com/pro/?ref=curations.tech",
+    "name": "Pixelmator Pro",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2235",
+    "link": "https://mad.ac/?ref=curations.tech",
+    "name": "MAD",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2236",
+    "link": "https://github.com/home?ref=curations.tech",
+    "name": "GitHub",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2237",
+    "link": "https://p5aholic.me/projects/?ref=curations.tech",
+    "name": "Keita Yamada",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2238",
+    "link": "https://join.cosmos.so/?ref=curations.tech",
+    "name": "Cosmos",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2239",
+    "link": "https://www.aircompany.com/?ref=curations.tech",
+    "name": "AIR COMPANY",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2240",
+    "link": "https://designvault.io/?ref=curations.tech",
+    "name": "Design Vault",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2241",
+    "link": "https://www.axiom.co/?ref=curations.tech",
+    "name": "Axiom",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2242",
+    "link": "https://framer.tips/?ref=curations.tech",
+    "name": "Framer Tips",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2243",
+    "link": "https://nike-studio.com/nyc/home/?ref=curations.tech",
+    "name": "Nike Studio: NYC",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2244",
+    "link": "https://icons.download/?ref=curations.tech",
+    "name": "icons.download",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2245",
+    "link": "https://www.majesticons.com/?ref=curations.tech",
+    "name": "Majesticons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2246",
+    "link": "https://www.polestar.com/de/?ref=curations.tech",
+    "name": "Polestar",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2247",
+    "link": "https://cal.com/?ref=curations.tech",
+    "name": "Cal.com",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2248",
+    "link": "https://chriswelch.co/?ref=curations.tech",
+    "name": "Chris Welch",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2249",
+    "link": "https://hu.ma.ne/?ref=curations.tech",
+    "name": "Humane",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2250",
+    "link": "https://bendingspoons.com/?ref=curations.tech",
+    "name": "Bending Spoons",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2251",
+    "link": "https://www.jaewanjeong.com/?ref=curations.tech",
+    "name": "Jaewan Jeong",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2252",
+    "link": "https://goods.wtf/?ref=curations.tech",
+    "name": "Goods",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2253",
+    "link": "https://www.searchsystem.co/?ref=curations.tech",
+    "name": "SearchSystem™",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2254",
+    "link": "https://www.cssdesignawards.com/?ref=curations.tech",
+    "name": "CSS Awards",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2255",
+    "link": "https://www.siteinspire.com/?ref=curations.tech",
+    "name": "Siteinspire",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2256",
+    "link": "https://killerportfolio.com/?ref=curations.tech",
+    "name": "Killer Portfolio",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2257",
+    "link": "https://maxibestof.one/?ref=curations.tech",
+    "name": "MaxiBestOf",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2258",
+    "link": "https://www.ogimage.gallery/?ref=curations.tech",
+    "name": "OG Images",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2259",
+    "link": "https://minimal.gallery/?ref=curations.tech",
+    "name": "Minimal Gallery",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2260",
+    "link": "https://godly.website/?ref=curations.tech",
+    "name": "Godly",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2261",
+    "link": "https://icones.js.org/?ref=curations.tech",
+    "name": "Icônes",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2262",
+    "link": "https://feathericons.com/?ref=curations.tech",
+    "name": "Feather",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2263",
+    "link": "https://heroicons.com/?ref=curations.tech",
+    "name": "Heroicons",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2264",
+    "link": "https://phosphoricons.com/?ref=curations.tech",
+    "name": "Phosphor",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2265",
+    "link": "https://iconoir.com/?ref=curations.tech",
+    "name": "Iconoir",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2266",
+    "link": "https://monokei.co/?ref=curations.tech",
+    "name": "MONOKEI",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2267",
+    "link": "https://teta.so/?ref=curations.tech",
+    "name": "Teta",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2268",
+    "link": "https://www.ofc.software/?ref=curations.tech",
+    "name": "OFC",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2269",
+    "link": "https://musicbed.com/subscription/business?irclickid=Uh0Xis3wkxyNR5BXia2F3SfnUkDSQIWjB1A4Qc0&amp;irgwc=1?ref=curations.tech",
+    "name": "Musicbed",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2270",
+    "link": "https://thesymbols.co/?ref=curations.tech",
+    "name": "The Symbols",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2271",
+    "link": "https://www.drawkit.com/?ref=curations.tech",
+    "name": "DrawKit",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2272",
+    "link": "https://www.benfryc.com/?ref=curations.tech",
+    "name": "Ben Fryc",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2273",
+    "link": "https://emilkowal.ski/?ref=curations.tech",
+    "name": "Emil Kowalski",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2274",
+    "link": "https://www.alessandroscarpellini.it/?ref=curations.tech",
+    "name": "Alessandro Scarpellini",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2275",
+    "link": "https://visualjournal.it/?ref=curations.tech",
+    "name": "Visual Journal",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2276",
+    "link": "https://www.redis.agency/?ref=curations.tech",
+    "name": "Redis",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2277",
+    "link": "https://angellotorres.com/?ref=curations.tech",
+    "name": "Angello Torres",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2278",
+    "link": "https://threejs-journey.com/?ref=curations.tech",
+    "name": "Three.js",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2279",
+    "link": "https://capital.xyz/?ref=curations.tech",
+    "name": "Capital",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2280",
+    "link": "https://gron.world/?ref=curations.tech",
+    "name": "GRÖN",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2281",
+    "link": "https://read.cv/explore?ref=curations.tech",
+    "name": "Explore",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2282",
+    "link": "https://www.krijnrijshouwer.com/?ref=curations.tech",
+    "name": "Krijn Rijshouwer",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2283",
+    "link": "https://affinity.serif.com/en-gb/?ref=curations.tech",
+    "name": "Affinity",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2284",
+    "link": "https://evilrabb.it/?ref=curations.tech",
+    "name": "Evil Rabbit",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2285",
+    "link": "https://generated.photos/?ref=curations.tech",
+    "name": "Generated Photos",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2286",
+    "link": "https://trycoffee.co/?ref=curations.tech",
+    "name": "Coffee",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2287",
+    "link": "https://landings.dev/?ref=producthunt?ref=curations.tech",
+    "name": "Landings",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2288",
+    "link": "https://draftbit.com/?ref=curations.tech",
+    "name": "Draftbit",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2289",
+    "link": "https://www.composer.trade/?ref=curations.tech",
+    "name": "Composer",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2290",
+    "link": "https://www.awwwards.com/?ref=curations.tech",
+    "name": "Awwwards",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2291",
+    "link": "https://www.lazarev.agency/?ref=curations.tech",
+    "name": "LAZAREV.",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2292",
+    "link": "https://fleava.com/?ref=curations.tech",
+    "name": "Fleava",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2293",
+    "link": "https://www.jetbrains.com/fleet/?ref=curations.tech",
+    "name": "JetBrains Fleet",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2294",
+    "link": "https://frame.io/?ref=curations.tech",
+    "name": "Frame.io",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2295",
+    "link": "https://github.com/vercel/satori?ref=curations.tech",
+    "name": "vercel/satori",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2296",
+    "link": "https://www.jessicahernandez.me/?ref=curations.tech",
+    "name": "Jessica Hernandez",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2297",
+    "link": "https://magician.design/?ref=curations.tech",
+    "name": "Magician",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2298",
+    "link": "https://www.rasmusnielsen.dk/?ref=curations.tech",
+    "name": "rasmusnielsen.dk",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2299",
+    "link": "https://www.midjourney.com/?ref=curations.tech",
+    "name": "Midjourney",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2300",
+    "link": "https://franvelas.co/?ref=curations.tech",
+    "name": "Fran Velasco",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2301",
+    "link": "https://wagmi.sh/?ref=curations.tech",
+    "name": "wagmi",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2302",
+    "link": "https://thirdweb.studio/?ref=curations.tech",
+    "name": "Crypto & Web3 design studio",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2303",
+    "link": "https://abstractions.gallery/?ref=curations.tech",
+    "name": "Abstracti✸ns",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2304",
+    "link": "https://leerob.io/?ref=curations.tech",
+    "name": "Lee Robinson",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2305",
+    "link": "https://www.epidemicsound.com/?ref=curations.tech",
+    "name": "Epidemic Sound",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2306",
+    "link": "https://turbo.build/?ref=curations.tech",
+    "name": "Turbo",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2307",
+    "link": "https://intmagic.com/?ref=curations.tech",
+    "name": "International Magic",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2308",
+    "link": "https://pierrelouis.webflow.io/#main-section?ref=curations.tech",
+    "name": "Pierre-Louis",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2309",
+    "link": "https://typefully.com/homepage?ref=curations.tech",
+    "name": "Typefully",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2310",
+    "link": "https://ionicframework.com/?ref=curations.tech",
+    "name": "Ionic",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2311",
+    "link": "https://godly.shop/product/iphone-mockups-01?ref=curations.tech",
+    "name": "iPhone Mockups 01",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2312",
+    "link": "https://ia.net/presenter?ref=curations.tech",
+    "name": "iA Presenter",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2313",
+    "link": "https://pp-fragment.com/?ref=curations.tech",
+    "name": "Fřaġmeňţ",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2314",
+    "link": "https://www.relumedesignleague.com/?ref=curations.tech",
+    "name": "Relume Design League",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2315",
+    "link": "https://www.stellar.work/?ref=curations.tech",
+    "name": "Stellar",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2316",
+    "link": "https://studyhall.design/?ref=curations.tech",
+    "name": "Curious Creatives",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2317",
+    "link": "https://brianlovin.com/?ref=curations.tech",
+    "name": "Brian Lovin",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2318",
+    "link": "https://icon.ray.so/?ref=curations.tech",
+    "name": "Icon Maker",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2319",
+    "link": "https://github.com/mona-sans?ref=curations.tech",
+    "name": "Mona Sans & Hubot Sans",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2320",
+    "link": "https://baukunst.co/?ref=curations.tech",
+    "name": "Baukunst",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2321",
+    "link": "https://www.openpurpose.com/?ref=curations.tech",
+    "name": "OpenPurpose®",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2322",
+    "link": "https://www.bezel.it/?ref=curations.tech",
+    "name": "Bezel",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2323",
+    "link": "https://vercel.com/design?ref=curations.tech",
+    "name": "Vercel Design",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2324",
+    "link": "https://visual.systems/?ref=curations.tech",
+    "name": "VisualSystems™",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2325",
+    "link": "https://reactjs.org/?ref=curations.tech",
+    "name": "React",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2326",
+    "link": "https://nextjs.org/?ref=curations.tech",
+    "name": "Next.js",
+    "category": "Learning"
+  },
+  {
+    "web-scraper-order": "1678016167-2327",
+    "link": "https://openai.fund/?ref=curations.tech",
+    "name": "OpenAI Startup Fund",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2328",
+    "link": "https://www.figcomponents.com/?ref=curations.tech",
+    "name": "Figcomponents",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2329",
+    "link": "https://blog.maximeheckel.com/?ref=curations.tech",
+    "name": "Maxime Heckel's Blog",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2330",
+    "link": "https://vos9x.com/?ref=curations.tech",
+    "name": "VOS9X",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2331",
+    "link": "https://designwithtech.com/?ref=curations.tech",
+    "name": "Design with Tech",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2332",
+    "link": "https://www.jonasarleth.com/?ref=curations.tech",
+    "name": "Jonas Arleth",
+    "category": "Productivity"
+  },
+  {
+    "web-scraper-order": "1678016167-2333",
+    "link": "https://webflow.com/?r=0?ref=curations.tech",
+    "name": "Webflow",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2334",
+    "link": "https://splitbee.io/?ref=curations.tech",
+    "name": "Splitbee",
+    "category": "Development"
+  },
+  {
+    "web-scraper-order": "1678016167-2335",
+    "link": "https://imgs.so/?ref=curations.tech",
+    "name": "imgs",
+    "category": "Design"
+  },
+  {
+    "web-scraper-order": "1678016167-2336",
+    "link": "https://arc.net/?ref=curations.tech",
+    "name": "Arc",
+    "category": "Design"
+  }
+]
