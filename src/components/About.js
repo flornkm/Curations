@@ -5,8 +5,6 @@ import * as Icon from "iconoir-react";
 export default function Navigation(props) {
   const button = useRef();
   const buttonBorder = useRef();
-  const input = useRef();
-  const inputBorder = useRef();
 
   useEffect(() => {
     document.addEventListener("mousemove", (e) => {
@@ -16,13 +14,6 @@ export default function Navigation(props) {
 
       button.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #52525b, #3f3f46)`;
       buttonBorder.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #a1a1aa, #3f3f46)`;
-
-      const inputRectangle = input.current.getBoundingClientRect(),
-        inputX = e.clientX - inputRectangle.left,
-        inputY = e.clientY - inputRectangle.top;
-
-      input.current.style.background = `radial-gradient(circle at ${inputX}px ${inputY}px, #52525b, #3f3f46)`;
-      inputBorder.current.style.background = `radial-gradient(circle at ${inputX}px ${inputY}px, #a1a1aa, #3f3f46)`;
     });
   }, []);
 
@@ -64,21 +55,12 @@ export default function Navigation(props) {
             <div className="w-full flex justify-between gap-2">
               <div className="w-full h-12 relative">
                 <input
-                  ref={input}
                   type="text"
                   placeholder="Enter Link"
-                  className="rounded-md absolute left-0 right-0 top-0 bottom-0 z-10 px-4 focus:outline-none transition-all focus:ring-1 focus:ring-red-500"
+                  className="rounded-md absolute left-0 right-0 top-0 ring-1 ring-zinc-600 bg-zinc-700 bottom-0 z-10 px-4 focus:outline-none transition-all focus:ring-1 focus:ring-red-500"
                 />
-                <div
-                  ref={inputBorder}
-                  type="text"
-                  placeholder="Enter Link"
-                  className="absolute -left-[1px] -top-[1px] -right-[1px] -bottom-[1px] rounded-[7px]"
-                >
-                  {" "}
-                </div>
               </div>
-              <div className="bg-zinc-600 px-6 font-medium py-3 rounded-md text-white hover:bg-zinc-700 relative cursor-pointer transition-all hover:scale-95">
+              <div className="bg-zinc-600 px-6 font-medium py-3 rounded-md text-white hover:bg-zinc-700 relative cursor-pointer">
                 <div
                   ref={button}
                   className="absolute left-0 top-0 right-0 bottom-0 pointer-events-none rounded-md z-10"

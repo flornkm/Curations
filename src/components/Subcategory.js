@@ -46,10 +46,10 @@ export default function Subcategory(props) {
                     }
                   }}
                   className={
-                    "flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all hover:text-white hover:bg-zinc-900 ring-1 hover:ring-zinc-700 rounded-lg " +
+                    "flex flex-col gap-2 place-items-center p-2 cursor-pointer transition-all hover:text-white " +
                     (props.subCategory.toLowerCase() === item.name.toLowerCase()
-                      ? "ring-zinc-700 bg-zinc-900 text-white"
-                      : "text-zinc-400 ring-zinc-800")
+                      ? "border-b border-white text-white"
+                      : "border-b border-transparent text-zinc-400")
                   }
                 >
                   <div>{item.icon}</div>
