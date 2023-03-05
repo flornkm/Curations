@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "@supabase/supabase-js": "^2.8.0",
+    "@supabase/supabase-js": "^1.2.1",
+    "@supabase/ui": "^0.36.2",
     "embla-carousel-react": "^7.0.9",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
@@ -19,6 +20,7 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "swr": "^2.0.4",
     "tinify": "^1.7.1"
   },
   "devDependencies": {

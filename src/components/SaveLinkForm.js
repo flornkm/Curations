@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const SaveScreenshotForm = () => {
+const SaveLinkForm = () => {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [subcategory, setSubcategory] = useState("");
@@ -44,18 +44,18 @@ const SaveScreenshotForm = () => {
     }
   };
 
-  useEffect(() => {
-    if (!loading) {
-      document.addEventListener("mousemove", (e) => {
-        const rectangle = button.current.getBoundingClientRect(),
-          x = e.clientX - rectangle.left,
-          y = e.clientY - rectangle.top;
+//   useEffect(() => {
+//     if (!loading) {
+//       document.addEventListener("mousemove", (e) => {
+//         const rectangle = button.current.getBoundingClientRect(),
+//           x = e.clientX - rectangle.left,
+//           y = e.clientY - rectangle.top;
 
-        button.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #52525b, #3f3f46)`;
-        buttonBorder.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #a1a1aa, #3f3f46)`;
-      });
-    }
-  }, []);
+//         button.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #52525b, #3f3f46)`;
+//         buttonBorder.current.style.background = `radial-gradient(circle at ${x}px ${y}px, #a1a1aa, #3f3f46)`;
+//       });
+//     }
+//   }, []);
 
   return (
     <div className="w-screen h-screen flex flex-col gap-10 items-center justify-center">
@@ -133,4 +133,4 @@ const SaveScreenshotForm = () => {
   );
 };
 
-export default SaveScreenshotForm;
+export default SaveLinkForm;

@@ -350,6 +350,8 @@ export default function Navigation(props) {
                 <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-3 right-4 animate-pulse" />
                 <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-10 right-10 animate-pulse" />
                 <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-8 right-2 animate-pulse" />
+                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-11 left-10 animate-pulse" />
+                <div className="w-[1px] h-[1px] rounded-full bg-orange-200 absolute top-12 left-7 animate-pulse" />
               </div>
             </div>
             <div className="group-hover:opacity-80 transition-all absolute z-0 -top-[2px] -bottom-[2px] -right-[2px] -left-[2px] opacity-50 bg-gradient-to-r from-red-500 to-rose-500 blur-xl rounded-full overflow-hidden" />
