@@ -18,7 +18,8 @@
     "iconoir-react": "^6.3.0",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tinify": "^1.7.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

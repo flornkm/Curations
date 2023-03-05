@@ -1,22 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
+import tinify from "tinify";
 
-async function fetchScreenshot(url) {
-  const endpoint = `https://api.curations.tech/api/screenshot?url=${encodeURIComponent(
-    url
-  )}`;
+tinify.key = process.env.TINIFY_API_KEY;
 
+async function compressImage(url) {
   try {
-    const response = await fetch(endpoint);
+    const source = tinify.fromUrl(`https://api.curations.tech/api/screenshot?url=${encodeURIComponent(
+      url
+    )}`);
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch screenshot: ${response.status}`);
-    }
+    const converted = source.convert({type:["image/webp","image/png"]}).toBuffer();
 
-    const blob = await response.blob();
-    const buffer = await blob.arrayBuffer();
-    const byteArray = new Uint8Array(buffer);
-
-    return byteArray;
+    return converted;
   } catch (error) {
     console.error(error);
     return null;
@@ -32,7 +27,7 @@ export default async (req, res) => {
   );
 
   name = name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase();
-  const image = await fetchScreenshot(imageUrl);
+  const image = await compressImage(imageUrl);
 
   const { data, error } = await supabase.storage
     .from("images")
