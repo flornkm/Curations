@@ -20,6 +20,9 @@ export default function Login() {
       setLoading(true);
       const { error } = await supabase.auth.signIn({
         provider: "github",
+      },
+      {
+        redirectTo: "/dashboard",
       });
       if (error) throw error;
     } catch (error) {
