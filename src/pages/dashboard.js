@@ -1,26 +1,42 @@
 import Link from "next/link";
-import { Auth, Card, Typography, Space, Button, Icon } from "@supabase/ui";
+import { useEffect, useState } from "react";
 import { supabase } from "../supabase-config";
 import Sidebar from "@/components/Sidebar";
+import Login from "@/components/Login";
+import Profile from "@/components/Settings";
 import SaveLinkForm from "@/components/SaveLinkForm";
-import { useEffect, useLayoutEffect, useState } from "react";
 
-const fetcher = ([url, token]) =>
-  fetch(url, {
-    method: "GET",
-    headers: new Headers({ "Content-Type": "application/json", token }),
-    credentials: "same-origin",
-  }).then((res) => res.json());
+export default function Dashboard() {
+  const [session, setSession] = useState(null);
+  const [tab, setTab] = useState("links-inserter");
 
-export default function Authenticate({ initialData }) {
-  const user = initialData;
+  useEffect(() => {
+    setSession(supabase.auth.session());
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+  }, []);
 
   return (
     <>
-    <Sidebar />
-    {user && (
-      <SaveLinkForm />
-    )}
+      {!session ? (
+        <Login />
+      ) : session.user.email === "florian.kiem@hfg.design" ? (
+        <>
+          <Sidebar session={session} setTab={setTab} tab={tab} />
+          {tab === "links-inserter" && <SaveLinkForm />}
+          {tab === "profile" && <Profile session={session} />}
+        </>
+      ) : (
+        <div className="h-screen w-full flex flex-col gap-5 justify-center items-center">
+          <span className="text-xl">You are not authorized to view this page.</span>
+          <Link
+            href="/"
+            className="px-4 py-2 bg-zinc-800 text-white rounded-md transition-all hover:bg-zinc-700"
+          >Back</Link>
+        </div>
+      )}
     </>
   );
 }
