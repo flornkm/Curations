@@ -13,8 +13,8 @@ export default async function handler(req, res) {
     // Create a new Discord client
     const client = new Discord.Client({
         intents: [
-          Discord.Intents.FLAGS.GUILDS,
-          Discord.Intents.FLAGS.GUILD_MESSAGES
+          Discord.GatewayIntentBits.Guilds,
+          Discord.GatewayIntentBits.GuildMessages,
         ]
       });
 
