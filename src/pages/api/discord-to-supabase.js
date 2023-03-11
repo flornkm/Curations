@@ -11,7 +11,12 @@ const SUPABASE_KEY = 'process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY';
 export default async function handler(req, res) {
   try {
     // Create a new Discord client
-    const client = new Discord.Client();
+    const client = new Discord.Client({
+        intents: [
+          Discord.Intents.FLAGS.GUILDS,
+          Discord.Intents.FLAGS.GUILD_MESSAGES
+        ]
+      });
 
     // When the client is ready, retrieve messages from the #contributions channel
     client.on('ready', async () => {
