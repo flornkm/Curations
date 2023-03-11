@@ -2,11 +2,11 @@ const { createClient } = require('@supabase/supabase-js');
 const Discord = require('discord.js');
 
 // Your Discord bot token
-const DISCORD_TOKEN = 'process.env.DISCORD_TOKEN';
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 
 // Your Supabase URL and API key
-const SUPABASE_URL = 'process.env.NEXT_PUBLIC_SUPABASE_URL';
-const SUPABASE_KEY = 'process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY';
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 export default async function handler(req, res) {
   try {
