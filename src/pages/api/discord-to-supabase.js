@@ -15,6 +15,7 @@ export default async function handler(req, res) {
         intents: [
           Discord.GatewayIntentBits.Guilds,
           Discord.GatewayIntentBits.GuildMessages,
+          Discord.GatewayIntentBits.MessageContent
         ]
       });
 
@@ -33,9 +34,9 @@ export default async function handler(req, res) {
       // Retrieve all messages from the channel
       const messages = await channel.messages.fetch();
 
-      //transform timestamp from miliseconds to timestamp that is readable by supabase
+      //transform timestamp from miliseconds to date and time
         messages.forEach((message) => {
-            message.createdTimestamp = new Date(message.createdTimestamp).toISOString();
+            message.createdTimestamp = new Date(message.createdTimestamp).toLocaleString();
         });
 
       // Transform the messages into an array of objects
