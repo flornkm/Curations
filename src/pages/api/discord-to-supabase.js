@@ -33,17 +33,27 @@ export default async function handler(req, res) {
       // Retrieve all messages from the channel
       const messages = await channel.messages.fetch();
 
+      //transform timestamp from miliseconds to timestamp that is readable by supabase
+        messages.forEach((message) => {
+            message.createdTimestamp = new Date(message.createdTimestamp).toISOString();
+        });
+
       // Transform the messages into an array of objects
       const messageArray = messages.map((message) => ({
-        link: message.link,
+        link: message.content,  
         timestamp: message.createdTimestamp,
       }));
+
+      console.log(messages);
 
       // Connect to the Supabase client
       const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
+      console.log("1message");
+      console.log(messageArray[0]);
+
       // Insert the messages into a Supabase table
-      const { data, error } = await supabase.from('unconfirmed_links').insert(messageArray);
+      const { data, error } = await supabase.from('unconfirmed_links').insert(messageArray[0]);
 
       if (error) {
         console.error('Failed to insert messages into the database:', error.message);
