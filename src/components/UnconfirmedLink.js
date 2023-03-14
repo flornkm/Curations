@@ -26,12 +26,16 @@ function UnconfirmedLink() {
     const newName = prompt('Enter a new name', item.name)
     const newDescription = prompt('Enter a new description', item.description)
 
-    // Update the item in the database
+    // Update the item in the curations database
     const { error: updateError } = await supabase
-      .from('unconfirmed_links')
-      .update({ name: newName, description: newDescription })
+      .from('curations')
+      .insert([ { created_at: item.timestamp, link: item.link, name: item.newName } ])
       .eq('id', id)
     if (updateError) console.log(updateError)
+
+    // Delete the item from the unconfirmed_links database
+    const { error: deleteError } = await supabase.from('unconfirmed_links').delete().eq('id', id)
+    if (deleteError) console.log(deleteError)
 
     // Fetch the updated data and update the state
     const { data: updatedData, error: fetchError } = await supabase.from('unconfirmed_links').select('*')
