@@ -51,9 +51,9 @@ function UnconfirmedLink() {
   }
 
   return (
-    <div>
+    <div className="flex-column justify-center items-start">
       {data.map((item) => (
-        <div key={item.id}>
+        <div key={item.id} className="flex flex-row gap-x-4 mb-4">
           <p>{item.timestamp}</p>
           <p>{item.link}</p>
           <button onClick={() => handleEdit(item.id)}>Edit</button>
