@@ -24,6 +24,7 @@ export default function Curations() {
     productivity: useRef(),
     learning: useRef(),
   };
+  const main = useRef();
 
   const moveRect = useCallback(() => {
     if (router.query.category === "design") {
@@ -87,10 +88,12 @@ export default function Curations() {
   }, [router]);
 
   const loadCategoryItems = (category) => {
-    setLoading(true);
+    main.current.style.pointerEvents = "none";
+    setLoading(true);    
     fetch("/api/supabase?category=" + category)
       .then((res) => res.json())
       .then((data) => {
+        main.current.style.pointerEvents = "auto";
         setLoading(false);
         setItems(data);
       })
@@ -98,10 +101,12 @@ export default function Curations() {
   };
 
   const loadSubcategoryItems = (category, itemName) => {
+    main.current.style.pointerEvents = "none";
     setLoading(true);
     fetch("/api/supabase?category=" + category + "&subCategory=" + itemName)
       .then((res) => res.json())
       .then((data) => {
+        main.current.style.pointerEvents = "auto";
         setLoading(false);
         setItems(data);
       })
@@ -124,7 +129,7 @@ export default function Curations() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="pl-[5%] pr-[5%] min-h-[200vh]">
+      <main className="pl-[5%] pr-[5%] min-h-[200vh]" ref={main}>
         <Navigation
           mainNavigation={mainNavigation}
           navigation={navigation}
