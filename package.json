@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@rive-app/canvas": "^1.0.102",
+    "@rive-app/react-canvas": "^3.0.38",
     "@supabase/supabase-js": "^1.2.1",
     "discord.js": "^14.7.1",
     "embla-carousel-react": "^7.0.9",
@@ -20,6 +22,7 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rive-react": "^3.0.38",
     "swr": "^2.0.4",
     "tinify": "^1.7.1"
   },
