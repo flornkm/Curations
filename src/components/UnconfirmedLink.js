@@ -113,7 +113,7 @@ function UnconfirmedLink() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-500">
                       {item.timestamp}
                     </td>
-                    <td className="max-w-xl px-6 py-4 whitespace-nowrap truncate text-sm text-zinc-500">
+                    <td className="max-w-lg px-6 py-4 whitespace-nowrap truncate text-sm text-zinc-500">
                       {item.link}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

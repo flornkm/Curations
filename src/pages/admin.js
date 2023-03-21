@@ -28,10 +28,10 @@ export default function Home() {
               <p className="text-base font-semibold">Link list</p>
             </div>
             <div className="flex px-4 py-1">
-              <p className="text-base font-semibold">Add link</p>
+              <p className="text-base font-semibold text-zinc-600">Add link</p>
             </div>
             <div className="flex px-4 py-1">
-              <p className="text-base font-semibold">Add component</p>
+              <p className="text-base font-semibold text-zinc-600">Add component</p>
             </div>
             
           </div>
