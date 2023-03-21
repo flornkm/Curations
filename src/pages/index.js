@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import RiveComponent from "@rive-app/react-canvas";
 import Navigation from "@/components/Navigation";
 import About from "@/components/About";
 
@@ -39,11 +40,11 @@ export default function Curations() {
       mainNavigation.development.current.offsetLeft;
       mainNavigation.development.current.offsetWidth;
       if (window.innerWidth > 768) {
-      rect.current.style.transform = `translateX(${mainNavigation.development.current.offsetLeft}px)`;
-      rect.current.style.width = `${mainNavigation.development.current.offsetWidth}px`;
+        rect.current.style.transform = `translateX(${mainNavigation.development.current.offsetLeft}px)`;
+        rect.current.style.width = `${mainNavigation.development.current.offsetWidth}px`;
       } else {
-      rect.current.style.transform = `translateX(${mainNavigation.code.current.offsetLeft}px)`;
-      rect.current.style.width = `${mainNavigation.code.current.offsetWidth}px`;
+        rect.current.style.transform = `translateX(${mainNavigation.code.current.offsetLeft}px)`;
+        rect.current.style.width = `${mainNavigation.code.current.offsetWidth}px`;
       }
     } else if (router.query.category === "productivity") {
       mainNavigation.productivity.current.offsetLeft;
@@ -89,7 +90,7 @@ export default function Curations() {
 
   const loadCategoryItems = (category) => {
     main.current.style.pointerEvents = "none";
-    setLoading(true);    
+    setLoading(true);
     fetch("/api/supabase?category=" + category)
       .then((res) => res.json())
       .then((data) => {
@@ -144,9 +145,10 @@ export default function Curations() {
           rect={rect}
         />
         {(loading && (
-          <div className="flex justify-center items-center h-[75vh]">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-500"></div>
-          </div>
+          <RiveComponent
+            src="./animations/curations_loading.riv"
+            className="max-w-[500px] max-md:h-64 md:h-[256px] object-contain m-auto pt-24"
+          />
         )) ||
           (!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
@@ -158,21 +160,25 @@ export default function Curations() {
                     href={item.link}
                     className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
                   >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      width={500}
-                      height={500}
-                      className="rounded-lg"
-                    />
-                    <div className="flex gap-4 place-items-center">
+                    {item.image && (
                       <Image
-                        src={item.favicon}
-                        alt={item.title + " favicon"}
-                        width={16}
-                        height={16}
-                        className="object-contain"
+                        src={item.image}
+                        alt={item.title}
+                        width={500}
+                        height={500}
+                        className="rounded-lg"
                       />
+                    )}
+                    <div className="flex gap-4 place-items-center">
+                      {item.favicon && (
+                        <Image
+                          src={item.favicon}
+                          alt={item.title + " favicon"}
+                          width={16}
+                          height={16}
+                          className="object-contain"
+                        />
+                      )}
                       <h3 className="font-medium">{item.name}</h3>
                     </div>
                   </Link>
