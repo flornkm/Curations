@@ -1,9 +1,11 @@
 import UnconfirmedLink from "../components/UnconfirmedLink";
+import LinkPopup from "../components/LinkPopup";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
+      <LinkPopup />
         <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">
           <Image
             src="/images/curations_logo.png"

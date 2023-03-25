@@ -85,7 +85,7 @@ function UnconfirmedLink() {
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200">
             <table className="table-fixed divide-y divide-zinc-800">
-              <thead className=" bg-black-80">
+              <thead className="bg-black-80">
                 <tr className="">
                   <th
                     scope="col"
