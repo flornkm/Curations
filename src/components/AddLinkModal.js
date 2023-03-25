@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function LinkPopup() {
+function AddLinkModal({ onCloseModal }) {
+
+  function handleClose() {
+    onCloseModal();
+    console.log("close button clicked");
+  }
+
   return (
     //make the div a popup
     <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-50 z-50">
@@ -28,22 +34,25 @@ function LinkPopup() {
           <div className="flex flex-row justify-between items-center w-full h-auto">
             <p className="text-sm font-medium text-zinc-200">Main Category</p>
             <select className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </div>
           <div className="flex flex-row justify-between items-center w-full h-auto">
             <p className="text-sm font-medium text-zinc-200">Sub Category</p>
             <select className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </div>
         </div>
         <div className="flex flex-row justify-between items-center p-4 gap-4">
-          <button className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded">
+          <button
+            onClick={() => handleClose()}
+            className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
+          >
             Cancel
           </button>
           <button className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-zinc-800 border-zinc-800 border-2 rounded">
@@ -55,4 +64,4 @@ function LinkPopup() {
   );
 }
 
-export default LinkPopup;
+export default AddLinkModal;

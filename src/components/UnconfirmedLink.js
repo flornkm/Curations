@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function UnconfirmedLink() {
+function UnconfirmedLink({ onShowModal }) {
   const [data, setData] = useState([]);
+
+  function handleClick() {
+    onShowModal();
+    console.log("button in table clicked");
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -118,7 +123,7 @@ function UnconfirmedLink() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
-                        onClick={() => handleEdit(item.id)}
+                        onClick={() => (handleClick())}
                         className="text-zinc-600 hover:text-zinc-400"
                       >
                         Edit
