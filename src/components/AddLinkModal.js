@@ -8,6 +8,13 @@ function AddLinkModal({ onCloseModal, itemData }) {
   const [subCategory, setSubCategory] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const subCategoryOptions = {
+    Design: ["Tools", "Portfolios", "Inspiration", "Icons", "Mockups", "3D Assets", "Colors", "Fonts", "Illustrations", "Design Studios", "Product Pages", "Figma", "Design Systems"],
+    Development: ["Tools", "Frameworks", "Repositories", "IDEs", "Coding Info", "CSS"],
+    Productivity: ["Tools", "Analytics", "Survey", "Typing", "Presentations", "Mac Apps", "Audiovisual", "File Sharing", "Job Boards"],
+    Learning: ["Startups", "Materials", "Blog", "Resource Pages", "Books", "Documentations", "Quotes", "YT Videos"],
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -30,7 +37,7 @@ function AddLinkModal({ onCloseModal, itemData }) {
     const response = await fetch("/api/insert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+      body: JSON.stringify(data),
     });
     const result = await response.json();
 
@@ -43,6 +50,17 @@ function AddLinkModal({ onCloseModal, itemData }) {
     }
   };
 
+  function handleMainCategoryChange(event) {
+    const value = event.target.value;
+    setMainCategory(value);
+    setSubCategory("");
+  }
+
+  function handleSubCategoryChange(event) {
+    const value = event.target.value;
+    setSubCategory(value);
+  }
+
   function handleClose() {
     onCloseModal();
     console.log("close button clicked");
@@ -53,9 +71,8 @@ function AddLinkModal({ onCloseModal, itemData }) {
     <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-50 z-50">
       <div className="flex flex-col w-[424px] h-auto bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg">
         <div
-          className="flex"
-            // (loading && "pointer-events-none")
-          // }
+        // (loading && "pointer-events-none")
+        // }
         >
           <form onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start items-center gap-2 p-4 border-zinc-800 border-b-2">
@@ -103,10 +120,10 @@ function AddLinkModal({ onCloseModal, itemData }) {
                 <select
                   id="mainCategory"
                   value={mainCategory}
-                  onChange={(e) => setMainCategory(e.target.value)}
-                  className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
+                  onChange={handleMainCategoryChange}
+                  className=" w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
                 >
-                  <option value="1">Select</option>
+                  <option value="">Select Main Category</option>
                   <option value="Design">Design</option>
                   <option value="Development">Development</option>
                   <option value="Productivity">Productivity</option>
@@ -123,12 +140,16 @@ function AddLinkModal({ onCloseModal, itemData }) {
                 <select
                   id="subCategory"
                   value={subCategory}
-                  onChange={(e) => setSubCategory(e.target.value)}
+                  onChange={handleSubCategoryChange}
                   className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
                 >
-                  <option value="1">Select</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <option value="">Select Sub Category</option>
+                  {subCategoryOptions[mainCategory] &&
+                    subCategoryOptions[mainCategory].map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
                 </select>
               </div>
             </div>
