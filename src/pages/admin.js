@@ -5,6 +5,12 @@ import Image from "next/image";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [link, setLink] = useState("");
+
+  function handleItemData(item) {
+    setLink(item.link);
+    console.log(item.link);
+  }
 
   function handleShowModal() {
     if (showModal === false ) {
@@ -58,7 +64,7 @@ export default function Home() {
             <p className="text-base font-semibold">Link list</p>
           </div>
           <div className="h-[calc(100vh-8rem)] overflow-y-auto">
-            <UnconfirmedLink onShowModal={handleShowModal} />
+            <UnconfirmedLink onShowModal={handleShowModal} onItemData={handleItemData}/>
           </div>
         </div>
       </div>

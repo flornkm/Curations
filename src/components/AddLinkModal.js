@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
 function AddLinkModal({ onCloseModal }) {
-  const [link, setLink] = useState("");
   const [name, setName] = useState("");
+  const [link, setLink] = useState("test");
   const [mainCategory, setMainCategory] = useState("");
   const [subCategory, setSubCategory] = useState("");
   const [loading, setLoading] = useState(false);
@@ -36,6 +36,7 @@ function AddLinkModal({ onCloseModal }) {
 
     if (result) {
       setLoading(false);
+      onCloseModal();
     } else {
       setLoading(false);
       alert("Error saving link to database.");

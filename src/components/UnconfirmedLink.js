@@ -1,11 +1,14 @@
+import { SERVER_PROPS_ID } from "next/dist/shared/lib/constants";
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
 function UnconfirmedLink({ onShowModal }) {
   const [data, setData] = useState([]);
 
-  function handleClick() {
+  function handleClick(item) {
     onShowModal();
+    const data = { link: item.link, id: item.id };
+    console.log(item.link, item.id);
     console.log("button in table clicked");
   }
 
@@ -74,16 +77,6 @@ function UnconfirmedLink({ onShowModal }) {
   }
 
   return (
-    // <div className="flex-column justify-center items-start">
-    //   {data.map((item) => (
-    //     <div key={item.id} className="flex flex-row gap-x-4 mb-4">
-    //       <p>{item.timestamp}</p>
-    //       <p>{item.link}</p>
-    //       <button onClick={() => handleEdit(item.id)}>Edit</button>
-    //       <button onClick={() => handleDelete(item.id)}>Delete</button>
-    //     </div>
-    //   ))}
-    // </div>
 
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -123,7 +116,7 @@ function UnconfirmedLink({ onShowModal }) {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
-                        onClick={() => (handleClick())}
+                        onClick={() => (handleClick(item))}
                         className="text-zinc-600 hover:text-zinc-400"
                       >
                         Edit
