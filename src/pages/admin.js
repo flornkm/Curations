@@ -6,10 +6,12 @@ import Image from "next/image";
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [link, setLink] = useState("");
+  const [itemData, setItemData] = useState({});
 
   function handleItemData(item) {
-    setLink(item.link);
-    console.log(item.link);
+    setItemData(item);
+    console.log(item);
+    
   }
 
   function handleShowModal() {
@@ -22,7 +24,7 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
-      {showModal ? ( <AddLinkModal onCloseModal={handleShowModal}/> ) : null}
+      {showModal ? ( <AddLinkModal onCloseModal={handleShowModal} itemData={itemData}/> ) : null}
       <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">
         <Image
           src="/images/curations_logo.png"

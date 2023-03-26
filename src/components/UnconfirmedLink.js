@@ -2,12 +2,13 @@ import { SERVER_PROPS_ID } from "next/dist/shared/lib/constants";
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function UnconfirmedLink({ onShowModal }) {
+function UnconfirmedLink({ onItemData, onShowModal }) {
   const [data, setData] = useState([]);
 
   function handleClick(item) {
     onShowModal();
-    const data = { link: item.link, id: item.id };
+    const itemData = { link: item.link, id: item.id };
+    onItemData(itemData);
     console.log(item.link, item.id);
     console.log("button in table clicked");
   }

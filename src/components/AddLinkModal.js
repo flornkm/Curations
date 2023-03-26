@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function AddLinkModal({ onCloseModal }) {
+function AddLinkModal({ onCloseModal, itemData }) {
   const [name, setName] = useState("");
-  const [link, setLink] = useState("test");
+  const [link, setLink] = useState(itemData.link);
   const [mainCategory, setMainCategory] = useState("");
   const [subCategory, setSubCategory] = useState("");
   const [loading, setLoading] = useState(false);
@@ -53,9 +53,9 @@ function AddLinkModal({ onCloseModal }) {
     <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-50 z-50">
       <div className="flex flex-col w-[424px] h-auto bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg">
         <div
-          className={
-            (loading && "pointer-events-none")
-          }
+          className="flex"
+            // (loading && "pointer-events-none")
+          // }
         >
           <form onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start items-center gap-2 p-4 border-zinc-800 border-b-2">
@@ -75,7 +75,7 @@ function AddLinkModal({ onCloseModal }) {
                   id="link"
                   value={link}
                   onChange={(e) => setLink(e.target.value)}
-                  className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded "
+                  className="w-[240px] h-8 px-2 text-sm font-medium whitespace-nowrap truncate text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded "
                 />
               </div>
               <div className="flex flex-row justify-between items-center w-full h-auto">
