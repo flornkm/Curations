@@ -13,7 +13,6 @@ function UnconfirmedLink({ onItemData, onShowModal }) {
     console.log("button in table clicked");
   }
 
-  useEffect(() => {
     async function fetchData() {
       const { data, error } = await supabase
         .from("unconfirmed_links")
@@ -21,8 +20,14 @@ function UnconfirmedLink({ onItemData, onShowModal }) {
       if (error) console.log(error);
       else setData(data);
     }
+
+  useEffect(() => {
     fetchData();
   }, []);
+
+  const updateData = async () => {
+    fetchData();
+  };
 
   async function handleEdit(id) {
     // Fetch the item you want to edit
@@ -78,7 +83,6 @@ function UnconfirmedLink({ onItemData, onShowModal }) {
   }
 
   return (
-
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -112,12 +116,14 @@ function UnconfirmedLink({ onItemData, onShowModal }) {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-500">
                       {item.timestamp}
                     </td>
-                    <td className="max-w-lg px-6 py-4 whitespace-nowrap truncate text-sm text-zinc-500">
-                      {item.link}
+                    <td className="max-w-lg px-6 py-4 whitespace-nowrap truncate text-sm text-zinc-500 hover:underline underline-offset-auto">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                          {item.link}
+                        </a>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
-                        onClick={() => (handleClick(item))}
+                        onClick={() => handleClick(item)}
                         className="text-zinc-600 hover:text-zinc-400"
                       >
                         Edit

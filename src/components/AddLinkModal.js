@@ -7,6 +7,7 @@ function AddLinkModal({ onCloseModal, itemData }) {
   const [mainCategory, setMainCategory] = useState("");
   const [subCategory, setSubCategory] = useState("");
   const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
 
   const subCategoryOptions = {
     Design: ["Tools", "Portfolios", "Inspiration", "Icons", "Mockups", "3D Assets", "Colors", "Fonts", "Illustrations", "Design Studios", "Product Pages", "Figma", "Design Systems"],
@@ -44,6 +45,24 @@ function AddLinkModal({ onCloseModal, itemData }) {
     if (result) {
       setLoading(false);
       onCloseModal();
+      //delete the item from the unconfirmed_links database
+      const { error: deleteError } = await supabase
+        .from("unconfirmed_links")
+        .delete()
+        .eq("id", itemData.id);
+      if (deleteError) console.log(deleteError);
+
+      //!fetch the updated data and update the state
+      //!this is not working and needs to be connected to unconfirmedLink.js
+      const { data, error } = await supabase
+        .from("unconfirmed_links")
+        .select("*");
+      if (error) console.log(error);
+      else setData(data);
+
+
+      console.log("link saved to database");
+
     } else {
       setLoading(false);
       alert("Error saving link to database.");
