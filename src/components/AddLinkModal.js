@@ -105,9 +105,11 @@ function AddLinkModal({ onCloseModal }) {
                   onChange={(e) => setMainCategory(e.target.value)}
                   className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
                 >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <option value="1">Select</option>
+                  <option value="Design">Design</option>
+                  <option value="Development">Development</option>
+                  <option value="Productivity">Productivity</option>
+                  <option value="Learning">Learning</option>
                 </select>
               </div>
               <div className="flex flex-row justify-between items-center w-full h-auto">
@@ -123,7 +125,7 @@ function AddLinkModal({ onCloseModal }) {
                   onChange={(e) => setSubCategory(e.target.value)}
                   className="w-[240px] h-8 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded"
                 >
-                  <option value="1">1</option>
+                  <option value="1">Select</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>

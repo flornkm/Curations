@@ -37,14 +37,14 @@ async function getFavicon(url) {
 }
 
 export default async (req, res) => {
-  let { imageUrl, name, category, subcategory } = req.body;
+  let { link, name, mainCategory, subCategory } = req.body;
 
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
-  const image = await compressImage(imageUrl);
+  const image = await compressImage(link);
 
   const { data, error } = await supabase.storage
     .from("images")
@@ -58,7 +58,7 @@ export default async (req, res) => {
     console.error(error);
     res.status(500).json({ message: "Error saving screenshot to database." });
   } else {
-    const favicon = await getFavicon(imageUrl);
+    const favicon = await getFavicon(link);
 
     const { data, error } = await supabase.storage
       .from("images")
@@ -79,10 +79,10 @@ export default async (req, res) => {
       const { data, error } = await supabase.from("curations").insert([
         {
           name: name,
-          category: category.toLowerCase(),
-          design: subcategory.toLowerCase(),
+          category: mainCategory.toLowerCase(),
+          design: subCategory.toLowerCase(),
           image: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + ".webp",
-          link: imageUrl,
+          link: link,
           favicon: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + "_favicon.png",
         },
       ]);
