@@ -145,10 +145,11 @@ export default function Curations() {
           rect={rect}
         />
         {(loading && (
-          <RiveComponent
-            src="./animations/curations_loading.riv"
-            className="max-w-[500px] max-md:h-64 md:h-[256px] object-contain m-auto pt-24"
-          />
+          // <RiveComponent
+          //   src="./animations/curations_loading.riv"
+          //   className="max-w-[500px] max-md:h-64 md:h-[256px] object-contain m-auto pt-24"
+          // />
+          <></>
         )) ||
           (!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
