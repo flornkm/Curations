@@ -90,8 +90,8 @@ function UnconfirmedLink({ onShowModal }) {
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200">
             <table className="table-fixed divide-y divide-zinc-800">
-              <thead className="bg-black-80">
-                <tr className="">
+              <thead className="sticky top-0 bg-black-80">
+                <tr>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-zinc-200 uppercase tracking-wider"
@@ -130,7 +130,7 @@ function UnconfirmedLink({ onShowModal }) {
                       </button>
                       <button
                         onClick={() => handleDelete(item.id)}
-                        className="ml-4 text-zinc-600 hover:text-zinc-400"
+                        className="ml-4 text-zinc-600 hover:text-red-700"
                       >
                         Delete
                       </button>
