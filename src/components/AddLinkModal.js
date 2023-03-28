@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function AddLinkModal({ onCloseModal, itemData }) {
+function AddLinkModal({ onCloseModal, itemData}) {
   const [name, setName] = useState("");
   const [link, setLink] = useState(itemData.link);
   const [mainCategory, setMainCategory] = useState("");
@@ -56,6 +56,10 @@ function AddLinkModal({ onCloseModal, itemData }) {
     ],
   };
 
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -81,10 +85,13 @@ function AddLinkModal({ onCloseModal, itemData }) {
       body: JSON.stringify(data),
     });
     const result = await response.json();
+    console.log("result: ");
+    console.log(result);
 
     if (result) {
       setLoading(false);
       onCloseModal();
+
       //delete the item from the unconfirmed_links database
       const { error: deleteError } = await supabase
         .from("unconfirmed_links")
@@ -92,13 +99,9 @@ function AddLinkModal({ onCloseModal, itemData }) {
         .eq("id", itemData.id);
       if (deleteError) console.log(deleteError);
 
-      //!fetch the updated data and update the state
-      //!doesnt work yet
-      const { data, error } = await supabase
-        .from("unconfirmed_links")
-        .select("*");
-      if (error) console.log(error);
-      else setData(data);
+      // Fetch the updated data and update the state
+      //TODO: doesnt work yet
+      // fetchData();
 
       // console.log("link saved to database");
     } else {
