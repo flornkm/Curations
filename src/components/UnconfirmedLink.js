@@ -87,7 +87,7 @@ function UnconfirmedLink({ onItemData, onShowModal }) {
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200">
-            <table className="table-fixed divide-y divide-zinc-800">
+            <table className="table-fixed divide-y divide-zinc-800 border-r-2 border-zinc-800">
               <thead className="sticky top-0 bg-black-80">
                 <tr>
                   <th

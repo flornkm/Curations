@@ -10,10 +10,50 @@ function AddLinkModal({ onCloseModal, itemData }) {
   const [data, setData] = useState([]);
 
   const subCategoryOptions = {
-    Design: ["Tools", "Portfolios", "Inspiration", "Icons", "Mockups", "3D Assets", "Colors", "Fonts", "Illustrations", "Design Studios", "Product Pages", "Figma", "Design Systems"],
-    Development: ["Tools", "Frameworks", "Repositories", "IDEs", "Coding Info", "CSS"],
-    Productivity: ["Tools", "Analytics", "Survey", "Typing", "Presentations", "Mac Apps", "Audiovisual", "File Sharing", "Job Boards"],
-    Learning: ["Startups", "Materials", "Blog", "Resource Pages", "Books", "Documentations", "Quotes", "YT Videos"],
+    Design: [
+      "Tools",
+      "Portfolios",
+      "Inspiration",
+      "Icons",
+      "Mockups",
+      "3D Assets",
+      "Colors",
+      "Fonts",
+      "Illustrations",
+      "Design Studios",
+      "Product Pages",
+      "Figma",
+      "Design Systems",
+    ],
+    Development: [
+      "Tools",
+      "Frameworks",
+      "Repositories",
+      "IDEs",
+      "Coding Info",
+      "CSS",
+    ],
+    Productivity: [
+      "Tools",
+      "Analytics",
+      "Survey",
+      "Typing",
+      "Presentations",
+      "Mac Apps",
+      "Audiovisual",
+      "File Sharing",
+      "Job Boards",
+    ],
+    Learning: [
+      "Startups",
+      "Materials",
+      "Blog",
+      "Resource Pages",
+      "Books",
+      "Documentations",
+      "Quotes",
+      "YT Videos",
+    ],
   };
 
   const handleSubmit = async (event) => {
@@ -53,16 +93,14 @@ function AddLinkModal({ onCloseModal, itemData }) {
       if (deleteError) console.log(deleteError);
 
       //!fetch the updated data and update the state
-      //!this is not working and needs to be connected to unconfirmedLink.js
+      //!doesnt work yet
       const { data, error } = await supabase
         .from("unconfirmed_links")
         .select("*");
       if (error) console.log(error);
       else setData(data);
 
-
-      console.log("link saved to database");
-
+      // console.log("link saved to database");
     } else {
       setLoading(false);
       alert("Error saving link to database.");
