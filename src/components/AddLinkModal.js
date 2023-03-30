@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function AddLinkModal({ onCloseModal, itemData}) {
+function AddLinkModal({ onCloseModal, itemData, fetchData}) {
   const [name, setName] = useState("");
   const [link, setLink] = useState(itemData.link);
   const [mainCategory, setMainCategory] = useState("");
@@ -78,6 +78,7 @@ function AddLinkModal({ onCloseModal, itemData}) {
     }
 
     setLoading(true);
+
     const data = { link, name, mainCategory, subCategory };
     const response = await fetch("/api/insert", {
       method: "POST",
@@ -99,11 +100,10 @@ function AddLinkModal({ onCloseModal, itemData}) {
         .eq("id", itemData.id);
       if (deleteError) console.log(deleteError);
 
-      // Fetch the updated data and update the state
-      //TODO: doesnt work yet
-      // fetchData();
+      //update the data
+      fetchData();
 
-      // console.log("link saved to database");
+      console.log("link saved to database");
     } else {
       setLoading(false);
       alert("Error saving link to database.");

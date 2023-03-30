@@ -1,32 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UnconfirmedLink from "../components/UnconfirmedLink";
 import AddLinkModal from "../components/AddLinkModal";
 import DeleteLinkModal from "../components/DeleteLinkModal";
+import { supabase } from "../pages/api/supabase";
 import Image from "next/image";
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
-  const [link, setLink] = useState("");
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  // const [link, setLink] = useState("");
   const [itemData, setItemData] = useState({});
+  const [data, setData] = useState([]);
+
+  //fetch data from unconfirmed_links table
+  async function fetchData() {
+    const { data, error } = await supabase
+      .from("unconfirmed_links")
+      .select("*");
+    if (error) console.log(error);
+    else setData(data);
+  }
+
+  //fetch data on page load
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   function handleItemData(item) {
     setItemData(item);
     console.log(item);
   }
 
-  function handleShowModal() {
-    if (showModal === false) {
-      setShowModal(true);
+  function handleShowEditModal() {
+    if (showEditModal === false) {
+      setShowEditModal(true);
     } else {
-      setShowModal(false);
+      setShowEditModal(false);
+    }
+  }
+
+  function handleShowDeleteModal() {
+    if (showDeleteModal === false) {
+      setShowDeleteModal(true);
+    } else {
+      setShowDeleteModal(false);
     }
   }
 
   return (
     <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
-      <DeleteLinkModal />
-      {showModal ? <DeleteLinkModal onCloseModal={handleShowModal} /> : null}
-      {showModal ? (<AddLinkModal onCloseModal={handleShowModal} itemData={itemData} />) : null}
+      {showDeleteModal ? <DeleteLinkModal onCloseModal={handleShowDeleteModal} itemData={itemData} fetchData={fetchData}/> : null}
+      {showEditModal ? (<AddLinkModal onCloseModal={handleShowEditModal} itemData={itemData} fetchData={fetchData}/>) : null}
       <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">
         <Image
           src="/images/curations_logo.png"
@@ -69,8 +93,10 @@ export default function Home() {
           </div>
           <div className="h-[calc(100vh-8rem)] overflow-y-auto">
             <UnconfirmedLink
-              onShowModal={handleShowModal}
+              onShowEditModal={handleShowEditModal}
+              onShowDeleteModal={handleShowDeleteModal}
               onItemData={handleItemData}
+              data={data}
             />
           </div>
         </div>
