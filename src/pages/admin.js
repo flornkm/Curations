@@ -78,7 +78,7 @@ export default function Home() {
     <>
       {!session ? (
         <Login />
-      ) : session.user.email === "florian.kiem@hfg.design" ? (
+      ) : session.user.email === "florian.kiem@hfg.design" || session.user.email === "nils.eller@hfg.design" || session.user.email === "anton.stallboerger@hfg.design"  ? (
         <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
           {showDeleteModal ? (
             <DeleteLinkModal

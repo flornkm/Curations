@@ -59,34 +59,18 @@ export default function Curations() {
     }
   }, [router.query.category]);
 
+
   useEffect(() => {
-    if (router.isReady) {
-      if (
-        router.query.category !== undefined &&
-        router.query.subcategory === undefined
-      ) {
-        moveRect();
-        setCategory({ category: router.query.category });
-        loadSubcategoryItems(router.query.category, "All");
-      } else if (
-        router.query.category !== undefined &&
-        router.query.subcategory !== undefined
-      ) {
-        moveRect();
-        loadSubcategoryItems(router.query.category, router.query.subcategory);
-        setCategory({ category: router.query.category });
-        if (router.query.subcategory.includes("-")) {
-          router.query.subcategory = router.query.subcategory.replace(
-            /-/g,
-            " "
-          );
-        }
-        setSubCategory(router.query.subcategory);
-      } else {
-        loadCategoryItems("all");
-      }
+    if (router.asPath.includes("#access_token")) {
+      window.location.href = "/admin" + router.asPath;
     }
-  }, [router]);
+
+    window.addEventListener("scroll", (e) => {
+      if (e.target.documentElement.scrollTop > 35)
+        navigation.current.classList.remove("max-lg:translate-y-16");
+      else navigation.current.classList.add("max-lg:translate-y-16");
+    });
+  }, []);
 
   const loadCategoryItems = (category) => {
     main.current.style.pointerEvents = "none";
@@ -115,16 +99,33 @@ export default function Curations() {
   };
 
   useEffect(() => {
-    if (router.asPath.includes("#access_token")) {
-      window.location.href = "/admin" + router.asPath;
+    if (router.isReady) {
+      if (
+        router.query.category !== undefined &&
+        router.query.subcategory === undefined
+      ) {
+        moveRect();
+        setCategory({ category: router.query.category });
+        loadSubcategoryItems(router.query.category, "All");
+      } else if (
+        router.query.category !== undefined &&
+        router.query.subcategory !== undefined
+      ) {
+        moveRect();
+        loadSubcategoryItems(router.query.category, router.query.subcategory);
+        setCategory({ category: router.query.category });
+        if (router.query.subcategory.includes("-")) {
+          router.query.subcategory = router.query.subcategory.replace(
+            /-/g,
+            " "
+          );
+        }
+        setSubCategory(router.query.subcategory);
+      } else {
+        loadCategoryItems("all");
+      }
     }
-
-    window.addEventListener("scroll", (e) => {
-      if (e.target.documentElement.scrollTop > 35)
-        navigation.current.classList.remove("max-lg:translate-y-16");
-      else navigation.current.classList.add("max-lg:translate-y-16");
-    });
-  }, []);
+  }, [router]);
 
   return (
     <>

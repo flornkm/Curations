@@ -328,34 +328,6 @@ export default function Navigation(props) {
           />
         </div>
         <div className="flex gap-4 place-items-center">
-        <div className="group relative">
-            <div className="relative z-10 font-medium flex place-items-center py-2.5 px-4 cursor-pointer rounded-full bg-gradient-to-r from-red-500 to-rose-500 md:text-sm max-lg:justify-between transition-all duration-100 max-md:text-[12px]">
-              <div className="flex gap-2 place-items-center">
-              <span>
-              Components
-              </span>
-              <span className="px-1 py-0.5 text-xs bg-white bg-opacity-80 text-rose-500 rounded-md">
-                New
-              </span>
-              </div>
-              <div className="absolute z-20 top-0 right-0 left-0 bottom-0 pointer-events-none mix-blend-overlay scale-80">
-                <div className="w-[2px] h-[2px] rounded-full bg-pink-300 absolute top-6 left-2 animate-pulse" />
-                <div className="w-[3px] h-[3px] rounded-full bg-pink-300 absolute top-1 left-2 animate-pulse" />
-                <div className="w-[1px] h-[1px] rounded-full bg-pink-300 absolute top-3 left-3 animate-pulse" />
-                <div className="w-[1px] h-[1px] rounded-full bg-orange-200 absolute top-0 left-8 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute bottom-2 left-4 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute bottom-2 left-12 animate-pulse" />
-                <div className="w-[3px] h-[3px] rounded-full bg-orange-200 absolute bottom-5 left-9 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute bottom-8 right-9 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-3 right-4 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-10 right-10 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-8 right-2 animate-pulse" />
-                <div className="w-[2px] h-[2px] rounded-full bg-orange-200 absolute top-11 left-10 animate-pulse" />
-                <div className="w-[1px] h-[1px] rounded-full bg-orange-200 absolute top-12 left-7 animate-pulse" />
-              </div>
-            </div>
-            <div className="group-hover:opacity-80 transition-all absolute z-0 -top-[2px] -bottom-[2px] -right-[2px] -left-[2px] opacity-50 bg-gradient-to-r from-red-500 to-rose-500 blur-xl rounded-full overflow-hidden" />
-          </div>
         <Icon.Plus
           className="bg-white rounded-full p-0.5 cursor-pointer text-black transition-all hover:opacity-80 z-50 duration-700"
           fontSize={24}
