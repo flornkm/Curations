@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UnconfirmedLink from "../components/UnconfirmedLink";
 import AddLinkModal from "../components/AddLinkModal";
+import DeleteLinkModal from "../components/DeleteLinkModal";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,11 +12,10 @@ export default function Home() {
   function handleItemData(item) {
     setItemData(item);
     console.log(item);
-    
   }
 
   function handleShowModal() {
-    if (showModal === false ) {
+    if (showModal === false) {
       setShowModal(true);
     } else {
       setShowModal(false);
@@ -24,7 +24,9 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
-      {showModal ? ( <AddLinkModal onCloseModal={handleShowModal} itemData={itemData}/> ) : null}
+      <DeleteLinkModal />
+      {showModal ? <DeleteLinkModal onCloseModal={handleShowModal} /> : null}
+      {showModal ? (<AddLinkModal onCloseModal={handleShowModal} itemData={itemData} />) : null}
       <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">
         <Image
           src="/images/curations_logo.png"
@@ -66,7 +68,10 @@ export default function Home() {
             <p className="text-base font-semibold">Link list</p>
           </div>
           <div className="h-[calc(100vh-8rem)] overflow-y-auto">
-            <UnconfirmedLink onShowModal={handleShowModal} onItemData={handleItemData}/>
+            <UnconfirmedLink
+              onShowModal={handleShowModal}
+              onItemData={handleItemData}
+            />
           </div>
         </div>
       </div>
