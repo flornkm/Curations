@@ -86,8 +86,10 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log("result: ");
-    console.log(result);
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
 
     if (result) {
       setLoading(false);
@@ -215,7 +217,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
             </div>
             <div className="flex flex-row justify-between items-center p-4 gap-4">
               <button
-                onClick={() => handleClose()}
+                onClick={handleClose}
                 className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded hover:border-zinc-700"
               >
                 Cancel

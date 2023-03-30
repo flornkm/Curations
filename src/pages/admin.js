@@ -8,6 +8,8 @@ import Image from "next/image";
 export default function Home() {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showLinkListPage, setShowLinkListPage] = useState(false);
+  const [showAddLinkPage, setShowAddLinkPage] = useState(false);
   // const [link, setLink] = useState("");
   const [itemData, setItemData] = useState({});
   const [data, setData] = useState([]);
@@ -47,10 +49,40 @@ export default function Home() {
     }
   }
 
+  function handleLinkListPage() {
+    if (showLinkListPage === false) {
+      setShowLinkListPage(true);
+      setShowAddLinkPage(false);
+    } else {
+      setShowLinkListPage(false);
+    }
+  }
+
+  function handleAddLinkPage() {
+    if (showAddLinkPage === false) {
+      setShowAddLinkPage(true);
+      setShowLinkListPage(false);
+    } else {
+      setShowAddLinkPage(false);
+    }
+  }
+
   return (
     <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
-      {showDeleteModal ? <DeleteLinkModal onCloseModal={handleShowDeleteModal} itemData={itemData} fetchData={fetchData}/> : null}
-      {showEditModal ? (<AddLinkModal onCloseModal={handleShowEditModal} itemData={itemData} fetchData={fetchData}/>) : null}
+      {showDeleteModal ? (
+        <DeleteLinkModal
+          onCloseModal={handleShowDeleteModal}
+          itemData={itemData}
+          fetchData={fetchData}
+        />
+      ) : null}
+      {showEditModal ? (
+        <AddLinkModal
+          onCloseModal={handleShowEditModal}
+          itemData={itemData}
+          fetchData={fetchData}
+        />
+      ) : null}
       <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">
         <Image
           src="/images/curations_logo.png"
@@ -70,34 +102,65 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col justify-start items-start p-4 gap-2 w-auto h-100">
-            <div className="flex px-4 py-1 border-l-2 border-white">
-              <p className="text-base font-semibold">Link list</p>
+            <div
+              className={
+                showLinkListPage
+                  ? "flex px-4 py-1 border-l-2 border-white"
+                  : "flex px-4 py-1"
+              }
+            >
+              <button
+                onClick={handleLinkListPage}
+                className={
+                  showLinkListPage
+                    ? "text-base font-semibold text-zinc-200"
+                    : "text-base font-semibold text-zinc-600 hover:text-zinc-500"
+                }
+              >
+                Link list
+              </button>
             </div>
-            <div className="flex px-4 py-1">
-              <p className="text-base font-semibold text-zinc-600">Add link</p>
-            </div>
-            <div className="flex px-4 py-1">
-              <p className="text-base font-semibold text-zinc-600">
-                Add component
-              </p>
+            <div
+              className={
+                showAddLinkPage
+                  ? "flex px-4 py-1 border-l-2 border-white"
+                  : "flex px-4 py-1"
+              }
+            >
+              <button
+                onClick={handleAddLinkPage}
+                className={
+                  showAddLinkPage
+                    ? "text-base font-semibold text-zinc-200"
+                    : "text-base font-semibold text-zinc-600 hover:text-zinc-500"
+                }
+              >
+                Add Link
+              </button>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col justify-start items-start w-100 h-100 overflow-hidden">
-          <div className="flex flex-col justify-center items-start p-4 gap-1 w-full h-auto border-b-2 border-zinc-800">
+          <div className="flex flex-col justify-center items-start p-4 gap-1 w-screen h-auto border-b-2 border-zinc-800">
             <p className="text-sm font-regular text-zinc-500">
-              Curations / Link list
+              {showAddLinkPage ? "Curations / Add Link" : null}
+              {showLinkListPage ? "Curations / Link List" : null}
             </p>
-            <p className="text-base font-semibold">Link list</p>
+            <p className="text-base font-semibold">
+              {showAddLinkPage ? "Add Link" : null}
+              {showLinkListPage ? "Link List" : null}
+            </p>
           </div>
           <div className="h-[calc(100vh-8rem)] overflow-y-auto">
-            <UnconfirmedLink
-              onShowEditModal={handleShowEditModal}
-              onShowDeleteModal={handleShowDeleteModal}
-              onItemData={handleItemData}
-              data={data}
-            />
+            {showLinkListPage ? (
+              <UnconfirmedLink
+                onShowEditModal={handleShowEditModal}
+                onShowDeleteModal={handleShowDeleteModal}
+                onItemData={handleItemData}
+                data={data}
+              />
+            ) : null}
           </div>
         </div>
       </div>
