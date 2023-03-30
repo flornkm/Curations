@@ -137,7 +137,7 @@ function AddLinkModal({ onCloseModal, itemData}) {
           <form onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start items-center gap-2 p-4 border-zinc-800 border-b-2">
               <div className="origin-center rotate-45 w-3 h-3 bg-[#FC4733] rounded-sm"></div>
-              <p className="text-base font-semibold text-zinc-200">Add Link</p>
+              <p className="text-lg font-semibold text-zinc-200">Add Link</p>
             </div>
             <div className="flex flex-col justify-start items-start p-4 gap-4">
               <div className="flex flex-row justify-between items-center w-full h-auto">

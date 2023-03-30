@@ -12,7 +12,7 @@ function DeleteLinkModal () {
       // }
       >
           <div className="flex flex-row justify-center items-center gap-2 p-4">
-            <p className="text-base font-semibold text-zinc-200">Delete Link?</p>
+            <p className="text-lg font-semibold text-zinc-200">Delete Link?</p>
           </div>
           <div className="flex flex-col justify-center items-center px-12 gap-4">
             <p className="text-base text-center font-regular text-zinc-600">Deleting this link will remove it from the database and it can't be recovered again.</p>
