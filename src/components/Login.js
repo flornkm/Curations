@@ -22,7 +22,7 @@ export default function Login() {
         provider: "github",
       },
       {
-        redirectTo: "/dashboard",
+        redirectTo: "/admin",
       });
       if (error) throw error;
     } catch (error) {
