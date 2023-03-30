@@ -115,6 +115,10 @@ export default function Curations() {
   };
 
   useEffect(() => {
+    if (router.asPath.includes("#access_token")) {
+      window.location.href = "/admin" + router.asPath;
+    }
+
     window.addEventListener("scroll", (e) => {
       if (e.target.documentElement.scrollTop > 35)
         navigation.current.classList.remove("max-lg:translate-y-16");

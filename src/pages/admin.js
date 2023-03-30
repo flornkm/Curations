@@ -67,7 +67,6 @@ export default function Home() {
   useEffect(() => {
     setSession(supabase.auth.session());
 
-    // auth and redirect to /admin
     supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
     });
