@@ -158,7 +158,7 @@ export default function Curations() {
         )) ||
           (!loading && (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
-              {items &&
+              {!loading &&
                 items.map((item) => (
                   <Link
                     target="_blank"
