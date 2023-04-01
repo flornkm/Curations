@@ -28,6 +28,7 @@ async function getFavicon(url) {
       )}`
     );
     const data = await response.buffer();
+    
 
     return data;
   } catch (error) {

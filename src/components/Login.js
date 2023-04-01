@@ -33,10 +33,10 @@ export default function Login() {
   };
 
   return (
-    <div className="container mx-auto grid place-content-center min-h-screen">
-      <p className="mb-4">Log in to access this page</p>
+    <div className="container mx-auto grid place-content-center min-h-screen gap-2">
+      <p className="font-semibold text-zinc-200">Log in to access this page</p>
       <input
-        className="rounded-md mb-8 py-2 ring-1 ring-zinc-600 bg-zinc-700 bottom-0 z-10 px-4 focus:outline-none transition-all focus:ring-1 focus:ring-red-500"
+        className="mb-4 py-2 bg-[#0d0d0d] border-zinc-800 border-2 rounded bottom-0 z-10 px-4 focus:outline-none focus:border-transparent transition-all focus:ring-2 focus:ring-zinc-200"
         type="email"
         placeholder="Your email"
         value={email}
@@ -48,16 +48,16 @@ export default function Login() {
             e.preventDefault();
             handleLogin(email);
           }}
-          className="px-4 py-2 bg-zinc-700 text-white rounded-md transition-all hover:bg-zinc-600"
+          className="px-4 py-2 bg-zinc-800 text-white rounded transition-all hover:bg-zinc-700"
         >
           <span>Send magic link</span>
         </button>
         <button
-          className="px-4 py-2 bg-zinc-700 text-white rounded-md transition-all hover:bg-zinc-600"
+          className="px-4 py-2 bg-zinc-800 text-white rounded transition-all hover:bg-zinc-700"
           onClick={() => handleGitHubLogin()}
           disabled={loading}
         >
-          {loading ? "Logging in" : "Login with GitHub"}
+          {loading ? "Logging in" : "Log in with GitHub"}
         </button>
       </div>
     </div>
