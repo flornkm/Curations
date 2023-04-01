@@ -9,9 +9,8 @@ import Login from "@/components/Login";
 export default function Home() {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [showLinkListPage, setShowLinkListPage] = useState(false);
+  const [showLinkListPage, setShowLinkListPage] = useState(true);
   const [showAddLinkPage, setShowAddLinkPage] = useState(false);
-  // const [link, setLink] = useState("");
   const [itemData, setItemData] = useState({});
   const [data, setData] = useState([]);
   const [session, setSession] = useState(null);
@@ -78,7 +77,9 @@ export default function Home() {
     <>
       {!session ? (
         <Login />
-      ) : session.user.email === "florian.kiem@hfg.design" || session.user.email === "nils.eller@hfg.design" || session.user.email === "anton.stallboerger@hfg.design" ? (
+      ) : session.user.email === "florian.kiem@hfg.design" ||
+        session.user.email === "nils.eller@hfg.design" ||
+        session.user.email === "anton.stallboerger@hfg.design" ? (
         <div className="w-screen h-screen overflow-hidden overflow-x-hidden">
           {showDeleteModal ? (
             <DeleteLinkModal
@@ -150,8 +151,7 @@ export default function Home() {
                     Add Link
                   </button>
                 </div>
-                <div
-                  className="flex px-4 py-1"                              >
+                <div className="flex px-4 py-1">
                   <button
                     onClick={() => supabase.auth.signOut()}
                     className="text-base font-semibold text-zinc-600 hover:text-zinc-500"
