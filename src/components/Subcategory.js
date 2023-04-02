@@ -63,14 +63,14 @@ export default function Subcategory(props) {
         {props.canScrollPrev && (
           <div className="absolute z-10 left-0 w-40 pointer-events-none top-0 bottom-0 flex items-center justify-start bg-gradient-to-r from-[#0D0D0D] to-zinc-900/0">
             <button onClick={props.scrollPrev} className="embla__prev p-1 rounded-full z-10 bg-white text-black pointer-events-auto transition-all hover:opacity-75">
-              <ArrowLeft strokeWidth="2" />
+              <ArrowLeft />
             </button>
           </div>
         )}
         {props.canScrollNext && (
           <div className="absolute z-10 right-0 w-40 pointer-events-none top-0 bottom-0 flex items-center justify-end bg-gradient-to-r from-zinc-900/0 to-[#0D0D0D]">
             <button onClick={props.scrollNext} className="embla__next p-1 rounded-full z-10 bg-white text-black pointer-events-auto transition-all hover:opacity-75">
-              <ArrowRight strokeWidth="2" />
+              <ArrowRight />
             </button>
           </div>
         )}
