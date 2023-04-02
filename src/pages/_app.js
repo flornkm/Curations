@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import TagManager from 'react-gtm-module';
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { SessionContextProvider } from '@supabase/auth-helpers-react'
 import Maintenance from "@/pages/maintenance";
@@ -15,6 +16,10 @@ const inter = Inter({
 export default function App({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient())
   const maintenanceMode = false;
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-KDHCP8C' });
+}, []);
 
   if (maintenanceMode) {
     return <Maintenance />;
