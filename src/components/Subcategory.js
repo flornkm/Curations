@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { ArrowRight, ArrowLeft } from "iconoir-react";
 
 export default function Subcategory(props) {
   const router = useRouter();
@@ -59,6 +60,16 @@ export default function Subcategory(props) {
             );
           })}
         </div>
+        {props.canScrollPrev && (
+          <button className="embla__prev" onClick={props.scrollPrev} className="absolute p-1 rounded-full z-10 bg-white text-black left-0 top-[50%] translate-y-[-50%]">
+            <ArrowLeft />
+          </button>
+        )}
+        {props.canScrollNext && (
+          <button className="embla__next" onClick={props.scrollNext} className="absolute p-1 rounded-full z-10 bg-white text-black right-0 top-[50%] translate-y-[-50%]">
+            <ArrowRight />
+          </button>
+        )}
       </div>
     </div>
   );

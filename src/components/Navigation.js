@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as Icon from "iconoir-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Subcategory from "@/components/Subcategory";
@@ -11,6 +11,8 @@ export default function Navigation(props) {
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
+  const [canScrollNext, setCanScrollNext] = useState(true)
+  const [canScrollPrev, setCanScrollPrev] = useState(true)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -18,6 +20,33 @@ export default function Navigation(props) {
     dragFree: true,
     containScroll: "keepSnaps",
   });
+
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.on("init", () => {
+        setCanScrollPrev(!emblaApi.canScrollPrev());
+        setCanScrollNext(emblaApi.canScrollNext());
+      });
+      emblaApi.on("select", () => {
+        setCanScrollPrev(emblaApi.canScrollPrev());
+        setCanScrollNext(emblaApi.canScrollNext());
+      });
+      return () => {
+        emblaApi.off("init");
+        emblaApi.off("select");
+      };
+    }
+  }, [emblaApi]);
+  
+  
+  
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   const designCategory = [
     {
@@ -365,6 +394,10 @@ export default function Navigation(props) {
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
           category={props.category}
+          scrollNext={scrollNext}
+          scrollPrev={scrollPrev}
+          canScrollNext={canScrollNext}
+          canScrollPrev={canScrollPrev}
         />
       )}
       {props.category.category === "development" && (
@@ -377,6 +410,10 @@ export default function Navigation(props) {
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
           category={props.category}
+          scrollNext={scrollNext}
+          scrollPrev={scrollPrev}
+          canScrollNext={canScrollNext}
+          canScrollPrev={canScrollPrev}
         />
       )}
       {props.category.category === "productivity" && (
@@ -389,6 +426,10 @@ export default function Navigation(props) {
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
           category={props.category}
+          scrollNext={scrollNext}
+          scrollPrev={scrollPrev}
+          canScrollNext={canScrollNext}
+          canScrollPrev={canScrollPrev}
         />
       )}
       {props.category.category === "learning" && (
@@ -401,6 +442,10 @@ export default function Navigation(props) {
           handleCategory={props.handleCategory}
           emblaApi={emblaApi}
           category={props.category}
+          scrollNext={scrollNext}
+          scrollPrev={scrollPrev}
+          canScrollNext={canScrollNext}
+          canScrollPrev={canScrollPrev}
         />
       )}
     </>
