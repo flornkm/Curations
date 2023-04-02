@@ -72,18 +72,20 @@ export default function Curations() {
     });
   }, []);
 
-  const loadCategoryItems = (category) => {
-    main.current.style.pointerEvents = "none";
-    setLoading(true);
-    fetch("/api/supabase?category=" + category)
-      .then((res) => res.json())
-      .then((data) => {
-        main.current.style.pointerEvents = "auto";
-        setLoading(false);
-        setItems(data);
-      })
-      .catch((error) => console.log(error));
+  const loadCategoryItems = async (category) => {
+    try {
+      main.current.style.pointerEvents = "none";
+      setLoading(true);
+      const response = await fetch(`/api/supabase?category=${category}`);
+      const data = await response.json();
+      main.current.style.pointerEvents = "auto";
+      setLoading(false);
+      setItems(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
+  
 
   const loadSubcategoryItems = async (category, itemName) => {
     main.current.style.pointerEvents = "none";
@@ -107,6 +109,7 @@ export default function Curations() {
         router.query.category !== undefined &&
         router.query.subcategory === undefined
       ) {
+        rect.current.style.opacity = 1;
         moveRect();
         setCategory({ category: router.query.category });
         loadSubcategoryItems(router.query.category, "All");
@@ -114,6 +117,7 @@ export default function Curations() {
         router.query.category !== undefined &&
         router.query.subcategory !== undefined
       ) {
+        rect.current.style.opacity = 1;
         moveRect();
         loadSubcategoryItems(router.query.category, router.query.subcategory);
         setCategory({ category: router.query.category });
@@ -125,6 +129,12 @@ export default function Curations() {
         }
         setSubCategory(router.query.subcategory);
       } else {
+        const width = window.innerWidth;
+        if (width > 768) {
+          rect.current.style.opacity = 1;
+        } else {
+          rect.current.style.opacity = 0;
+        }
         loadCategoryItems("all");
       }
     }
