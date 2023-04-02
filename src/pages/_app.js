@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { SessionContextProvider } from '@supabase/auth-helpers-react'
 import Maintenance from "@/pages/maintenance";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   display: "swap",
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
         <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
           <Component {...pageProps} />
         </SessionContextProvider>
+        <Analytics />
       </>
     );
   }
