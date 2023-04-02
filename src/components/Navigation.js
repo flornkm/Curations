@@ -11,42 +11,34 @@ export default function Navigation(props) {
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
-  const [canScrollNext, setCanScrollNext] = useState(true)
-  const [canScrollPrev, setCanScrollPrev] = useState(true)
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [canScrollNext, setCanScrollNext] = useState(false)
+  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [scrollSnaps, setScrollSnaps] = useState([]);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: false,
-    align: 0,
+    skipSnaps: false,
+    containScroll: "trimSnaps",
+    align: "start",
     dragFree: true,
-    containScroll: "keepSnaps",
   });
 
-  useEffect(() => {
-    if (emblaApi) {
-      emblaApi.on("init", () => {
-        setCanScrollPrev(!emblaApi.canScrollPrev());
-        setCanScrollNext(emblaApi.canScrollNext());
-      });
-      emblaApi.on("select", () => {
-        setCanScrollPrev(emblaApi.canScrollPrev());
-        setCanScrollNext(emblaApi.canScrollNext());
-      });
-      return () => {
-        emblaApi.off("init");
-        emblaApi.off("select");
-      };
-    }
-  }, [emblaApi]);
-  
-  
-  
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, setScrollSnaps, onSelect]);
 
   const designCategory = [
     {
