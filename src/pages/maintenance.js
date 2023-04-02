@@ -3,7 +3,7 @@ import * as Icon from "iconoir-react";
 import { useRef, useEffect } from "react";
 import { Inter } from "@next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Maintenance() {
   const border = useRef();
