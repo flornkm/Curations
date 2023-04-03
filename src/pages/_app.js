@@ -19,25 +19,24 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-KDHCP8C' });
-}, []);
-
-  if (maintenanceMode) {
-    return <Maintenance />;
-  } else {
-    return (
-      <>
-        <style jsx global>
-          {`
+  }, []);
+  return (
+    <>
+      <style jsx global>
+        {`
           :root {
             --inter-font: ${inter.style.fontFamily};
           }
         `}
-        </style>
-        <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
+      </style>
+      <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
+        {maintenanceMode ? (
+          <Maintenance />
+        ) : (
           <Component {...pageProps} />
-        </SessionContextProvider>
-        <Analytics />
-      </>
-    );
-  }
+        )}
+      </SessionContextProvider>
+      <Analytics />
+    </>
+  );
 }

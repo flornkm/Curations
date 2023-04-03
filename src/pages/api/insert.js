@@ -81,7 +81,7 @@ export default async (req, res) => {
         {
           name: name,
           category: mainCategory.toLowerCase(),
-          design: subCategory.toLowerCase(),
+          subcategory: subCategory.toLowerCase(),
           image: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + ".webp",
           link: link,
           favicon: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + "_favicon.png",

@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       .from("curations")
       .select("*")
       .eq("category", category)
-      .eq(category.toLowerCase(), subCategory.toLowerCase());
+      .eq("subcategory", subCategory.toLowerCase());
 
     res.status(200).json(data);
   } else {
