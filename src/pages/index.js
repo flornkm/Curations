@@ -197,7 +197,7 @@ export default function Curations() {
           <></>
         )) ||
           (!loading && items && (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12 pb-24">
               {items.map((item) => (
                 <Link
                   target="_blank"
@@ -211,7 +211,7 @@ export default function Curations() {
                       alt={item.title}
                       width={500}
                       height={300}
-                      className="rounded-lg"
+                      className="rounded-lg max-h-72 object-cover object-top"
                     />
                   )}
                   <div className="flex gap-4 place-items-center">
