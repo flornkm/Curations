@@ -1,4 +1,3 @@
-
 # Curations
 
 Curations is a open-source tool for finding stunning projects online, for free.

@@ -2,3 +2,5 @@
 **/.next
 .env
 .vercel
+.env.local
+.pages/admin
