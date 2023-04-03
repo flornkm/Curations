@@ -1,38 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Curations
 
-## Getting Started
+Curations is a open-source tool for finding stunning projects online, for free.
+With more than 50 categories and 500 filterable tools it is one of the biggest websites for finding exactly the kind of tool, inspiration or whatever you need.
 
-First, run the development server:
+Currently we have no sponsors and all the costs are covered by our creators.
+If you have plans to support this project financially you can reach out to us: team@curations.tech
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Curations Cover](https://www.curations.tech/curations_social_image.jpg)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to contribute?
+Submitting your own tool is quite easy. When visiting https://curations.tech/ you will se a small "plus" icon on the top right corner.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 1. Open the about section
+You can open the about section when clicking the plus icon on the top right corner.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### 2. Paste the link of the website or tool
+You can paste the link of the website or tool into our form. Please make sure that
+the website has enabled ssl, otherwise we can't feature it.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 3. Wait until our daily update
+Your submission will be reviewed and we will feature the tool soon. Please don't be sad when your website is not featured, that can have many reasons.
+You can reach out to our twitter @curationshq and ask us why your tool got refused.
+Please also note that because every tool is reviewed manually it could take some time to feature it.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## More to come soon.
+## Creators
 
-## Learn More
+- [@antonstallboerger](https://github.com/antonstallboerger)
+- [@nils-e13](https://github.com/nils-e13)
+- [@floriandwt](https://www.github.com/floriandwt)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## FAQ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Are you working actively on this project?
 
-## Deploy on Vercel
+Absolutely! We are want to give you the best experience possible. At this time (Dec 2022) we
+are all fulltime students so we give our best to contribute on a regular basis.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Do you offer premium memberships?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+No, we don't. We want to make the service as accessible as possible - for everyone.
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at team@curations.tech.
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
