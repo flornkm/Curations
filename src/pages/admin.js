@@ -126,6 +126,7 @@ export default function Home() {
                 onCloseModal={handleShowEditModal}
                 itemData={itemData}
                 fetchData={fetchData}
+                session={session}
               />
             ) : null}
             <div className="flex flex-col justify-center items-start p-4 w-full h-auto border-b-2 border-zinc-800">

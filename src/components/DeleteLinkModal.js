@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase } from "../pages/api/supabase";
+import { supabase } from "../supabase-config";
 
 function DeleteLinkModal ({ onCloseModal, itemData, fetchData }) {
 
