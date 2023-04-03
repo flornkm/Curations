@@ -6,7 +6,7 @@ With more than 50 categories and 500 filterable tools it is one of the biggest w
 Currently we have no sponsors and all the costs are covered by our creators.
 If you have plans to support this project financially you can reach out to us: team@curations.tech
 
-![Curations Cover](https://www.curations.tech/curations_social_image.jpg)
+![Curations Cover](./public/images/curations_social_image.jpg)
 
 ## How to contribute?
 Submitting your own tool is quite easy. When visiting https://curations.tech/ you will se a small "plus" icon on the top right corner.
