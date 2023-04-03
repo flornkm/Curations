@@ -50,21 +50,13 @@ export default function Home() {
   }
 
   function handleLinkListPage() {
-    if (showLinkListPage === false) {
-      setShowLinkListPage(true);
-      setShowAddLinkPage(false);
-    } else {
-      setShowLinkListPage(false);
-    }
+    setShowLinkListPage(true);
+    setShowAddLinkPage(false);
   }
-
+  
   function handleAddLinkPage() {
-    if (showAddLinkPage === false) {
-      setShowAddLinkPage(true);
-      setShowLinkListPage(false);
-    } else {
-      setShowAddLinkPage(false);
-    }
+    setShowAddLinkPage(true);
+    setShowLinkListPage(false);
   }
 
   async function lookUserRank(session) {
@@ -160,7 +152,7 @@ export default function Home() {
                     className={
                       showLinkListPage
                         ? "flex px-4 py-1 border-l-2 border-white"
-                        : "flex px-4 py-1"
+                        : "flex px-4 py-1 border-l-2 border-transparent"
                     }
                   >
                     <button
@@ -178,7 +170,7 @@ export default function Home() {
                     className={
                       showAddLinkPage
                         ? "flex px-4 py-1 border-l-2 border-white"
-                        : "flex px-4 py-1"
+                        : "flex px-4 py-1 border-l-2 border-transparent"
                     }
                   >
                     <button
