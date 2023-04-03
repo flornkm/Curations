@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../pages/api/supabase";
 
-function AddLinkPage({ onCloseModal, itemData, fetchData}) {
+function AddLinkPage({ itemData, fetchData}) {
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const [mainCategory, setMainCategory] = useState("");
@@ -119,11 +119,6 @@ function AddLinkPage({ onCloseModal, itemData, fetchData}) {
     setSubCategory(value);
   }
 
-  function handleClose() {
-    onCloseModal();
-    console.log("close button clicked");
-  }
-
   return (
     //make the div a popup
       <div className="flex flex-col w-[424px] h-auto bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg">
@@ -211,12 +206,6 @@ function AddLinkPage({ onCloseModal, itemData, fetchData}) {
               </div>
             </div>
             <div className="flex flex-row justify-between items-center p-4 gap-4">
-              <button
-                onClick={handleClose}
-                className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-[#0d0d0d] border-zinc-800 border-2 rounded hover:border-zinc-700"
-              >
-                Cancel
-              </button>
               <button
                 onClick={handleSubmit}
                 className="w-full h-10 px-2 text-sm font-medium text-zinc-200 bg-zinc-800 rounded hover:bg-zinc-700"
