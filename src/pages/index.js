@@ -80,28 +80,44 @@ export default function Curations() {
       const data = await response.json();
       main.current.style.pointerEvents = "auto";
       setLoading(false);
-      setItems(data);
+      if (data === null || data.length === 0) {
+        // Retry fetching the data
+        const retryResponse = await fetch(`/api/supabase?category=${category}`);
+        const retryData = await retryResponse.json();
+        setItems(retryData);
+      } else {
+        setItems(data);
+      }
     } catch (error) {
       console.log(error);
     }
   };
   
-
   const loadSubcategoryItems = async (category, itemName) => {
-    main.current.style.pointerEvents = "none";
-    setLoading(true);
     try {
+      main.current.style.pointerEvents = "none";
+      setLoading(true);
       const response = await fetch(
         "/api/supabase?category=" + category + "&subCategory=" + itemName
       );
       const data = await response.json();
       main.current.style.pointerEvents = "auto";
       setLoading(false);
-      setItems(data);
+      if (data === null || data.length === 0) {
+        // Retry fetching the data
+        const retryResponse = await fetch(
+          "/api/supabase?category=" + category + "&subCategory=" + itemName
+        );
+        const retryData = await retryResponse.json();
+        setItems(retryData);
+      } else {
+        setItems(data);
+      }
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   useEffect(() => {
     if (router.isReady) {
