@@ -194,7 +194,7 @@ export default function Curations() {
                       src={item.image}
                       alt={item.title}
                       width={500}
-                      height={500}
+                      height={300}
                       className="rounded-lg"
                     />
                   )}
