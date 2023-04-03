@@ -56,10 +56,6 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     ],
   };
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -131,11 +127,11 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
   return (
     //make the div a popup
     <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-50 z-50">
-      <div className="flex flex-col w-[424px] h-auto bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg">
-        <div
-        // (loading && "pointer-events-none")
-        // }
-        >
+      <div className="flex flex-col w-[424px] h-[344px] bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg">
+          {loading ? (
+            <div className="flex flex-col h-full w-full justify-center items-center">
+              <p className="text-lg font-medium text-zinc-200">Loading...</p>
+              </div>) : (
           <form onSubmit={handleSubmit}>
             <div className="flex flex-row justify-start items-center gap-2 p-4 border-zinc-800 border-b-2">
               <div className="origin-center rotate-45 w-3 h-3 bg-[#FC4733] rounded-sm"></div>
@@ -230,9 +226,9 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
               </button>
             </div>
           </form>
+          )}
         </div>
       </div>
-    </div>
   );
 }
 
