@@ -214,7 +214,7 @@ function AddLinkPage({ itemData, fetchData}) {
               </button>
             </div>
           </form>
-        )};
+        )}
         </div>
   );
 }
