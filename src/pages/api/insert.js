@@ -81,7 +81,8 @@ export default async (req, res) => {
         {
           name: name,
           category: mainCategory.toLowerCase(),
-          subcategory: subCategory.toLowerCase(),
+          // insert into subcategory and make - instead of spaces
+          subcategory: subCategory.toLowerCase().replace(/ /g, "-"),
           image: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + ".webp",
           link: link,
           favicon: name.replace(/[^a-zA-Z0-9]/g, "_").toLowerCase() + "_favicon.png",
