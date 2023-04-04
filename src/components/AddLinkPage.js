@@ -89,7 +89,6 @@ function AddLinkPage({ itemData, fetchData}) {
 
     if (result) {
       setLoading(false);
-      onCloseModal();
 
       //delete the item from the unconfirmed_links database
       const { error: deleteError } = await supabase
@@ -214,7 +213,7 @@ function AddLinkPage({ itemData, fetchData}) {
               </button>
             </div>
           </form>
-        )};
+        )}
         </div>
   );
 }

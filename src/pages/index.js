@@ -6,6 +6,7 @@ import Image from "next/image";
 import RiveComponent from "@rive-app/react-canvas";
 import Navigation from "@/components/Navigation";
 import About from "@/components/About";
+import SubmitLinkModal from "@/components/SubmitLinkModal";
 
 export default function Curations() {
   const [loading, setLoading] = useState(true);
@@ -197,6 +198,8 @@ export default function Curations() {
           <></>
         )) ||
           (!loading && items && (
+            <>
+            <SubmitLinkModal />
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12 pb-24">
               {items.map((item) => (
                 <Link
@@ -229,6 +232,7 @@ export default function Curations() {
                 </Link>
               ))}
             </div>
+            </>
           ))}
         <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
       </main>
