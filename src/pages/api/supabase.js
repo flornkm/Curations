@@ -16,13 +16,14 @@ export default async function handler(req, res) {
 
   if (!subCategory) {
     if (category === "all") {
-      const { data } = await supabase.from("curations").select("*");
+      const { data } = await supabase.from("curations").select("*").order("id", { ascending: false });
 
       res.status(200).json(data);
     } else {
       const { data } = await supabase
         .from("curations")
         .select("*")
+        .order("id", { ascending: false })
         .eq("category", category);
 
       res.status(200).json(data);
@@ -31,6 +32,7 @@ export default async function handler(req, res) {
     const { data } = await supabase
       .from("curations")
       .select("*")
+      .order("id", { ascending: false })
       .eq("category", category)
       .eq("subcategory", subCategory.toLowerCase());
 
@@ -39,6 +41,7 @@ export default async function handler(req, res) {
     const { data } = await supabase
       .from("curations")
       .select("*")
+      .order("id", { ascending: false })
       .eq("category", category);
 
     res.status(200).json(data);

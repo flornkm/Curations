@@ -176,7 +176,7 @@ export default function Curations() {
         <meta name="twitter:description" content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends." />
         <meta name="twitter:image" content="/images/curations_social_image.jpg" />
       </Head>
-      <main className="pl-[5%] pr-[5%] min-h-[200vh]" ref={main}>
+      <main className="pl-[5%] pr-[5%] min-h-screen" ref={main}>
         <Navigation
           mainNavigation={mainNavigation}
           navigation={navigation}
