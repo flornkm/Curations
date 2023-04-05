@@ -6,7 +6,7 @@ tinify.key = process.env.TINIFY_API_KEY;
 async function compressImage(url) {
   try {
     const source = tinify.fromUrl(
-      `https://v1.nocodeapi.com/floriandwt/screen/${process.env.NOCODEAPI_KEY}/screenshot?url=${encodeURIComponent(url)}&delay=2&viewport=1280x800&format=jpg`
+      `https://api.curations.tech/api?url=${encodeURIComponent(url)}`
     );
 
     const converted = source
