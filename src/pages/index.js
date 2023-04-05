@@ -198,8 +198,6 @@ export default function Curations() {
           <></>
         )) ||
           (!loading && items && (
-            <>
-            <SubmitLinkModal />
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12 pb-24">
               {items.map((item) => (
                 <Link
@@ -232,7 +230,6 @@ export default function Curations() {
                 </Link>
               ))}
             </div>
-            </>
           ))}
         <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
       </main>
