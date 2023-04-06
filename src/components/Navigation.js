@@ -11,9 +11,9 @@ export default function Navigation(props) {
   const imgLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [canScrollNext, setCanScrollNext] = useState(false)
-  const [canScrollPrev, setCanScrollPrev] = useState(false)
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -23,8 +23,14 @@ export default function Navigation(props) {
     dragFree: true,
   });
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -352,33 +358,14 @@ export default function Navigation(props) {
             }
           />
         </div>
-        <div className="flex gap-4 place-items-center">
-        <Icon.Plus
-          className="bg-white rounded-full p-0.5 cursor-pointer text-black transition-all hover:opacity-80 z-50 duration-700"
-          fontSize={24}
-          ref={props.plusIcon}
+        <div
           onClick={() => {
             handleSubmitLinkModal();
-            // if (
-            //   props.sidebarWrapper.current.classList.contains("opacity-0") &&
-            //   props.sidebarWrapper.current.classList.contains(
-            //     "translate-x-[100%]"
-            //   )
-            // ) {
-            //   props.sidebarWrapper.current.classList.remove("opacity-0");
-            //   props.sidebarWrapper.current.classList.remove(
-            //     "translate-x-[100%]"
-            //   );
-            //   props.plusIcon.current.classList.add("rotate-45");
-            //   document.body.style.overflow = "hidden";
-            // } else {
-            //   props.sidebarWrapper.current.classList.add("opacity-0");
-            //   props.sidebarWrapper.current.classList.add("translate-x-[100%]");
-            //   props.plusIcon.current.classList.remove("rotate-45");
-            //   document.body.style.overflow = "auto";
-            // }
           }}
-        />
+          className="flex flex-row items-center justify-between gap-1 place-items-between bg-white rounded-full pl-2 pr-3 py-2 cursor-pointer text-black transition-all hover:opacity-80 z-50 duration-700"
+        >
+          <Icon.Plus fontSize={16} strokeWidth={2} ref={props.plusIcon} />
+          <p className="text-black text-sm font-medium">Submit Link</p>
         </div>
       </div>
       {props.category.category === "design" && (
