@@ -15,7 +15,7 @@ export default function Curations() {
   const [category, setCategory] = useState({ category: "all" });
   const [subCategory, setSubCategory] = useState("All");
   const [items, setItems] = useState([]);
-  const [showSubmitLinkModal, setShowSubmitLinkModal] = useState(true);
+  const [showSubmitLinkModal, setShowSubmitLinkModal] = useState(false);
   const sidebarWrapper = useRef(null);
   const plusIcon = useRef(null);
   const navigation = useRef(null);
