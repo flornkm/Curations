@@ -10,11 +10,12 @@ import About from "@/components/About";
 import SubmitLinkModal from "@/components/SubmitLinkModal";
 
 export default function Curations() {
-  const maintenanceMode = true;
+  const maintenanceMode = false;
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState({ category: "all" });
   const [subCategory, setSubCategory] = useState("All");
   const [items, setItems] = useState([]);
+  const [showSubmitLinkModal, setShowSubmitLinkModal] = useState(true);
   const sidebarWrapper = useRef(null);
   const plusIcon = useRef(null);
   const navigation = useRef(null);
@@ -121,7 +122,60 @@ export default function Curations() {
       }
     };
 
+    function handleShowSubmitLinkModal() {
+      if (showSubmitLinkModal === false) {
+        setShowSubmitLinkModal(true);
+      } else {
+        setShowSubmitLinkModal(false);
+      }
+    }
+
     if (!maintenanceMode) {
+  const loadCategoryItems = async (category) => {
+    try {
+      main.current.style.pointerEvents = "none";
+      setLoading(true);
+      const response = await fetch(`/api/supabase?category=${category}`);
+      const data = await response.json();
+      main.current.style.pointerEvents = "auto";
+      setLoading(false);
+      if (data === null || data.length === 0) {
+        // Retry fetching the data
+        const retryResponse = await fetch(`/api/supabase?category=${category}`);
+        const retryData = await retryResponse.json();
+        setItems(retryData);
+      } else {
+        setItems(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const loadSubcategoryItems = async (category, itemName) => {
+    try {
+      main.current.style.pointerEvents = "none";
+      setLoading(true);
+      const response = await fetch(
+        "/api/supabase?category=" + category + "&subCategory=" + itemName
+      );
+      const data = await response.json();
+      main.current.style.pointerEvents = "auto";
+      setLoading(false);
+      if (data === null || data.length === 0) {
+        // Retry fetching the data
+        const retryResponse = await fetch(
+          "/api/supabase?category=" + category + "&subCategory=" + itemName
+        );
+        const retryData = await retryResponse.json();
+        setItems(retryData);
+      } else {
+        setItems(data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
     useEffect(() => {
       if (router.isReady) {
@@ -167,20 +221,41 @@ export default function Curations() {
       <>
         <Head>
           <title>Curations - Stunning Tools, served daily</title>
-          <meta name="description" content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends." />
+          <meta
+          name="description"
+          content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends."
+        />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="robots" content="index, follow" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Curations - Stunning Tools, served daily" />
-          <meta property="og:description" content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends." />
-          <meta property="og:image" content="/images/curations_social_image.jpg" />
+          <meta
+          property="og:title"
+          content="Curations - Stunning Tools, served daily"
+        />
+          <meta
+          property="og:description"
+          content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends."
+        />
+          <meta
+          property="og:image"
+          content="/images/curations_social_image.jpg"
+        />
           <meta property="og:url" content="https://www.curations.tech/" />
           <meta property="og:site_name" content="Curations" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Curations - Stunning Tools, served daily" />
-          <meta name="twitter:description" content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends." />
-          <meta name="twitter:image" content="/images/curations_social_image.jpg" />
+          <meta
+          name="twitter:title"
+          content="Curations - Stunning Tools, served daily"
+        />
+          <meta
+          name="twitter:description"
+          content="Curations is a collection of tools and inspiration for designers and developers. Discover new resources and stay up-to-date with the latest trends."
+        />
+          <meta
+          name="twitter:image"
+          content="/images/curations_social_image.jpg"
+        />
         </Head>
         <main className="pl-[5%] pr-[5%] min-h-screen" ref={main}>
           <Navigation
@@ -195,7 +270,8 @@ export default function Curations() {
             setSubCategory={setSubCategory}
             loadCategoryItems={loadCategoryItems}
             rect={rect}
-          />
+            onSubmitLinkModal={handleShowSubmitLinkModal}
+        />
           {(loading && (
             // <RiveComponent
             //   src="./animations/curations_loading.riv"
@@ -204,39 +280,44 @@ export default function Curations() {
             <></>
           )) ||
             (!loading && items && (
+              <>
+              {showSubmitLinkModal ? (
+                <SubmitLinkModal onCloseModal={handleShowSubmitLinkModal} />
+              ): null}
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12 pb-24">
-                {items.map((item) => (
-                  <Link
-                    target="_blank"
-                    key={item.id}
-                    href={item.link}
-                    className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
-                  >
-                    {item.image && (
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={500}
-                        height={300}
-                        className="rounded-lg max-h-72 object-cover object-top"
-                      />
-                    )}
-                    <div className="flex gap-4 place-items-center">
-                      {item.favicon && (
+                  {items.map((item) => (
+                    <Link
+                      target="_blank"
+                      key={item.id}
+                      href={item.link}
+                      className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
+                    >
+                      {item.image && (
                         <Image
-                          src={item.favicon}
-                          alt={item.title + " favicon"}
-                          width={16}
-                          height={16}
-                          className="object-contain"
+                          src={item.image}
+                          alt={item.title}
+                          width={500}
+                          height={300}
+                          className="rounded-lg max-h-72 object-cover object-top"
                         />
                       )}
-                      <h3 className="font-medium">{item.name}</h3>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            ))}
+                      <div className="flex gap-4 place-items-center">
+                        {item.favicon && (
+                          <Image
+                            src={item.favicon}
+                            alt={item.title + " favicon"}
+                            width={16}
+                            height={16}
+                            className="object-contain"
+                          />
+                        )}
+                        <h3 className="font-medium">{item.name}</h3>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </>
+          ))}
           <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
         </main>
       </>

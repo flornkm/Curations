@@ -234,6 +234,10 @@ export default function Navigation(props) {
     }
   };
 
+  function handleSubmitLinkModal() {
+    props.onSubmitLinkModal();
+  }
+
   return (
     <>
       <div className="w-full flex justify-between px-[2%] h-24 place-items-center">
@@ -354,24 +358,25 @@ export default function Navigation(props) {
           fontSize={24}
           ref={props.plusIcon}
           onClick={() => {
-            if (
-              props.sidebarWrapper.current.classList.contains("opacity-0") &&
-              props.sidebarWrapper.current.classList.contains(
-                "translate-x-[100%]"
-              )
-            ) {
-              props.sidebarWrapper.current.classList.remove("opacity-0");
-              props.sidebarWrapper.current.classList.remove(
-                "translate-x-[100%]"
-              );
-              props.plusIcon.current.classList.add("rotate-45");
-              document.body.style.overflow = "hidden";
-            } else {
-              props.sidebarWrapper.current.classList.add("opacity-0");
-              props.sidebarWrapper.current.classList.add("translate-x-[100%]");
-              props.plusIcon.current.classList.remove("rotate-45");
-              document.body.style.overflow = "auto";
-            }
+            handleSubmitLinkModal();
+            // if (
+            //   props.sidebarWrapper.current.classList.contains("opacity-0") &&
+            //   props.sidebarWrapper.current.classList.contains(
+            //     "translate-x-[100%]"
+            //   )
+            // ) {
+            //   props.sidebarWrapper.current.classList.remove("opacity-0");
+            //   props.sidebarWrapper.current.classList.remove(
+            //     "translate-x-[100%]"
+            //   );
+            //   props.plusIcon.current.classList.add("rotate-45");
+            //   document.body.style.overflow = "hidden";
+            // } else {
+            //   props.sidebarWrapper.current.classList.add("opacity-0");
+            //   props.sidebarWrapper.current.classList.add("translate-x-[100%]");
+            //   props.plusIcon.current.classList.remove("rotate-45");
+            //   document.body.style.overflow = "auto";
+            // }
           }}
         />
         </div>

@@ -14,6 +14,7 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient())
+  const maintenanceMode = true;
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-KDHCP8C' });
