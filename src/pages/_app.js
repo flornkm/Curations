@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import TagManager from 'react-gtm-module';
 import { createBrowserSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { SessionContextProvider } from '@supabase/auth-helpers-react'
-import Maintenance from "@/pages/maintenance";
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
@@ -15,7 +14,6 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient())
-  const maintenanceMode = true;
 
   useEffect(() => {
     TagManager.initialize({ gtmId: 'GTM-KDHCP8C' });
@@ -30,11 +28,7 @@ export default function App({ Component, pageProps }) {
         `}
       </style>
       <SessionContextProvider supabaseClient={supabase} initialSession={pageProps.initialSession}>
-        {maintenanceMode ? (
-          <Maintenance />
-        ) : (
           <Component {...pageProps} />
-        )}
       </SessionContextProvider>
       <Analytics />
     </>
