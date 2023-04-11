@@ -53,18 +53,43 @@ export default async function handler(req, res) {
             // Connect to the Supabase client
             const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-            console.log("1message");
-            console.log(messageArray[0]);
+            // Retrieve all existing links from Supabase
+            const { data: existingLinks, error: existingLinksError } = await supabase
+                .from('unconfirmed_links')
+                .select('link');
 
-            // Insert the messages into a Supabase table
-            const { data, error } = await supabase.from('unconfirmed_links').insert(messageArray);
+            if (existingLinksError) {
+                console.error('Failed to retrieve existing links from the database:', existingLinksError.message);
+                return;
+            }
+
+            // Store existing links in an array
+            const existingLinksArray = existingLinks.map((link) => link.link);
+
+            // Insert new messages into a Supabase table
+            const newMessages = messageArray.filter((message) => {
+                if (!existingLinksArray.includes(message.link)) {
+                    existingLinksArray.push(message.link);
+                    return true;
+                }
+                return false;
+            });
+
+            if (newMessages.length === 0) {
+                console.log('No new messages to insert into the database.');
+                return;
+            }
+
+            console.log('Existing links:', existingLinksArray.length);
+            console.log('New messages:', newMessages.length);
+            console.log('Inserting new messages into the database.', newMessages.length);
+
+            const { data, error } = await supabase.from('unconfirmed_links').insert(newMessages);
 
             if (error) {
                 console.error('Failed to insert messages into the database:', error.message);
                 return;
             }
-
-            console.log('Inserted', data.length, 'messages into the database.');
 
             // Disconnect the Discord client
             client.destroy();

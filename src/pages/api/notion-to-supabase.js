@@ -10,14 +10,22 @@ const tableName = 'Curation Archive';
 export default async function handler(req, res) {
   try {
     // Retrieve all pages from the Notion database
-    const { results } = await notion.databases.query({ database_id: databaseId });
-    // console.log(results);
+    const data = [];
+    let nextCursor = undefined;
+    do {
+      const response = await notion.databases.query({
+        database_id: databaseId,
+        start_cursor: nextCursor,
+      });
+      data.push(
+        ...response.results.map((page) => ({
+          link: page.properties.Link.rich_text[0].plain_text,
+        }))
+      );
+      nextCursor = response.next_cursor;
+    } while (nextCursor);
 
-    // Extract links from each page and format them for import into Supabase
-    const data = results.map((page) => ({
-      link: page.properties.Link.rich_text[0].plain_text,
-    }));
-    console.log(data);
+    console.table(data);
 
     // Import the data into Supabase
     // const { data: importedData, error } = await supabase.from('unconfirmed_links').insert(data);
