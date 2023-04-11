@@ -11,12 +11,13 @@ export default async function handler(req, res) {
   try {
     // Retrieve all pages from the Notion database
     const { results } = await notion.databases.query({ database_id: databaseId });
-    console.log(results);
+    // console.log(results);
 
     // Extract links from each page and format them for import into Supabase
     const data = results.map((page) => ({
-      link: page.properties.Link.url,
+      link: page.properties.Link.rich_text[0].plain_text,
     }));
+    console.log(data);
 
     // Import the data into Supabase
     // const { data: importedData, error } = await supabase.from('unconfirmed_links').insert(data);
