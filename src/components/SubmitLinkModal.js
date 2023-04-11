@@ -94,7 +94,7 @@ function SubmitLinkModal({ onCloseModal, data }) {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-50 z-50">
+    <div className="fixed top-0 left-0 w-full h-full flex flex-column justify-center items-center bg-black bg-opacity-70 z-50">
       <div ref={modalRef} className="flex flex-col w-[424px] h-auto bg-[#0d0d0d] border-zinc-800 border-2 rounded-lg drop-shadow-lg">
         {loading ? (
           <div className="flex flex-col h-[230px] w-full justify-center items-center">
