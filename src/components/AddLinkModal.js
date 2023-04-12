@@ -56,6 +56,28 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     ],
   };
 
+  //transform url into a name
+  useEffect(() => {
+    const url = new URL(link);
+    //get the hostname and remove domain ending and also www
+    const name = url.hostname
+      .replace("www.", "")
+      .replace(".com", "")
+      .replace(".org", "")
+      .replace(".net", "")
+      .replace(".io", "")
+      .replace(".co", "")
+      .replace(".uk", "")
+      .replace(".de", "")
+      .replace(".dev", "")
+      .replace(".app", "")
+      .replace(".tech", "")
+      .replace(".co", "")
+    //capitalize first letter
+    const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+    setName(nameCapitalized);
+  }, [link]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
