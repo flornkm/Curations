@@ -56,6 +56,10 @@ export default function Navigation(props) {
       icon: <Icon.Tools />,
     },
     {
+      name: "AI",
+      icon: <Icon.MagicWand />,
+    },
+    {
       name: "Portfolios",
       icon: <Icon.User />,
     },
@@ -115,6 +119,10 @@ export default function Navigation(props) {
       icon: <Icon.Tools />,
     },
     {
+      name: "AI",
+      icon: <Icon.MagicWand />,
+    },
+    {
       name: "Frameworks",
       icon: <Icon.Calculator />,
     },
@@ -144,6 +152,10 @@ export default function Navigation(props) {
     {
       name: "Tools",
       icon: <Icon.Tools />,
+    },
+    {
+      name: "AI",
+      icon: <Icon.MagicWand />,
     },
     {
       name: "Analytics",
@@ -183,6 +195,10 @@ export default function Navigation(props) {
     {
       name: "All",
       icon: <Icon.Globe />,
+    },
+    {
+      name: "AI",
+      icon: <Icon.MagicWand />,
     },
     {
       name: "Startups",

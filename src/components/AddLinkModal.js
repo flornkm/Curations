@@ -12,6 +12,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
   const subCategoryOptions = {
     Design: [
       "Tools",
+      "AI",
       "Portfolios",
       "Inspiration",
       "Icons",
@@ -27,6 +28,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     ],
     Development: [
       "Tools",
+      "AI",
       "Frameworks",
       "Repositories",
       "IDEs",
@@ -35,6 +37,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     ],
     Productivity: [
       "Tools",
+      "AI",
       "Analytics",
       "Survey",
       "Typing",
@@ -45,6 +48,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
       "Job Boards",
     ],
     Learning: [
+      "AI",
       "Startups",
       "Materials",
       "Blog",
