@@ -294,7 +294,7 @@ export default function Curations() {
                     <Link
                       target="_blank"
                       key={item.id}
-                      href={item.link}
+                      href={item.link + "?ref=curations.tech"}
                       className="rounded-xl shadow-lg flex flex-col gap-2 transition-all hover:scale-[0.98] focus:outline-1 focus:outline-red-300"
                     >
                       {item.image && (
