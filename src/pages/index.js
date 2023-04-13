@@ -98,6 +98,9 @@ export default function Curations() {
     };
 
     const loadSubcategoryItems = async (category, itemName) => {
+      if (category === "code") {
+        category = "development";
+      }
       try {
         main.current.style.pointerEvents = "none";
         setLoading(true);
