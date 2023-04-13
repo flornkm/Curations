@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import RiveComponent from "@rive-app/react-canvas";
+import _ from 'lodash';
 import Maintenance from "@/pages/maintenance";
 import Navigation from "@/components/Navigation";
 import About from "@/components/About";
@@ -140,8 +140,6 @@ export default function Curations() {
       setLoading(true);
       const response = await fetch(`/api/supabase?category=${category}`);
       const data = await response.json();
-      main.current.style.pointerEvents = "auto";
-      setLoading(false);
       if (data === null || data.length === 0) {
         // Retry fetching the data
         const retryResponse = await fetch(`/api/supabase?category=${category}`);
@@ -152,6 +150,9 @@ export default function Curations() {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      main.current.style.pointerEvents = "auto";
+      setLoading(false);
     }
   };
 
@@ -163,8 +164,6 @@ export default function Curations() {
         "/api/supabase?category=" + category + "&subCategory=" + itemName
       );
       const data = await response.json();
-      main.current.style.pointerEvents = "auto";
-      setLoading(false);
       if (data === null || data.length === 0) {
         // Retry fetching the data
         const retryResponse = await fetch(
@@ -177,6 +176,9 @@ export default function Curations() {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      main.current.style.pointerEvents = "auto";
+      setLoading(false);
     }
   };
 
