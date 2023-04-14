@@ -138,10 +138,6 @@ export default function Navigation(props) {
       name: "Coding Info",
       icon: <Icon.InputField />,
     },
-    {
-      name: "CSS",
-      icon: <Icon.Css3 />,
-    },
   ];
 
   const productivityCategory = [
@@ -168,14 +164,6 @@ export default function Navigation(props) {
     {
       name: "Typing",
       icon: <Icon.KeyAltBack />,
-    },
-    {
-      name: "Presentations",
-      icon: <Icon.Presentation />,
-    },
-    {
-      name: "Mac Apps",
-      icon: <Icon.Apple />,
     },
     {
       name: "Audiovisual",
@@ -209,10 +197,6 @@ export default function Navigation(props) {
       icon: <Icon.Book />,
     },
     {
-      name: "Blog",
-      icon: <Icon.PageFlip />,
-    },
-    {
       name: "Resource Pages",
       icon: <Icon.SquareWave />,
     },
@@ -223,14 +207,6 @@ export default function Navigation(props) {
     {
       name: "Documentations",
       icon: <Icon.VideoProjector />,
-    },
-    {
-      name: "Quotes",
-      icon: <Icon.Quote />,
-    },
-    {
-      name: "YT Videos",
-      icon: <Icon.Play />,
     },
   ];
 

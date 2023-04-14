@@ -33,7 +33,6 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
       "Repositories",
       "IDEs",
       "Coding Info",
-      "CSS",
     ],
     Productivity: [
       "Tools",
@@ -41,8 +40,6 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
       "Analytics",
       "Survey",
       "Typing",
-      "Presentations",
-      "Mac Apps",
       "Audiovisual",
       "File Sharing",
       "Job Boards",
@@ -50,13 +47,10 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     Learning: [
       "AI",
       "Startups",
-      "Materials",
       "Blog",
       "Resource Pages",
       "Books",
       "Documentations",
-      "Quotes",
-      "YT Videos",
     ],
   };
 
