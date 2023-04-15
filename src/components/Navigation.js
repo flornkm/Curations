@@ -131,8 +131,12 @@ export default function Navigation(props) {
       icon: <Icon.GitHub />,
     },
     {
-      name: "IDEs",
-      icon: <Icon.CodeBrackets />,
+      name: "Packages",
+      icon: <Icon.Package />,
+    },
+    {
+      name: "API",
+      icon: <Icon.NetworkRight />,
     },
     {
       name: "Coding Info",

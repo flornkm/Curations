@@ -31,7 +31,8 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
       "AI",
       "Frameworks",
       "Repositories",
-      "IDEs",
+      "Packages",
+      "API",
       "Coding Info",
     ],
     Productivity: [
@@ -96,6 +97,7 @@ function AddLinkModal({ onCloseModal, itemData, fetchData}) {
     setLoading(true);
 
     const data = { link, name, mainCategory, subCategory };
+    
     const response = await fetch("/api/insert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },

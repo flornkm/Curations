@@ -12,6 +12,7 @@ function AddLinkPage({ itemData, fetchData}) {
   const subCategoryOptions = {
     Design: [
       "Tools",
+      "AI",
       "Portfolios",
       "Inspiration",
       "Icons",
@@ -27,32 +28,30 @@ function AddLinkPage({ itemData, fetchData}) {
     ],
     Development: [
       "Tools",
+      "AI",
       "Frameworks",
       "Repositories",
-      "IDEs",
+      "Packages",
+      "API",
       "Coding Info",
-      "CSS",
     ],
     Productivity: [
       "Tools",
+      "AI",
       "Analytics",
       "Survey",
       "Typing",
-      "Presentations",
-      "Mac Apps",
       "Audiovisual",
       "File Sharing",
       "Job Boards",
     ],
     Learning: [
+      "AI",
       "Startups",
-      "Materials",
       "Blog",
       "Resource Pages",
       "Books",
       "Documentations",
-      "Quotes",
-      "YT Videos",
     ],
   };
 
