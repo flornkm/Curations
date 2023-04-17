@@ -289,7 +289,7 @@ export default function Curations() {
               {showSubmitLinkModal ? (
                 <SubmitLinkModal onCloseModal={handleShowSubmitLinkModal} />
               ): null}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-items-center md:px-8 max-md:pt-12 pb-24">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:px-8 max-md:pt-12 pb-24 max-w-[1720px] m-auto justify-items-center">
                   {items.map((item) => (
                     <Link
                       target="_blank"
