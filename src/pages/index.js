@@ -324,6 +324,14 @@ export default function Curations() {
               </>
           ))}
           <About sidebarWrapper={sidebarWrapper} plusIcon={plusIcon} />
+          <div className="flex items-center gap-4 mb-8 pl-6">
+              <Link href="/legal-notice" className="text-zinc-500 hover:text-zinc-400 transition-all">
+                Legal Notice
+              </Link>
+              <Link href="/privacy-policy" className="text-zinc-500 hover:text-zinc-400 transition-all">
+                Privacy Policy
+              </Link>
+          </div>
         </main>
       </>
     )
